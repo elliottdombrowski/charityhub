@@ -7,8 +7,15 @@ import './query.css';
 
 //IMPORT LUXON DATE PACKAGE
 const { DateTime } = require('luxon');
+const apiKey = '08fd305a5d7db027100d162178b62865'
 
 const Toolbar = () => {
+  const weatherData = {
+    method: 'GET',
+    url: `api.openweathermap.org/data/2.5/weather?q=Chicago&appid=${apiKey}`,
+    
+  }
+
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
   //FORMATTED TO ABV. MONTH / DATE / YYYY , HOUR/MINUTE/SECOND / TIMEZONE
   let getTime = DateTime.now().toFormat("DD',' ttt");
