@@ -1,19 +1,21 @@
+:root {
+  --dblue: #1e425e;
+  --ddblue: #18354b;
+  --blue: #256670;
+  --dgreen: #407056;
+  --green: #ade28a;
+  --lgreen: #edfa8b;
+  
+  --white: white;
+  --black: black;
+  
+  --input-outline: #d9e2dd;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 100%;
-}
-
-:root {
-  --dblue: #1e425e;
-  --blue: #256670;
-  --dgreen: #407056;
-  --green: #ade28a;
-  --lgreen: #edfa8b;
-
-  --white: white;
-  --black: black;
-
-  --input-outline: #d9e2dd;
+  color: var(--white);
 }
