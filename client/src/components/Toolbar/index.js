@@ -10,7 +10,8 @@ const { DateTime } = require('luxon');
 
 const Toolbar = () => {
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
-  let getTime = DateTime.now().toFormat("DD',' t");
+  //FORMATTED TO ABV. MONTH / DATE / YYYY , HOUR/MINUTE/SECOND / TIMEZONE
+  let getTime = DateTime.now().toFormat("DD',' ttt");
 
   return (
     <div className='toolbar-wrapper'>
