@@ -1,0 +1,5 @@
+.toolbar-wrapper {
+  background: linear-gradient(to right, var(--gblue), var(--blue));
+  padding: 0 2rem;
+  font-size: 1.2em;
+}

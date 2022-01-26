@@ -1,0 +1,28 @@
+li,
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  padding: 0 2rem;
+  border-bottom: 2px solid white;
+}
+
+.nav-left,
+.nav-right {
+  font-size: 1.5em;
+}
+
+.nav-center {
+  font-size: 2rem;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
