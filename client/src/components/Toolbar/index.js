@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import axios from 'axios';
@@ -8,14 +8,21 @@ import './query.css';
 
 //IMPORT LUXON DATE PACKAGE
 const { DateTime } = require('luxon');
-const apiKey = '08fd305a5d7db027100d162178b62865'
+
 
 const Toolbar = () => {
-  const weatherData = {
-    method: 'GET',
-    url: `api.openweathermap.org/data/2.5/weather?q=Chicago&appid=${apiKey}`,
+  const [apiData, setApiData] = useState({});
+  const [getState, setGetState] = useState('chicago');
+  const [state, setState] = useState('chicago');
 
-  }
+  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=${apiKey}`;
+
+  useEffect(() => {
+    fetch(apiUrl).then((res) => res.json()).then((data) => setApiData(data));
+  }, []);
+
+  console.log(apiData);
 
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
   //FORMATTED TO ABV. MONTH / DATE / YYYY , HOUR/MINUTE/SECOND / TIMEZONE
