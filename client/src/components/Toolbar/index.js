@@ -12,17 +12,17 @@ const { DateTime } = require('luxon');
 
 const Toolbar = () => {
   const [apiData, setApiData] = useState({});
-  const [getState, setGetState] = useState('chicago');
-  const [state, setState] = useState('chicago');
 
   const apiKey = process.env.REACT_APP_API_KEY;
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Naperville&units=imperial&appid=${apiKey}`;
 
   useEffect(() => {
-    fetch(apiUrl).then((res) => res.json()).then((data) => setApiData(data));
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => setApiData(data));
   }, []);
-
-  console.log(apiData);
+  const weatherData = apiData?.apiData || [];
+  console.log(apiData.main.temp);
 
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
   //FORMATTED TO ABV. MONTH / DATE / YYYY , HOUR/MINUTE/SECOND / TIMEZONE
@@ -35,11 +35,15 @@ const Toolbar = () => {
           <li className='nav-item'>
             {getTime}
           </li>
-          <li className='nav-item'>
-            <Link to='/'>
-              blog
-            </Link>
-          </li>
+          {
+            weatherData.map((data, index) => {
+              return (
+                <li className='nav-item' key={index}>
+                  {apiData.main.temp}
+                </li>
+              );
+            })
+          }
         </ul>
       </nav>
 
