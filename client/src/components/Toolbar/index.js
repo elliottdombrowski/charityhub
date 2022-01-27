@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import axios from 'axios';
 
 import './styles.css';
 import './query.css';
@@ -13,7 +14,7 @@ const Toolbar = () => {
   const weatherData = {
     method: 'GET',
     url: `api.openweathermap.org/data/2.5/weather?q=Chicago&appid=${apiKey}`,
-    
+
   }
 
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
