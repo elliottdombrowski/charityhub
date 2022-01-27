@@ -21,8 +21,9 @@ const Toolbar = () => {
       .then((res) => res.json())
       .then((data) => setApiData(data));
   }, []);
-  const weatherData = apiData?.apiData || [];
-  console.log(apiData.main.temp);
+  // const weatherData = apiData?.data || [];
+  // console.log(apiData.main.temp);
+  console.log(apiData);
 
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
   //FORMATTED TO ABV. MONTH / DATE / YYYY , HOUR/MINUTE/SECOND / TIMEZONE
@@ -35,15 +36,15 @@ const Toolbar = () => {
           <li className='nav-item'>
             {getTime}
           </li>
-          {
-            weatherData.map((data, index) => {
-              return (
-                <li className='nav-item' key={index}>
+          {/* {
+            weatherData.map((data, id) => {
+              return ( */}
+                <li className='nav-item'>
                   {apiData.main.temp}
                 </li>
-              );
+              {/* );
             })
-          }
+          } */}
         </ul>
       </nav>
 
