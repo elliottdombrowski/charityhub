@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import LoginBtn from '../LoginBtn';
+
 import './styles.css';
 import './query.css';
 
@@ -35,11 +37,7 @@ const Navbar = () => {
               charities
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/'>
-              log in
-            </Link>
-          </li>
+          <LoginBtn />
         </ul>
       </nav>
     </div>

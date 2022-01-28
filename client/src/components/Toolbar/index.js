@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import axios from 'axios';
+import CurrDate from '../CurrDate';
 
 import './styles.css';
 import './query.css';
-
-//IMPORT LUXON DATE PACKAGE
-const { DateTime } = require('luxon');
-
 
 const Toolbar = () => {
   const [apiData, setApiData] = useState({});
@@ -27,20 +23,16 @@ const Toolbar = () => {
 
   //GET CURRENT TIME - CURRENT HARDCODED TO CHICAGO
   //FORMATTED TO ABV. MONTH / DATE / YYYY , HOUR/MINUTE/SECOND / TIMEZONE
-  let getTime = DateTime.now().toFormat("DD',' ttt");
-
   return (
     <div className='toolbar-wrapper'>
       <nav className='toolbar-left'>
         <ul className='nav-item-wrapper'>
-          <li className='nav-item'>
-            {getTime}
-          </li>
+          <CurrDate />
           {/* {
             weatherData.map((data, id) => {
               return ( */}
                 <li className='nav-item'>
-                  {apiData.main.temp}
+                  {/* {apiData.main.temp} */}
                 </li>
               {/* );
             })
