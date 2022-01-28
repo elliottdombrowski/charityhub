@@ -1,5 +1,8 @@
 .toolbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background: linear-gradient(to right, var(--gblue), var(--blue));
-  padding: 0 2rem;
+  padding: .5rem 2rem;
   font-size: 1.2em;
 }
