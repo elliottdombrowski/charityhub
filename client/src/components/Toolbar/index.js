@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import CurrDate from '../CurrDate';
+import ProfileIcon from '../ProfileIcon';
 
 import './styles.css';
 import './query.css';
@@ -28,20 +29,16 @@ const Toolbar = () => {
       <nav className='toolbar-left'>
         <ul className='nav-item-wrapper'>
           <CurrDate />
-          {/* {
-            weatherData.map((data, id) => {
-              return ( */}
-                <li className='nav-item'>
-                  {/* {apiData.main.temp} */}
-                </li>
-              {/* );
-            })
-          } */}
+          <li className='nav-item'>
+            {/* {apiData.main.temp} */}
+          </li>
         </ul>
       </nav>
 
       <nav className='toolbar-right'>
-
+        <ul className='nav-item-wrapper'>
+          <ProfileIcon />
+        </ul>
       </nav>
     </div >
   );
