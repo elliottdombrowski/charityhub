@@ -7,19 +7,18 @@ a {
 .navbar-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
   padding: 0 2rem;
   border-bottom: 2px solid white;
 }
 
-.nav-left,
 .nav-right {
   font-size: 1.5em;
 }
 
-.nav-center {
+.nav-left {
   font-size: 2rem;
 }
 
