@@ -5,16 +5,18 @@ import './styles.css';
 import './query.css';
 
 const LoginForm = () => {
-  const [showPwd, setShowPwd] = useState(false);
   const [loginData, setLoginData] = useState({ email: '', password: '' });
-
-  const loginSubmit = () => {
-    console.log('logging in');
-  };
-
+  const [showPwd, setShowPwd] = useState(false);
+  console.log(loginData);
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
+    console.log(loginData.password);
+  };
+
+  const loginSubmit = () => {
+    console.log('logging in');
   };
 
   return (
@@ -28,26 +30,28 @@ const LoginForm = () => {
         </label>
         <Input 
           variant='filled'
-          value=''
-          type={loginData.email}
-          className='login-input'
+          type='text'
           onChange={handleInputChange}
+          value={loginData.email}
+          placeholder='email'
+          className='login-input'
         />
         <div className="password-wrapper">
           <Input 
             variant='filled'
-            value={loginData.password}
-            type={showPwd ? 'text' : 'password'}
-            className='login-input'
+            type={showPwd ? "text" : "password"}
             onChange={handleInputChange}
+            value={loginData.password}
+            placeholder='password'
+            className='login-input'
             id='change-pwd'
           />
-          <button 
+          <div 
             className="show-password"
-            onClick={(event) => setShowPwd((prev) => !prev)}
+            onClick={() => setShowPwd(!showPwd)}
           >
             show
-          </button>
+          </div>
         </div>
         <span className="save-login">
           <label className="login-label">
