@@ -6,11 +6,15 @@ import './query.css';
 
 const LoginForm = () => {
   const [showPwd, setShowPwd] = useState(false);
-  let inputType = input.type;
-  showPwd ? inputType = 'text' : 'password';
+  const [loginData, setLoginData] = useState({ email: '', password: '' });
 
   const loginSubmit = () => {
     console.log('logging in');
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setLoginData({ ...loginData, [name]: value });
   };
 
   return (
@@ -24,18 +28,24 @@ const LoginForm = () => {
         </label>
         <Input 
           variant='filled'
-          value='email'
-          type='text'
+          value=''
+          type={loginData.email}
           className='login-input'
+          onChange={handleInputChange}
         />
         <div className="password-wrapper">
           <Input 
             variant='filled'
-            value='password'
-            type={showPwd}
+            value={loginData.password}
+            type={showPwd ? 'text' : 'password'}
             className='login-input'
+            onChange={handleInputChange}
+            id='change-pwd'
           />
-          <button className="show-password">
+          <button 
+            className="show-password"
+            onClick={(event) => setShowPwd((prev) => !prev)}
+          >
             show
           </button>
         </div>
