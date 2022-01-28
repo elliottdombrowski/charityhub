@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react';
 
-import Navbar from './components/Navbar/index';
-import Toolbar from './components/Toolbar/index';
+import Navbar from './components/Navbar';
+import Toolbar from './components/Toolbar';
+import LoginForm from './components/LoginForm';
 
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/'>
             <Navbar />
             <Toolbar />
+            <LoginForm />
           </Route>
         </Router>
       </div>
