@@ -16,6 +16,7 @@ function App() {
           <Route exact path='/'>
             <Navbar />
             <Toolbar />
+            <LoginForm />
           </Route>
         </Router>
       </div>
