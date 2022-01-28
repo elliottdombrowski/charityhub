@@ -16,3 +16,20 @@
   margin: 8px 0;
   color: black;
 }
+
+.login-label {
+  margin-right: 10px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.show-password {
+  position: absolute;
+  right: 1rem;
+  color: black;
+}
