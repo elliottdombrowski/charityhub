@@ -24,10 +24,12 @@
 .show-password {
   position: absolute;
   right: 1rem;
-  color: black;
+  color: white;
+  cursor: pointer;
 }
 
-.submit-btn {
+.submit-btn,
+.show-password {
   padding: 4px 15px;
   border-radius: 8px;
   background: var(--dgreen);
