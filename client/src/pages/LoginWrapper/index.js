@@ -16,6 +16,7 @@ const LoginWrapper = () => {
         className='form-switcher'
         href='#'
         rel='noopener noreferrer'
+        onClick={(prev) => setSwitchForm((prev) => !prev)}
       >
         {switchForm ? 'already have an account? log in!' : "don't have an account? sign up!"}
       </a>
