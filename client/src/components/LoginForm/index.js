@@ -8,7 +8,7 @@ const LoginForm = () => {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [showPwd, setShowPwd] = useState(false);
   console.log(loginData);
-  
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
@@ -21,14 +21,14 @@ const LoginForm = () => {
 
   return (
     <div className="login-form-wrapper">
-      <form 
+      <form
         onSubmit={loginSubmit}
         className="login-form"
       >
         <label className="login-label">
           log in
         </label>
-        <Input 
+        <Input
           variant='filled'
           type='text'
           name='email'
@@ -38,7 +38,7 @@ const LoginForm = () => {
           className='login-input'
         />
         <div className="password-wrapper">
-          <Input 
+          <Input
             variant='filled'
             type={showPwd ? "text" : "password"}
             name='password'
@@ -48,22 +48,31 @@ const LoginForm = () => {
             className='login-input'
             id='change-pwd'
           />
-          <div 
+          <div
             className="show-password"
             onClick={() => setShowPwd(!showPwd)}
           >
             show
           </div>
         </div>
-        <span className="save-login">
-          <label className="login-label">
-            keep me logged in
-          </label>
-          <input
-            className="save-login-checkbox"
-            type='checkbox'
-          />
-        </span>
+
+        <div className='login-options'>
+          <span className="save-login">
+            <label className="login-label">
+              keep me logged in
+            </label>
+            <input
+              className="save-login-checkbox"
+              type='checkbox'
+            />
+          </span>
+          <button
+            type='submit'
+            className="submit-btn"
+          >
+            Log In
+          </button>
+        </div>
       </form>
     </div>
   );
