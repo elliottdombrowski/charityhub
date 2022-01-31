@@ -1,7 +1,6 @@
 .login-form-wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
   width: 40%;

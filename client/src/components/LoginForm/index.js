@@ -7,12 +7,10 @@ import './query.css';
 const LoginForm = () => {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [showPwd, setShowPwd] = useState(false);
-  console.log(loginData);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
-    console.log(loginData.password);
   };
 
   const loginSubmit = () => {

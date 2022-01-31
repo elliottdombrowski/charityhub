@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import LoginForm from '../../components/LoginForm';
+import SignupForm from '../../components/SignupForm';
 
 import './styles.css';
 import './query.css';
@@ -10,7 +11,7 @@ const LoginWrapper = () => {
 
   return (
     <div className="login-form-wrapper">
-      {switchForm ? '' : <LoginForm />}
+      {switchForm ? <SignupForm /> : <LoginForm />}
       <a
         className='form-switcher'
         href='#'
