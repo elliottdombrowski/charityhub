@@ -66,10 +66,34 @@
   cursor: pointer;
 }
 
-.signup-location-info {
-  height: 0;
-}
-
 .arrow-icon {
   margin-left: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow-icon.animate {
+  transform: rotate(180deg);
+}
+
+.signup-location-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  margin-top: 0.5rem;
+  background: var(--dgreen);
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.signup-location-text {
+  margin: 0 1rem;
+}
+
+.signup-location-info.active {
+  height: 120px;
+  padding: 1rem 0;
+  border: 2px solid white;
+  border-radius: 5px;
 }

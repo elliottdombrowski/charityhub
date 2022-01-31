@@ -5,7 +5,7 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 import '../LoginForm/styles.css';
 
-const arrow = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon' />
+const arrow = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon' id='arrow' />
 
 const SignupForm = () => {
   const [signupData, setSignupData] = useState({
@@ -24,6 +24,10 @@ const SignupForm = () => {
     showLocationInfo 
       ? document.getElementById('location-info').classList.add('active')
       : document.getElementById('location-info').classList.remove('active')
+
+    showLocationInfo
+      ? document.getElementById('arrow').classList.add('animate')
+      : document.getElementById('arrow').classList.remove('animate')
   };
 
   const handleInputChange = (event) => {
@@ -168,7 +172,13 @@ const SignupForm = () => {
           className='signup-location-info'
           id='location-info'
         >
-
+          <p 
+            className='signup-location-text'
+            id='location-text'
+          >
+            We collect this information solely to provide information relevant to you.
+            This information will never be distributed, sold, or misused.
+          </p>
         </div>
       </div>
 
