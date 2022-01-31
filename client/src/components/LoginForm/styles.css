@@ -1,7 +1,5 @@
 .login-form {
-  margin-top: 5rem;
-  width: 40%;
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  width: 90%;
   padding: 1rem;
 }
 

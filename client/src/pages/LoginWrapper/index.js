@@ -10,6 +10,7 @@ const LoginWrapper = () => {
 
   return (
     <div className="login-form-wrapper">
+      <LoginForm />
     </div>
   );
 };

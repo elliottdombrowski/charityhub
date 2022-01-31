@@ -4,7 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import Navbar from './components/Navbar';
 import Toolbar from './components/Toolbar';
-import LoginForm from './components/LoginForm';
+import LoginWrapper from './pages/LoginWrapper';
 
 import './App.css';
 
@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/'>
             <Navbar />
             <Toolbar />
-            <LoginForm />
+            <LoginWrapper />
           </Route>
         </Router>
       </div>
