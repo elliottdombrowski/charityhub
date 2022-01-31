@@ -1,15 +1,8 @@
-.login-form-wrapper {
+.login-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-form {
-  margin-top: 5rem;
-  width: 40%;
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
-  padding: 1rem;
+  width: 90%;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .login-input {
@@ -32,4 +25,32 @@
   position: absolute;
   right: 1rem;
   color: black;
+}
+
+.submit-btn {
+  padding: 4px 15px;
+  border-radius: 8px;
+  background: var(--dgreen);
+}
+
+.login-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.location-signup-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.location-wrapper-left {
+  width: 65%;
+}
+
+.location-wrapper-right {
+  width: 30%;
+  margin-left: 5%;
 }
