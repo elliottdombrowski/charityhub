@@ -10,7 +10,14 @@ const LoginWrapper = () => {
 
   return (
     <div className="login-form-wrapper">
-      <LoginForm />
+      {switchForm ? '' : <LoginForm />}
+      <a
+        className='form-switcher'
+        href='#'
+        rel='noopener noreferrer'
+      >
+        {switchForm ? 'already have an account? log in!' : "don't have an account? sign up!"}
+      </a>
     </div>
   );
 };
