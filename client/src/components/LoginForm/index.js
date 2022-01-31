@@ -31,6 +31,7 @@ const LoginForm = () => {
         <Input 
           variant='filled'
           type='text'
+          name='email'
           onChange={handleInputChange}
           value={loginData.email}
           placeholder='email'
@@ -40,6 +41,7 @@ const LoginForm = () => {
           <Input 
             variant='filled'
             type={showPwd ? "text" : "password"}
+            name='password'
             onChange={handleInputChange}
             value={loginData.password}
             placeholder='password'
