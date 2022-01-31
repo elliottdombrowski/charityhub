@@ -61,9 +61,13 @@
   color: white;
 }
 
-.signup-location-info {
+.signup-location-header {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.signup-location-info {
+  height: 0;
 }
 
 .arrow-icon {

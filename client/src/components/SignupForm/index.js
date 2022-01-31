@@ -16,6 +16,15 @@ const SignupForm = () => {
     state: ''
   });
   const [showPwd, setShowPwd] = useState(false);
+  const [showLocationInfo, setShowLocationInfo] = useState(false);
+
+  const handleShowLocationInfo = () => {
+    setShowLocationInfo(!showLocationInfo);
+
+    showLocationInfo 
+      ? document.getElementById('location-info').classList.add('active')
+      : document.getElementById('location-info').classList.remove('active')
+  };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -148,10 +157,19 @@ const SignupForm = () => {
         </div>
       </span>
       <div className='signup-location-wrapper'>
-        <span className='signup-location-info'>
+        <span 
+          className='signup-location-header'
+          onClick={handleShowLocationInfo}
+        >
           How do we use this information?
           {arrow}
         </span>
+        <div 
+          className='signup-location-info'
+          id='location-info'
+        >
+
+        </div>
       </div>
 
       <div className='login-options'>
