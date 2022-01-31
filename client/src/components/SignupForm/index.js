@@ -91,6 +91,24 @@ const SignupForm = () => {
           />
         </div>
       </span>
+
+      <div className='login-options'>
+        <span className="save-login">
+          <label className="login-label">
+            keep me logged in
+          </label>
+          <input
+            className="save-login-checkbox"
+            type='checkbox'
+          />
+        </span>
+        <button
+          type='submit'
+          className="submit-btn"
+        >
+          Sign Up
+        </button>
+      </div>
     </form>
   );
 };
