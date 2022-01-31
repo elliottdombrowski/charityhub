@@ -56,7 +56,7 @@ const LoginForm = () => {
       <div className='login-options'>
         <span className="save-login">
           <label className="login-label">
-            keep me logged in
+            remember me?
           </label>
           <input
             className="save-login-checkbox"
