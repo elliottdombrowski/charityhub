@@ -60,3 +60,12 @@
 .login-input-state {
   color: white;
 }
+
+.signup-location-info {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+}

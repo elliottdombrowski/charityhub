@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Input, Select } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 import '../LoginForm/styles.css';
+
+const arrow = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon' />
 
 const SignupForm = () => {
   const [signupData, setSignupData] = useState({
@@ -143,6 +147,12 @@ const SignupForm = () => {
           </Select>
         </div>
       </span>
+      <div className='signup-location-wrapper'>
+        <span className='signup-location-info'>
+          How do we use this information?
+          {arrow}
+        </span>
+      </div>
 
       <div className='login-options'>
         <span className="save-login">
