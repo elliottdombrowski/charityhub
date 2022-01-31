@@ -4,7 +4,13 @@ import { Input, Select } from '@chakra-ui/react';
 import '../LoginForm/styles.css';
 
 const SignupForm = () => {
-  const [signupData, setSignupData] = useState();
+  const [signupData, setSignupData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    city: '',
+    state: ''
+  });
   const [showPwd, setShowPwd] = useState(false);
 
   const handleInputChange = (event) => {
@@ -29,7 +35,7 @@ const SignupForm = () => {
         type='text'
         name='name'
         onChange={handleInputChange}
-        // value={signupData.name}
+        value={signupData.name}
         placeholder='name'
         className='login-input'
       />
@@ -38,7 +44,7 @@ const SignupForm = () => {
         type='text'
         name='email'
         onChange={handleInputChange}
-        // value={signupData.email}
+        value={signupData.email}
         placeholder='email'
         className='login-input'
       />
@@ -48,7 +54,7 @@ const SignupForm = () => {
           type={showPwd ? 'text' : 'password'}
           name='password'
           onChange={handleInputChange}
-          // value={signupData.password}
+          value={signupData.password}
           placeholder='password'
           className='login-input'
         />
@@ -67,7 +73,7 @@ const SignupForm = () => {
             type='text'
             name='city'
             onChange={handleInputChange}
-            // value={signupData.city}
+            value={signupData.city}
             placeholder='city'
             className='login-input login-input-city'
           />
@@ -79,7 +85,7 @@ const SignupForm = () => {
             type='text'
             name='state'
             onChange={handleInputChange}
-            // value={signupData.state}
+            value={signupData.state}
             placeholder='state'
             className='login-input login-input-state'
           />
