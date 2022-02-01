@@ -69,11 +69,14 @@
 .login-options {
   position: absolute;
   top: 240px;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 8px 0;
+  padding: 0 1rem;
   z-index: 4;
 }
 
@@ -89,6 +92,14 @@
 .location-wrapper-right {
   width: 30%;
   margin-left: 5%;
+}
+
+.location-services-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
 }
 
 .login-input-state {
@@ -134,6 +145,11 @@
   padding: 1rem 0;
   border: 2px solid white;
   border-radius: 5px;
+}
+
+.required-label {
+  margin-left: 5px;
+  color: red;
 }
 
 .submit-btn {
