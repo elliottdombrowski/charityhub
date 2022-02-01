@@ -13,10 +13,8 @@ function App() {
     <ChakraProvider>
       <div className="App">
         <Router>
-          <Route exact path='/'>
-            <Navbar />
-            <Toolbar />
-          </Route>
+          <Navbar />
+          <Toolbar />
 
           <Route exact path='/login' component={LoginWrapper} />
         </Router>

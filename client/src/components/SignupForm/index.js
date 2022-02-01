@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Input, Select } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import '../LoginForm/styles.css';
 
-const arrow = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon' id='arrow' />
+const arrowDown = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-down' id='arrow-down' />
+const arrowRight = <FontAwesomeIcon icon={faArrowRight} className='arrow-icon arrow-right' id='arrow-right' />
 
 const SignupForm = () => {
   const [signupData, setSignupData] = useState({
@@ -26,8 +27,8 @@ const SignupForm = () => {
       : document.getElementById('location-info').classList.remove('active')
 
     showLocationInfo
-      ? document.getElementById('arrow').classList.add('animate')
-      : document.getElementById('arrow').classList.remove('animate')
+      ? document.getElementById('arrow-down').classList.add('animate')
+      : document.getElementById('arrow-down').classList.remove('animate')
   };
 
   const handleInputChange = (event) => {
@@ -83,7 +84,7 @@ const SignupForm = () => {
         </div>
       </div>
 
-      <span className='location-signup-wrapper'>
+      {/* <span className='location-signup-wrapper'>
         <div className='location-wrapper-left'>
           <Input
             variant='filled'
@@ -166,7 +167,7 @@ const SignupForm = () => {
           onClick={handleShowLocationInfo}
         >
           How do we use this information?
-          {arrow}
+          {arrowDown}
         </span>
         <div 
           className='signup-location-info'
@@ -180,7 +181,7 @@ const SignupForm = () => {
             This information will never be distributed, sold, or misused.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className='login-options'>
         <span className="save-login">
@@ -192,12 +193,13 @@ const SignupForm = () => {
             type='checkbox'
           />
         </span>
-        <button
+        <div
           type='submit'
           className="submit-btn"
         >
-          Sign Up
-        </button>
+          {arrowRight}
+          Next
+        </div>
       </div>
     </form>
   );

@@ -71,6 +71,10 @@
   transition: 0.3s ease-in-out;
 }
 
+.arrow-right {
+  margin-right: 10px;
+}
+
 .arrow-icon.animate {
   transform: rotate(180deg);
 }
@@ -96,4 +100,8 @@
   padding: 1rem 0;
   border: 2px solid white;
   border-radius: 5px;
+}
+
+.submit-btn {
+  cursor: pointer;
 }
