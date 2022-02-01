@@ -36,12 +36,16 @@ const SignupForm = () => {
     setShowLocationForm(!showLocationForm);
 
     showLocationForm
-     ? document.getElementById('location-form').classList.add('active')
-     : document.getElementById('location-form').classList.remove('active')
+      ? document.getElementById('location-form').classList.add('active')
+      : document.getElementById('location-form').classList.remove('active')
 
     showLocationForm
-     ? document.getElementById('signup-form').classList.add('active')
-     : document.getElementById('signup-form').classList.remove('active')
+      ? document.getElementById('signup-form').classList.add('active')
+      : document.getElementById('signup-form').classList.remove('active')
+
+    showLocationForm
+      ? document.getElementById('arrow-right').classList.add('animate')
+      : document.getElementById('arrow-right').classList.remove('animate')
   };
 
   const handleInputChange = (event) => {
@@ -97,6 +101,9 @@ const SignupForm = () => {
       </div>
 
       <div className='signup-right' id='location-form'>
+        <label className='login-label'>
+          Location
+        </label>
         <span className='location-signup-wrapper'>
           <div className='location-wrapper-left'>
             <Input

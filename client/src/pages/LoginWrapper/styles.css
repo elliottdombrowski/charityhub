@@ -5,12 +5,15 @@
   position: relative;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
   width: 40%;
+  height: 300px;
   margin: 0 auto;
   margin-top: 5rem;
   padding-bottom: 1rem;
 }
 
 .form-switcher {
+  position: absolute;
+  top: 270px;
   width: 90%;
   padding: 0 1rem;
   text-align: left;

@@ -13,8 +13,10 @@
 }
 
 .signup-left {
-  position: relative;
+  position: absolute;
+  right: 0;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  transition: 0.2s ease-in-out;
   z-index: 2;
 }
 
@@ -27,7 +29,11 @@
 }
 
 .signup-right.active {
-  left: 100%;
+  left: 50%;
+}
+
+.signup-left.active {
+  right: 50%;
 }
 
 .login-label {
@@ -56,6 +62,8 @@
 }
 
 .login-options {
+  position: absolute;
+  top: 220px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
