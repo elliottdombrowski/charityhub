@@ -84,7 +84,7 @@ const SignupForm = () => {
         </div>
       </div>
 
-      {/* <span className='location-signup-wrapper'>
+      <span className='location-signup-wrapper'>
         <div className='location-wrapper-left'>
           <Input
             variant='filled'
@@ -181,7 +181,7 @@ const SignupForm = () => {
             This information will never be distributed, sold, or misused.
           </p>
         </div>
-      </div> */}
+      </div>
 
       <div className='login-options'>
         <span className="save-login">
