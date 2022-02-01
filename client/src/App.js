@@ -16,8 +16,9 @@ function App() {
           <Route exact path='/'>
             <Navbar />
             <Toolbar />
-            <LoginWrapper />
           </Route>
+
+          <Route exact path='/login' component={LoginWrapper} />
         </Router>
       </div>
     </ChakraProvider>
