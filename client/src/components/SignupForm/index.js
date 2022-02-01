@@ -38,6 +38,10 @@ const SignupForm = () => {
     showLocationForm
      ? document.getElementById('location-form').classList.add('active')
      : document.getElementById('location-form').classList.remove('active')
+
+    showLocationForm
+     ? document.getElementById('signup-form').classList.add('active')
+     : document.getElementById('signup-form').classList.remove('active')
   };
 
   const handleInputChange = (event) => {
@@ -51,7 +55,7 @@ const SignupForm = () => {
 
   return (
     <>
-      <div className='signup-left'>
+      <div className='signup-left' id='signup-form'>
         <label className='login-label'>
           sign up
         </label>
