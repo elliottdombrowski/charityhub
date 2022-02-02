@@ -13,6 +13,7 @@ const LoginBtn = () => {
         <Link
           to='/'
           className='login-btn'
+          onClick={Auth.logout()}
         >
           log out
         </Link>

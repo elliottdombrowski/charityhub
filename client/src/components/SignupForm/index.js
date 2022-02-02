@@ -3,12 +3,17 @@ import { Input, Select } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+import { ADD_USER } from '../../utils/mutations';
+import Auth from '../../utils/auth';
+
 import '../LoginForm/styles.css';
+import { useMutation } from '@apollo/client';
 
 const arrowDown = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-down' id='arrow-down' />
 const arrowRight = <FontAwesomeIcon icon={faArrowRight} className='arrow-icon arrow-right' id='arrow-right' />
 
 const SignupForm = () => {
+  //SIGNUP DATA STATE
   const [signupData, setSignupData] = useState({
     name: '',
     email: '',
@@ -18,10 +23,14 @@ const SignupForm = () => {
     state: ''
   });
   
+  //MISC STATE FOR MODALS AND SHOW PWD
   const [showPwd, setShowPwd] = useState(false);
   const [showLocationInfo, setShowLocationInfo] = useState(false);
   const [showLocationForm, setShowLocationForm] = useState(false);
   const [useLocationServices, setUseLocationServices] = useState(false);
+
+  //LOGIN MUTATION
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleShowLocationInfo = () => {
     setShowLocationInfo(!showLocationInfo);
@@ -56,9 +65,15 @@ const SignupForm = () => {
     setSignupData({ ...signupData, [name]: value });
   };
 
-  // const signupSubmit = () => {
-  //   console.log('signing up');
-  // };
+  const signupSubmit = async (event) => {
+    event.preventDefault();
+
+    const { data } = await addUser({
+      variables: { ...signupData },
+    });
+
+    Auth.login(data.addUser.token);
+  };
 
   return (
     <>
@@ -275,6 +290,14 @@ const SignupForm = () => {
         >
           {arrowRight}
           Next
+        </button>
+
+        <button
+          type='submit'
+          className='submit-btn'
+          onClick={signupSubmit}
+        >
+          Sign Up
         </button>
       </div>
     </>
