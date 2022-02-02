@@ -22,6 +22,14 @@ const userSchema = new Schema({
   confirmpassword: {
     type: String
   },
+  city: {
+    type: String,
+    required: true
+  },
+  state: {
+    type: String,
+    required: true
+  }
 });
 
 //SAVE USER SCHEMA AND HASH / SALT PASSWORD 
