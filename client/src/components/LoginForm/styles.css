@@ -98,8 +98,26 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  margin: 0;
+  margin: 10px 0 0;
+}
+
+.location-services-button {
+  padding: 4px 15px;
+  width: 30%;
+}
+
+.location-services-secondary {
+  background: transparent;
+  padding: 2px 13px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.location-services-primary {
+  background: var(--dgreen);
+  border-radius: 10px;
 }
 
 .location-input-wrapper {
