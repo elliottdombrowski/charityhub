@@ -1,8 +1,11 @@
-.login-form {
+.login-form,
+.signup-left,
+.signup-right {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .login-input {
@@ -10,8 +13,40 @@
   color: black;
 }
 
+.signup-left {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.signup-right {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(to left, var(--ddblue), var(--dblue));
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.signup-right.active {
+  left: 50%;
+  border-radius: 0 10px 10px 0;
+}
+
+.signup-left.active {
+  right: 50%;
+  border-radius: 10px 0 0 10px;
+}
+
 .login-label {
   margin-right: 10px;
+}
+
+.double-password-wrapper {
+  position: relative;
 }
 
 .password-wrapper {
@@ -24,28 +59,45 @@
 .show-password {
   position: absolute;
   right: 1rem;
-  color: white;
+  background: var(--dgreen);
+  padding: 4px 10px;
+  border-radius: 10px;
   cursor: pointer;
+  z-index: 4;
 }
 
-.submit-btn,
-.show-password {
+.signup-password {
+  position: relative;
+  z-index: 2;
+}
+
+.signup-password-confirm {
+  z-index: 1;
+}
+
+.submit-btn {
   padding: 4px 15px;
   border-radius: 8px;
   background: var(--dgreen);
 }
 
 .login-options {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 8px 0;
+  padding: 0 1rem;
+  z-index: 4;
 }
 
 .location-signup-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .location-wrapper-left {
@@ -55,6 +107,37 @@
 .location-wrapper-right {
   width: 30%;
   margin-left: 5%;
+}
+
+.location-services-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin: 10px 0 0;
+}
+
+.location-services-button {
+  padding: 4px 15px;
+  width: 30%;
+}
+
+.location-services-secondary {
+  background: transparent;
+  padding: 2px 13px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.location-services-primary {
+  background: var(--dgreen);
+  border-radius: 10px;
+}
+
+.location-input-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 .login-input-state {
@@ -69,6 +152,10 @@
 .arrow-icon {
   margin-left: 8px;
   transition: 0.3s ease-in-out;
+}
+
+.arrow-right {
+  margin-right: 10px;
 }
 
 .arrow-icon.animate {
@@ -88,12 +175,21 @@
 }
 
 .signup-location-text {
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 .signup-location-info.active {
-  height: 120px;
+  height: 100px;
   padding: 1rem 0;
   border: 2px solid white;
   border-radius: 5px;
+}
+
+.required-label {
+  margin-left: 5px;
+  color: red;
+}
+
+.submit-btn {
+  cursor: pointer;
 }

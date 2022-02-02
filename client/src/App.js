@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 import Navbar from './components/Navbar';
 import Toolbar from './components/Toolbar';
@@ -8,19 +10,39 @@ import LoginWrapper from './pages/LoginWrapper';
 
 import './App.css';
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 function App() {
   return (
-    <ChakraProvider>
-      <div className="App">
-        <Router>
-          <Route exact path='/'>
+    <ApolloProvider client={client}>
+      <ChakraProvider>
+        <div className="App">
+          <Router>
             <Navbar />
             <Toolbar />
-            <LoginWrapper />
-          </Route>
-        </Router>
-      </div>
-    </ChakraProvider>
+
+            <Route exact path='/login' component={LoginWrapper} />
+          </Router>
+        </div>
+      </ChakraProvider>
+    </ApolloProvider>
   );
 }
 
