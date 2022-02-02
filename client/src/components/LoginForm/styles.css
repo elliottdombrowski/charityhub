@@ -68,7 +68,7 @@
 
 .login-options {
   position: absolute;
-  top: 240px;
+  bottom: 25px;
   right: 0;
   left: 0;
   display: flex;
