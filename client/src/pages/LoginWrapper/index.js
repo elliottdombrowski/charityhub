@@ -6,11 +6,19 @@ import SignupForm from '../../components/SignupForm';
 import './styles.css';
 import './query.css';
 
+
 const LoginWrapper = () => {
   const [switchForm, setSwitchForm] = useState(false);
 
+  const formHeight = {
+    height: switchForm ? '320px' : '250px'
+  }
+
   return (
-    <div className="login-form-wrapper">
+    <div 
+      style={formHeight}
+      className="login-form-wrapper"
+    >
       {switchForm ? <SignupForm /> : <LoginForm />}
       <a
         className='form-switcher'
