@@ -56,6 +56,16 @@
   align-items: center;
 }
 
+.show-password {
+  position: absolute;
+  right: 1rem;
+  background: var(--dgreen);
+  padding: 4px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 4;
+}
+
 .signup-password {
   position: relative;
   z-index: 2;
@@ -65,16 +75,7 @@
   z-index: 1;
 }
 
-.show-password {
-  position: absolute;
-  right: 1rem;
-  color: white;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.submit-btn,
-.show-password {
+.submit-btn {
   padding: 4px 15px;
   border-radius: 8px;
   background: var(--dgreen);

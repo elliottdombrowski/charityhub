@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Select } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 import { ADD_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
@@ -22,7 +22,7 @@ const SignupForm = () => {
     city: '',
     state: ''
   });
-  
+
   //MISC STATE FOR MODALS AND SHOW PWD
   const [showPwd, setShowPwd] = useState(false);
   const [showLocationInfo, setShowLocationInfo] = useState(false);
@@ -31,6 +31,10 @@ const SignupForm = () => {
 
   //LOGIN MUTATION
   const [addUser, { error, data }] = useMutation(ADD_USER);
+
+  //HANDLING FONTAWESOME ICONS HERE TO ALLOW STATE CHANGE
+  const eye = <FontAwesomeIcon icon={faEye} onClick={() => setShowPwd(!showPwd)} />
+  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} onClick={() => setShowPwd(!showPwd)} />
 
   const handleShowLocationInfo = () => {
     setShowLocationInfo(!showLocationInfo);
@@ -111,12 +115,9 @@ const SignupForm = () => {
               placeholder='password'
               className='login-input signup-password'
             />
-            <div
-              className="show-password"
-              onClick={() => setShowPwd(!showPwd)}
-            >
-              show
-            </div>
+            <span className='show-password'>
+              {showPwd ? eyeSlash : eye}
+            </span>
           </div>
 
           <div className="password-wrapper">
@@ -129,12 +130,6 @@ const SignupForm = () => {
               placeholder='confirm password'
               className='login-input signup-password-confirm'
             />
-            <div
-              className="show-password"
-              onClick={() => setShowPwd(!showPwd)}
-            >
-              show
-            </div>
           </div>
         </div>
       </div>
