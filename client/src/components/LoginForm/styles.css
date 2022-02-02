@@ -45,6 +45,10 @@
   margin-right: 10px;
 }
 
+.double-password-wrapper {
+  position: relative;
+}
+
 .password-wrapper {
   position: relative;
   display: flex;
@@ -52,11 +56,21 @@
   align-items: center;
 }
 
+.signup-password {
+  position: relative;
+  z-index: 2;
+}
+
+.signup-password-confirm {
+  z-index: 1;
+}
+
 .show-password {
   position: absolute;
   right: 1rem;
   color: white;
   cursor: pointer;
+  z-index: 3;
 }
 
 .submit-btn,

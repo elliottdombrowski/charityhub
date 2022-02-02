@@ -11,7 +11,7 @@ const LoginWrapper = () => {
   const [switchForm, setSwitchForm] = useState(false);
 
   const formHeight = {
-    height: switchForm ? '320px' : '250px'
+    height: switchForm ? '340px' : '250px'
   }
 
   return (

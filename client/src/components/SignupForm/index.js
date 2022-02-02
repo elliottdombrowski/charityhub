@@ -82,28 +82,49 @@ const SignupForm = () => {
           placeholder='email'
           className='login-input'
         />
-        <div className="password-wrapper">
-          <Input
-            variant='filled'
-            type={showPwd ? 'text' : 'password'}
-            name='password'
-            onChange={handleInputChange}
-            value={signupData.password}
-            placeholder='password'
-            className='login-input'
-          />
-          <div
-            className="show-password"
-            onClick={() => setShowPwd(!showPwd)}
-          >
-            show
+
+        <div className='password-double-wrapper'>
+          <div className="password-wrapper">
+            <Input
+              variant='filled'
+              type={showPwd ? 'text' : 'password'}
+              name='password'
+              onChange={handleInputChange}
+              value={signupData.password}
+              placeholder='password'
+              className='login-input signup-password'
+            />
+            <div
+              className="show-password"
+              onClick={() => setShowPwd(!showPwd)}
+            >
+              show
+            </div>
+          </div>
+
+          <div className="password-wrapper">
+            <Input
+              variant='filled'
+              type={showPwd ? 'text' : 'password'}
+              name='confirmpassword'
+              onChange={handleInputChange}
+              value={signupData.confirmpassword}
+              placeholder='confirm password'
+              className='login-input signup-password-confirm'
+            />
+            <div
+              className="show-password"
+              onClick={() => setShowPwd(!showPwd)}
+            >
+              show
+            </div>
           </div>
         </div>
       </div>
 
       <div className='signup-right' id='location-form'>
         <label className='login-label'>
-          Location
+          Use Location Services?
           <span className='required-label'>*</span>
         </label>
         <span className='location-signup-wrapper'>
