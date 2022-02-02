@@ -245,14 +245,14 @@ const SignupForm = () => {
             type='checkbox'
           />
         </span>
-        <div
-          type='submit'
+        <button
+          type='text'
           className="submit-btn"
           onClick={handleDisplayLocationForm}
         >
           {arrowRight}
           Next
-        </div>
+        </button>
       </div>
     </>
   );
