@@ -13,9 +13,11 @@ const SignupForm = () => {
     name: '',
     email: '',
     password: '',
+    confirmpassword: '',
     city: '',
     state: ''
   });
+  
   const [showPwd, setShowPwd] = useState(false);
   const [showLocationInfo, setShowLocationInfo] = useState(false);
   const [showLocationForm, setShowLocationForm] = useState(false);
