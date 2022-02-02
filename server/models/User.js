@@ -39,6 +39,11 @@ userSchema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
 
+  if (this.isNew || this.isModified('confirmpassword')) {
+    const saltRounds = 10;
+    this.confirmpassword = await bcrypt.hash(this.confirmpassword, saltRounds);
+  }
+
   next();
 });
 
