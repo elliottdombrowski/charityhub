@@ -52,11 +52,16 @@
 .profile-option {
   margin: 3px 0;
   padding: 0 8px;
-  background: grey;
+  background: var(--dgreen);
   border-radius: 5px;
+  transition: .3s ease-in-out;
 }
 
 .settings-icon {
   margin-right: 8px;
   cursor: pointer;
+}
+
+.profile-option.active {
+  height: 100px;
 }

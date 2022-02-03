@@ -22,15 +22,24 @@ const Profile = () => {
   
   const user = data?.me || [];
 
-  const displaySettings = () => {
+  const displaySettingsOne = () => {
     console.log('displaying settings');
     setShowSettings(!showSettings);
     showSettings
-      ? document.getElementById('settings-display').classList.add('active')
-      : document.getElementById('settings-display').classList.remove('active')
+      ? document.getElementById('settings-option-one').classList.add('active')
+      : document.getElementById('settings-option-one').classList.remove('active')
   };
 
-  const angle = <FontAwesomeIcon className='settings-icon' id='settings-display' icon={faAngleDown} onClick={displaySettings}/>
+  const displaySettingsTwo = () => {
+    console.log('displaying settings');
+    setShowSettings(!showSettings);
+    showSettings
+      ? document.getElementById('settings-option-two').classList.add('active')
+      : document.getElementById('settings-option-two').classList.remove('active')
+  };
+
+  const angleOne = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsOne}/>
+  const angleTwo = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsTwo}/>
 
   return (
     <main className='profile-wrapper'>
@@ -60,12 +69,12 @@ const Profile = () => {
             <li className='profile-option'>
               dark mode
             </li>
-            <li className='profile-option'>
-              {angle}
+            <li className='profile-option' id='settings-option-one'>
+              {angleOne}
               user settings
             </li>
-            <li className='profile-option'>
-              {angle}
+            <li className='profile-option' id='settings-option-two'>
+              {angleTwo}
               location settings
             </li>
             <li className='profile-option'></li>
