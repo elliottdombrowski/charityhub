@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from '../../utils/mutations';
+import { validateEmail } from '../../utils/helpers';
+import Auth from '../../utils/auth';
 
 import './styles.css';
 import './query.css';
@@ -7,20 +14,40 @@ import './query.css';
 const LoginForm = () => {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [showPwd, setShowPwd] = useState(false);
+  const [err, setErr] = useState('');
+
+  const eye = <FontAwesomeIcon icon={faEye} onClick={() => setShowPwd(!showPwd)} />
+  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} onClick={() => setShowPwd(!showPwd)} />
+
+  const [login, { error, data }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
   };
 
-  const loginSubmit = () => {
-    console.log('logging in');
+  const loginSubmit = async (event) => {
+    event.preventDefault();
+    // if (!validateEmail(loginData.email)) {
+    //   setErr('Please enter a valid Email.');
+    //   return false;
+    // }
+
+    try {
+      const { data } = await login({
+        variables: { ...loginData },
+      });
+
+      Auth.login(data.login.token);
+    } catch (err) {
+      console.log(error);
+    }
   };
 
   return (
     <form
-      onSubmit={loginSubmit}
       className="login-form"
+      onSubmit={loginSubmit}
     >
       <label className="login-label">
         log in
@@ -45,12 +72,9 @@ const LoginForm = () => {
           className='login-input'
           id='change-pwd'
         />
-        <div
-          className="show-password"
-          onClick={() => setShowPwd(!showPwd)}
-        >
-          show
-        </div>
+        <span className='show-password'>
+          {showPwd ? eyeSlash : eye}
+        </span>
       </div>
 
       <div className='login-options'>

@@ -7,6 +7,7 @@ import { setContext } from '@apollo/client/link/context';
 import Navbar from './components/Navbar';
 import Toolbar from './components/Toolbar';
 import LoginWrapper from './pages/LoginWrapper';
+import Profile from './pages/Profile';
 
 import './App.css';
 
@@ -39,6 +40,7 @@ function App() {
             <Toolbar />
 
             <Route exact path='/login' component={LoginWrapper} />
+            <Route exact path='/profile' component={Profile} />
           </Router>
         </div>
       </ChakraProvider>

@@ -16,6 +16,8 @@ export const QUERY_ME = gql`
       _id
       name
       email
+      city
+      state
     }
   }
 `;
