@@ -12,7 +12,8 @@ import './query.css';
 
 
 const Profile = () => {
-  const [showSettings, setShowSettings] = useState(false);
+  const [showSettingsOne, setShowSettingsOne] = useState(false);
+  const [showSettingsTwo, setShowSettingsTwo] = useState(false);
   
   const { name: userParam } = useParams();
   
@@ -24,16 +25,16 @@ const Profile = () => {
 
   const displaySettingsOne = () => {
     console.log('displaying settings');
-    setShowSettings(!showSettings);
-    showSettings
+    setShowSettingsOne(!showSettingsOne);
+    showSettingsOne
       ? document.getElementById('settings-option-one').classList.add('active')
       : document.getElementById('settings-option-one').classList.remove('active')
   };
 
   const displaySettingsTwo = () => {
     console.log('displaying settings');
-    setShowSettings(!showSettings);
-    showSettings
+    setShowSettingsTwo(!showSettingsTwo);
+    showSettingsTwo
       ? document.getElementById('settings-option-two').classList.add('active')
       : document.getElementById('settings-option-two').classList.remove('active')
   };
@@ -69,13 +70,24 @@ const Profile = () => {
             <li className='profile-option'>
               dark mode
             </li>
-            <li className='profile-option' id='settings-option-one'>
+            <li className='profile-option'>
               {angleOne}
               user settings
+              <div className='settings-option' id='settings-option-one'>
+                hey
+              </div>
             </li>
-            <li className='profile-option' id='settings-option-two'>
+            <li className='profile-option'>
               {angleTwo}
               location settings
+              <div className='settings-option' id='settings-option-two'>
+                <button
+                  type='text'
+                  className='settings-btn'
+                >
+                  
+                </button>
+              </div>
             </li>
             <li className='profile-option'></li>
             <li className='profile-option'></li>
