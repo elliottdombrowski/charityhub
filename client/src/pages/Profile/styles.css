@@ -23,3 +23,17 @@
 .profile-img {
   border-radius: 100%;
 }
+
+.profile-name {
+  margin: .5rem 0 1rem 0;
+  font-size: 120%;
+}
+
+.profile-info {
+  width: 80%;
+  border-top: 1px solid white;
+}
+
+.profile-email {
+  margin: 1rem 0 0.3rem;
+}
