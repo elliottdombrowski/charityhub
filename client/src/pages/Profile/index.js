@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LoginBtn from '../../components/LoginBtn';
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
@@ -14,13 +15,13 @@ import './query.css';
 const Profile = () => {
   const [showSettingsOne, setShowSettingsOne] = useState(false);
   const [showSettingsTwo, setShowSettingsTwo] = useState(false);
-  
+
   const { name: userParam } = useParams();
-  
+
   const { loading, data } = useQuery(QUERY_ME, {
     variables: { username: userParam },
   });
-  
+
   const user = data?.me || [];
 
   const displaySettingsOne = () => {
@@ -39,8 +40,8 @@ const Profile = () => {
       : document.getElementById('settings-option-two').classList.remove('active')
   };
 
-  const angleOne = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsOne}/>
-  const angleTwo = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsTwo}/>
+  const angleOne = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsOne} />
+  const angleTwo = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsTwo} />
 
   return (
     <main className='profile-wrapper'>
@@ -74,7 +75,19 @@ const Profile = () => {
               {angleOne}
               user settings
               <div className='settings-option' id='settings-option-one'>
-                hey
+                <button
+                  type='text'
+                  className='settings-btn'
+                >
+                  Change Profile Picture
+                </button>
+
+                <button
+                  type='text'
+                  className='settings-btn'
+                >
+                  Reset Password
+                </button>
               </div>
             </li>
             <li className='profile-option'>
@@ -85,13 +98,19 @@ const Profile = () => {
                   type='text'
                   className='settings-btn'
                 >
-                  
+                  Change Location
+                </button>
+
+                <button
+                  type='text'
+                  className='settings-btn'
+                >
+                  Disable Location Services
                 </button>
               </div>
             </li>
-            <li className='profile-option'></li>
-            <li className='profile-option'></li>
           </ul>
+          <LoginBtn />
         </span>
       </section>
 

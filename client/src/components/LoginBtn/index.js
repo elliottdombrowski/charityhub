@@ -8,7 +8,7 @@ import './query.css';
 
 const LoginBtn = () => {
   return (
-    <li className='login-btn-wrapper nav-item'>
+    <li className='login-btn-wrapper'>
       {Auth.loggedIn() ? (
         <Link
           to='/'
