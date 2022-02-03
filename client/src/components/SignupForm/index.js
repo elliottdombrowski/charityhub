@@ -3,11 +3,11 @@ import { Input, Select } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
+import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 import '../LoginForm/styles.css';
-import { useMutation } from '@apollo/client';
 
 const arrowDown = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-down' id='arrow-down' />
 const arrowRight = <FontAwesomeIcon icon={faArrowRight} className='arrow-icon arrow-right' id='arrow-right' />
