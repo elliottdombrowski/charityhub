@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import LoginBtn from '../../components/LoginBtn';
+import ProfileSettings from '../../components/ProfileSettings';
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
@@ -6,6 +8,7 @@ import { QUERY_ME } from '../../utils/queries';
 
 import './styles.css';
 import './query.css';
+
 
 const Profile = () => {
   const { name: userParam } = useParams();
@@ -36,13 +39,12 @@ const Profile = () => {
           <h2 className='profile-location profile-data'>{user.city}, {user.state}</h2>
         </section>
 
-        <span className='profile-settings'>
-          {/* PLACEHOLDERS FOR NOW  */}
-          <p>dark mode</p>
-          <p>change password</p>
-          <p>change picture</p>
-          <p>change location</p>
-          <p>disable location</p>
+        <span className='profile-settings-wrapper'>
+          <ProfileSettings />
+
+          <div className='logout-btn'>
+            <LoginBtn />
+          </div>
         </span>
       </section>
 
