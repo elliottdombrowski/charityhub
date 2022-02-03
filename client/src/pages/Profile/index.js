@@ -110,7 +110,10 @@ const Profile = () => {
               </div>
             </li>
           </ul>
-          <LoginBtn />
+          
+          <div className='logout-btn'>
+            <LoginBtn />
+          </div>
         </span>
       </section>
 
