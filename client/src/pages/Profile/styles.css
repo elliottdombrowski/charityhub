@@ -30,10 +30,33 @@
 }
 
 .profile-info {
-  width: 80%;
+  width: 100%;
+  padding: 0 8px;
   border-top: 1px solid white;
 }
 
 .profile-email {
   margin: 1rem 0 0.3rem;
+}
+
+.profile-settings-wrapper {
+  width: 100%;
+  padding: 1rem .5rem;
+}
+
+.profile-settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-option {
+  margin: 3px 0;
+  padding: 0 8px;
+  background: grey;
+  border-radius: 5px;
+}
+
+.settings-icon {
+  margin-right: 8px;
+  cursor: pointer;
 }
