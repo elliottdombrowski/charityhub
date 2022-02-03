@@ -5,6 +5,8 @@ const typeDefs = gql`
     _id: ID
     name: String!
     email: String!
+    city: String!
+    state: String!
   }
 
   type Auth {
