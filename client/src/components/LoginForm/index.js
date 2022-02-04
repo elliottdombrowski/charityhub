@@ -15,7 +15,7 @@ import './query.css';
 const LoginForm = () => {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [showPwd, setShowPwd] = useState(false);
-  const [err, setErr] = useState(false);
+  const [err, setErr] = useState(true);
 
   const eye = <FontAwesomeIcon icon={faEye} />
   const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
@@ -26,8 +26,10 @@ const LoginForm = () => {
 
   const handleInputChange = (event) => {
     if (!validateEmail(loginData.email)) {
+      setErr(true);
+    } else if (validateEmail(loginData.email)) {
       setErr(false);
-    } else setErr(true);
+    }
 
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
@@ -66,9 +68,9 @@ const LoginForm = () => {
           className='login-input'
         />
         <span 
-          className='show-password'
+          className='show-password valid-email'
         >
-          {err ? check : cross}
+          {err ? cross : check}
         </span>
       </div>
 

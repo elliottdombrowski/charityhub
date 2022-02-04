@@ -70,6 +70,10 @@
   z-index: 4;
 }
 
+.valid-email {
+  cursor: text;
+}
+
 .signup-password {
   position: relative;
   z-index: 2;
