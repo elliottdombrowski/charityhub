@@ -3,7 +3,6 @@ import { Input } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { onError } from '@apollo/client/link/error';
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from '../../utils/mutations';
 import { validateEmail } from '../../utils/helpers';
@@ -45,7 +44,7 @@ const LoginForm = () => {
 
       Auth.login(data.login.token);
     } catch (err) {
-      console.log(error);
+      console.log(err);
     }
   };
 
