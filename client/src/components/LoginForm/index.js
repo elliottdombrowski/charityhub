@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { onError } from '@apollo/client/link/error';
 import { useMutation } from "@apollo/client";
@@ -17,17 +17,17 @@ const LoginForm = () => {
   const [showPwd, setShowPwd] = useState(false);
   const [err, setErr] = useState(false);
 
-  const eye = <FontAwesomeIcon icon={faEye} onClick={() => setShowPwd(!showPwd)} />
-  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} onClick={() => setShowPwd(!showPwd)} />
+  const eye = <FontAwesomeIcon icon={faEye} />
+  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
   const check = <FontAwesomeIcon icon={faCheck} />
+  const cross = <FontAwesomeIcon icon={faTimes} />
 
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     if (!validateEmail(loginData.email)) {
-      setErr(!err);
-      return false;
-    }
+      setErr(false);
+    } else setErr(true);
 
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
@@ -55,15 +55,23 @@ const LoginForm = () => {
       <label className="login-label">
         log in
       </label>
-      <Input
-        variant='filled'
-        type='text'
-        name='email'
-        onChange={handleInputChange}
-        value={loginData.email}
-        placeholder='email'
-        className='login-input'
-      />
+      <div className="password-wrapper">
+        <Input
+          variant='filled'
+          type='text'
+          name='email'
+          onChange={handleInputChange}
+          value={loginData.email}
+          placeholder='email'
+          className='login-input'
+        />
+        <span 
+          className='show-password'
+        >
+          {err ? check : cross}
+        </span>
+      </div>
+
       <div className="password-wrapper">
         <Input
           variant='filled'
@@ -75,7 +83,10 @@ const LoginForm = () => {
           className='login-input'
           id='change-pwd'
         />
-        <span className='show-password'>
+        <span 
+          className='show-password'
+          onClick={() => setShowPwd((prev) => !prev)} 
+        >
           {showPwd ? eyeSlash : eye}
         </span>
       </div>
