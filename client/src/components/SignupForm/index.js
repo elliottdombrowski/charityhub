@@ -36,8 +36,8 @@ const SignupForm = () => {
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   //HANDLING FONTAWESOME ICONS HERE TO ALLOW STATE CHANGE
-  const eye = <FontAwesomeIcon icon={faEye} onClick={() => setShowPwd(!showPwd)} />
-  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} onClick={() => setShowPwd(!showPwd)} />
+  const eye = <FontAwesomeIcon icon={faEye} />
+  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
   const check = <FontAwesomeIcon icon={faCheck} />
   const cross = <FontAwesomeIcon icon={faTimes} />
 
@@ -76,9 +76,11 @@ const SignupForm = () => {
       setErr(false);
     }
 
-    if (signupData.password != signupData.confirmpassword) {
+    if (signupData.password !== signupData.confirmpassword) {
       setPwdErr(true);
-    } else setPwdErr(false);
+    } else {
+      setPwdErr(false);
+    }
 
     const { name, value } = event.target;
     setSignupData({ ...signupData, [name]: value });
@@ -137,7 +139,10 @@ const SignupForm = () => {
               placeholder='password'
               className='login-input signup-password'
             />
-            <span className='show-password'>
+            <span
+              className='show-password'
+              onClick={() => setShowPwd((prev) => !prev)}
+            >
               {showPwd ? eyeSlash : eye}
             </span>
           </div>
