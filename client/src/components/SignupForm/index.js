@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Input, Select } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown, faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowRight, faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
+import { validateEmail } from '../../utils/helpers';
 import Auth from '../../utils/auth';
 
 import '../LoginForm/styles.css';
@@ -28,13 +29,17 @@ const SignupForm = () => {
   const [showLocationInfo, setShowLocationInfo] = useState(false);
   const [showLocationForm, setShowLocationForm] = useState(false);
   const [useLocationServices, setUseLocationServices] = useState(false);
+  const [err, setErr] = useState(true);
+  const [pwdErr, setPwdErr] = useState(true);
 
   //LOGIN MUTATION
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   //HANDLING FONTAWESOME ICONS HERE TO ALLOW STATE CHANGE
-  const eye = <FontAwesomeIcon icon={faEye} onClick={() => setShowPwd(!showPwd)} />
-  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} onClick={() => setShowPwd(!showPwd)} />
+  const eye = <FontAwesomeIcon icon={faEye} />
+  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
+  const check = <FontAwesomeIcon icon={faCheck} />
+  const cross = <FontAwesomeIcon icon={faTimes} />
 
   const handleShowLocationInfo = () => {
     setShowLocationInfo(!showLocationInfo);
@@ -65,6 +70,18 @@ const SignupForm = () => {
   };
 
   const handleInputChange = (event) => {
+    if (!validateEmail(signupData.email)) {
+      setErr(true);
+    } else if (validateEmail(signupData.email)) {
+      setErr(false);
+    }
+
+    if (signupData.password !== signupData.confirmpassword) {
+      setPwdErr(true);
+    } else {
+      setPwdErr(false);
+    }
+
     const { name, value } = event.target;
     setSignupData({ ...signupData, [name]: value });
   };
@@ -94,15 +111,22 @@ const SignupForm = () => {
           placeholder='name'
           className='login-input'
         />
-        <Input
-          variant='filled'
-          type='text'
-          name='email'
-          onChange={handleInputChange}
-          value={signupData.email}
-          placeholder='email'
-          className='login-input'
-        />
+        <div className="password-wrapper">
+          <Input
+            variant='filled'
+            type='text'
+            name='email'
+            onChange={handleInputChange}
+            value={signupData.email}
+            placeholder='email'
+            className='login-input'
+          />
+          <span
+            className='show-password valid-email'
+          >
+            {err ? cross : check}
+          </span>
+        </div>
 
         <div className='password-double-wrapper'>
           <div className="password-wrapper">
@@ -115,7 +139,10 @@ const SignupForm = () => {
               placeholder='password'
               className='login-input signup-password'
             />
-            <span className='show-password'>
+            <span
+              className='show-password'
+              onClick={() => setShowPwd((prev) => !prev)}
+            >
               {showPwd ? eyeSlash : eye}
             </span>
           </div>
@@ -130,8 +157,23 @@ const SignupForm = () => {
               placeholder='confirm password'
               className='login-input signup-password-confirm'
             />
+            <span
+              className='show-password valid-email'
+            >
+              {pwdErr ? cross : check}
+            </span>
           </div>
         </div>
+        {error ? (
+          <pre className='apollo-errors'>
+            {error.graphQLErrors.map(({ message }, i) => (
+              <span key={i}>{message}</span>
+            ))}
+          </pre>
+        ) : (
+          <>
+          </>
+        )}
       </div>
 
       <div className='signup-right' id='location-form'>

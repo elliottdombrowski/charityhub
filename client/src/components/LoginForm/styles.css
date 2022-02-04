@@ -58,12 +58,20 @@
 
 .show-password {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 1rem;
   background: var(--dgreen);
-  padding: 4px 10px;
+  padding: 10px 0;
+  width: 40px;
   border-radius: 10px;
   cursor: pointer;
   z-index: 4;
+}
+
+.valid-email {
+  cursor: text;
 }
 
 .signup-password {

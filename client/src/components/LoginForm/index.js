@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from '../../utils/mutations';
@@ -14,24 +14,28 @@ import './query.css';
 const LoginForm = () => {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [showPwd, setShowPwd] = useState(false);
-  const [err, setErr] = useState('');
+  const [err, setErr] = useState(true);
 
-  const eye = <FontAwesomeIcon icon={faEye} onClick={() => setShowPwd(!showPwd)} />
-  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} onClick={() => setShowPwd(!showPwd)} />
+  const eye = <FontAwesomeIcon icon={faEye} />
+  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
+  const check = <FontAwesomeIcon icon={faCheck} />
+  const cross = <FontAwesomeIcon icon={faTimes} />
 
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
+    if (!validateEmail(loginData.email)) {
+      setErr(true);
+    } else if (validateEmail(loginData.email)) {
+      setErr(false);
+    }
+
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
   };
 
   const loginSubmit = async (event) => {
     event.preventDefault();
-    // if (!validateEmail(loginData.email)) {
-    //   setErr('Please enter a valid Email.');
-    //   return false;
-    // }
 
     try {
       const { data } = await login({
@@ -40,7 +44,7 @@ const LoginForm = () => {
 
       Auth.login(data.login.token);
     } catch (err) {
-      console.log(error);
+      console.log(err);
     }
   };
 
@@ -52,15 +56,23 @@ const LoginForm = () => {
       <label className="login-label">
         log in
       </label>
-      <Input
-        variant='filled'
-        type='text'
-        name='email'
-        onChange={handleInputChange}
-        value={loginData.email}
-        placeholder='email'
-        className='login-input'
-      />
+      <div className="password-wrapper">
+        <Input
+          variant='filled'
+          type='text'
+          name='email'
+          onChange={handleInputChange}
+          value={loginData.email}
+          placeholder='email'
+          className='login-input'
+        />
+        <span 
+          className='show-password valid-email'
+        >
+          {err ? cross : check}
+        </span>
+      </div>
+
       <div className="password-wrapper">
         <Input
           variant='filled'
@@ -72,10 +84,23 @@ const LoginForm = () => {
           className='login-input'
           id='change-pwd'
         />
-        <span className='show-password'>
+        <span 
+          className='show-password'
+          onClick={() => setShowPwd((prev) => !prev)} 
+        >
           {showPwd ? eyeSlash : eye}
         </span>
       </div>
+      {error ? (
+        <pre className='apollo-errors'>
+          {error.graphQLErrors.map(({ message }, i) => (
+            <span key={i}>{message}</span>
+          ))}
+        </pre>
+      ) : (
+        <>
+        </>
+      )}
 
       <div className='login-options'>
         <span className="save-login">
