@@ -45,6 +45,12 @@ const LoginForm = () => {
     } catch (err) {
       console.log(err);
     }
+
+    setLoginData({
+      email: '',
+      password: ''
+    });
+    setErr('');
   };
 
   return (
@@ -62,6 +68,7 @@ const LoginForm = () => {
           onChange={handleInputChange}
           value={loginData.email}
           placeholder='email'
+          required
           className='login-input'
         />
         <span 
@@ -78,6 +85,7 @@ const LoginForm = () => {
           onChange={handleInputChange}
           value={loginData.password}
           placeholder='password'
+          required
           className='login-input'
           id='change-pwd'
         />
@@ -112,6 +120,7 @@ const LoginForm = () => {
         <button
           type='submit'
           className="submit-btn"
+          disabled={!(loginData.email && loginData.password)}
         >
           Log In
         </button>

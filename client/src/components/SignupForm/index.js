@@ -109,6 +109,7 @@ const SignupForm = () => {
           onChange={handleInputChange}
           value={signupData.name}
           placeholder='name'
+          required
           className='login-input'
         />
         <div className="password-wrapper">
@@ -118,6 +119,7 @@ const SignupForm = () => {
             onChange={handleInputChange}
             value={signupData.email}
             placeholder='email'
+            required
             className='login-input signup-input'
           />
           <span
@@ -135,6 +137,7 @@ const SignupForm = () => {
               onChange={handleInputChange}
               value={signupData.password}
               placeholder='password'
+              required
               className='login-input signup-password'
             />
             <span
@@ -152,6 +155,7 @@ const SignupForm = () => {
               onChange={handleInputChange}
               value={signupData.confirmpassword}
               placeholder='confirm password'
+              required
               className='login-input signup-password-confirm'
             />
             <span
@@ -189,6 +193,7 @@ const SignupForm = () => {
                     onChange={handleInputChange}
                     value={signupData.city}
                     placeholder='city'
+                    required
                     className='login-input login-input-city'
                   />
                 </div>
@@ -198,6 +203,7 @@ const SignupForm = () => {
                     name='state'
                     onChange={handleInputChange}
                     value={signupData.state}
+                    required
                     className='login-input login-input-state'
                   >
                     <option value="" selected disabled hidden>State</option>
@@ -309,6 +315,7 @@ const SignupForm = () => {
           <button
             type='submit'
             className='submit-btn'
+            disabled={!(signupData.name && signupData.email && signupData.password && signupData.confirmpassword && signupData.city && signupData.state)}
             onClick={signupSubmit}
           >
             Sign Up
@@ -329,6 +336,7 @@ const SignupForm = () => {
         <button
           type='text'
           className="submit-btn"
+          disabled={!(signupData.name && signupData.email && signupData.password && signupData.confirmpassword)}
           onClick={handleDisplayLocationForm}
         >
           {arrowRight}

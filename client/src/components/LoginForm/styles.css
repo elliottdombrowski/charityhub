@@ -69,7 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 1rem;
+  right: .2rem;
   background: var(--dgreen);
   padding: 10px 0;
   width: 40px;
@@ -204,6 +204,7 @@
 
 .submit-btn {
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .login-input + select:invalid,
@@ -213,4 +214,8 @@
 
 ::placeholder {
   color: var(--input-placeholder);
+}
+
+:disabled {
+  background: var(--ddblue);
 }
