@@ -309,7 +309,7 @@ const SignupForm = () => {
           )}
         </span>
 
-        {/* <div className='signup-form-btn'>
+        <div className='signup-form-btn'>
           <button
             type='submit'
             className='submit-btn'
@@ -317,7 +317,7 @@ const SignupForm = () => {
           >
             Sign Up
           </button>
-        </div> */}
+        </div>
       </div>
 
       <div className='login-options'>
@@ -337,14 +337,6 @@ const SignupForm = () => {
         >
           {arrowRight}
           Next
-        </button>
-
-        <button
-          type='submit'
-          className='submit-btn'
-          onClick={signupSubmit}
-        >
-          Sign Up
         </button>
       </div>
     </>
