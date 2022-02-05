@@ -202,7 +202,8 @@
   color: red;
 }
 
-.submit-btn {
+.submit-btn,
+.save-login-checkbox {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
