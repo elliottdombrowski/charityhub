@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Input } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -57,8 +56,7 @@ const LoginForm = () => {
         log in
       </label>
       <div className="password-wrapper">
-        <Input
-          variant='filled'
+        <input
           type='text'
           name='email'
           onChange={handleInputChange}
@@ -74,8 +72,7 @@ const LoginForm = () => {
       </div>
 
       <div className="password-wrapper">
-        <Input
-          variant='filled'
+        <input
           type={showPwd ? "text" : "password"}
           name='password'
           onChange={handleInputChange}

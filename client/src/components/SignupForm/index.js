@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Input, Select } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,6 +11,8 @@ import '../LoginForm/styles.css';
 
 const arrowDown = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-down' id='arrow-down' />
 const arrowRight = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-right' id='arrow-right' />
+
+const red = 'red'
 
 const SignupForm = () => {
   //SIGNUP DATA STATE
@@ -102,8 +103,7 @@ const SignupForm = () => {
         <label className='login-label'>
           sign up
         </label>
-        <Input
-          variant='filled'
+        <input
           type='text'
           name='name'
           onChange={handleInputChange}
@@ -112,14 +112,13 @@ const SignupForm = () => {
           className='login-input'
         />
         <div className="password-wrapper">
-          <Input
-            variant='filled'
+          <input
             type='text'
             name='email'
             onChange={handleInputChange}
             value={signupData.email}
             placeholder='email'
-            className='login-input'
+            className='login-input signup-input'
           />
           <span
             className='show-password valid-email'
@@ -130,8 +129,7 @@ const SignupForm = () => {
 
         <div className='password-double-wrapper'>
           <div className="password-wrapper">
-            <Input
-              variant='filled'
+            <input
               type={showPwd ? 'text' : 'password'}
               name='password'
               onChange={handleInputChange}
@@ -148,8 +146,7 @@ const SignupForm = () => {
           </div>
 
           <div className="password-wrapper">
-            <Input
-              variant='filled'
+            <input
               type={showPwd ? 'text' : 'password'}
               name='confirmpassword'
               onChange={handleInputChange}
@@ -187,9 +184,7 @@ const SignupForm = () => {
             <>
               <div className='location-input-wrapper'>
                 <div className='location-wrapper-left'>
-                  <Input
-                    variant='filled'
-                    type='text'
+                  <input
                     name='city'
                     onChange={handleInputChange}
                     value={signupData.city}
@@ -198,15 +193,14 @@ const SignupForm = () => {
                   />
                 </div>
                 <div className='location-wrapper-right'>
-                  <Select
-                    variant='filled'
+                  <select
                     type='text'
                     name='state'
                     onChange={handleInputChange}
                     value={signupData.state}
-                    placeholder='state'
                     className='login-input login-input-state'
                   >
+                    <option value="" selected disabled hidden>State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -258,7 +252,7 @@ const SignupForm = () => {
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
-                  </Select>
+                  </select>
                 </div>
               </div>
               <div className='signup-location-wrapper'>
