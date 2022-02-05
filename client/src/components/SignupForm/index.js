@@ -308,7 +308,17 @@ const SignupForm = () => {
             </div>
           )}
         </span>
-      </div >
+
+        {/* <div className='signup-form-btn'>
+          <button
+            type='submit'
+            className='submit-btn'
+            onClick={signupSubmit}
+          >
+            Sign Up
+          </button>
+        </div> */}
+      </div>
 
       <div className='login-options'>
         <span className="save-login">
@@ -329,13 +339,13 @@ const SignupForm = () => {
           Next
         </button>
 
-        {/* <button
+        <button
           type='submit'
           className='submit-btn'
           onClick={signupSubmit}
         >
           Sign Up
-        </button> */}
+        </button>
       </div>
     </>
   );
