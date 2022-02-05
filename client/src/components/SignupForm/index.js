@@ -177,6 +177,7 @@ const SignupForm = () => {
       </div>
 
       <div className='signup-right' id='location-form'>
+        <div className='signup-right-inner-wrapper'>
         <label className='login-label'>
           Use Location Services?
           <span className='required-label'>*</span>
@@ -308,6 +309,7 @@ const SignupForm = () => {
             </div>
           )}
         </span>
+        </div>
 
         <div className='signup-form-btn'>
           <button

@@ -4,7 +4,8 @@
   align-items: center;
   position: relative;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
-  width: 40%;
+  /* width: 40%; */
+  width: 80%;
   margin: 0 auto;
   margin-top: 5rem;
   padding-bottom: 1rem;
