@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 import './query.css';
@@ -10,9 +11,9 @@ const DonationCard = () => {
         DUMMY NAME
       </h1>
 
-      <button className='donate-btn'>
+      <Link to='/' className='donate-btn'>
         test
-      </button>
+      </Link>
     </div>
   );
 };
