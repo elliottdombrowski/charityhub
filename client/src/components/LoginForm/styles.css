@@ -162,7 +162,7 @@
 .signup-location-header {
   text-decoration: underline;
   cursor: pointer;
-  color: var(--black);
+  color: var(--link-optional);
 }
 
 .arrow-icon {
@@ -172,6 +172,14 @@
 
 .arrow-right {
   margin-right: 10px;
+}
+
+.arrow-down > path {
+  color: var(--link-optional);
+}
+
+.arrow-color {
+  color: black !important;
 }
 
 .arrow-icon.animate {
@@ -222,5 +230,6 @@
 }
 
 :disabled {
-  background: var(--ddblue);
+  background: var(--btn-disabled);
+  cursor: initial;
 }

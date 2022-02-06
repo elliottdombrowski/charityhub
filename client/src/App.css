@@ -9,7 +9,9 @@
   
   --white: white;
   --black: black;
-  
+
+  --btn-disabled: #335067;
+  --link-optional: #7c949c;
   --login-background: #dbe5e5;
   --login-background-two: #d4dce6;
   --input-placeholder: #a0aec0;
