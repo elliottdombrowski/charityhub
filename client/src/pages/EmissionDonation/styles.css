@@ -1,4 +1,6 @@
 .emission-donation-wrapper {
+  height: 100%;
+  padding: 3rem 0;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
 }
 

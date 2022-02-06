@@ -1,5 +1,23 @@
 .donation-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
   height: 300px;
   width: 30%;
   background: var(--login-background-two);
+}
+
+.card-header {
+  color: var(--black);
+  font-size: 130%;
+}
+
+.donate-btn {
+  width: 70%;
+  padding: 8px 0;
+  border-radius: 10px;
+  background: var(--dgreen);
 }
