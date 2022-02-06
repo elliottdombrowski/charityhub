@@ -17,6 +17,7 @@
   border-radius: 5px;
   margin: 8px 0;
   color: black;
+  transition: 0.2s ease-in-out;
 }
 
 .signup-left {
@@ -228,4 +229,9 @@
 :disabled {
   background: var(--btn-disabled);
   cursor: initial;
+}
+
+.login-input:hover,
+.login-input:focus {
+  outline: 1px solid var(--input-placeholder);
 }
