@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import LoginForm from '../../components/LoginForm';
 import SignupForm from '../../components/SignupForm';
+import LoginSvg from '../../components/LoginSvg';
 
 import './styles.css';
 import './query.css';
@@ -32,7 +33,7 @@ const LoginWrapper = () => {
       </section>
 
       <section className='login-page-right'>
-        
+        <LoginSvg />
       </section>
     </main>
   );
