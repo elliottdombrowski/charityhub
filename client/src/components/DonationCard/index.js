@@ -5,7 +5,9 @@ import './query.css';
 
 const DonationCard = () => {
   return (
-    <div>hi</div>
+    <div className="donation-card">
+      
+    </div>
   );
 };
 

@@ -6,7 +6,13 @@ import './query.css';
 
 const EmissionDonation = () => {
   return (
-    <div>hi</div>
+    <section className='emission-donation-wrapper'>
+      <span className='emission-donation-cards'>
+        <DonationCard />
+        <DonationCard />
+        <DonationCard />
+      </span>
+    </section>
   );
 };
 

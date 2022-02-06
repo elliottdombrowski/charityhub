@@ -1,0 +1,5 @@
+.donation-card {
+  height: 300px;
+  width: 30%;
+  background: var(--login-background-two);
+}

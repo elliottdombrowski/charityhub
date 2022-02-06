@@ -1,0 +1,9 @@
+.emission-donation-wrapper {
+  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+}
+
+.emission-donation-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
