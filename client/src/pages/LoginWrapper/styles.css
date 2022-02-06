@@ -4,7 +4,7 @@
   justify-content: space-around;
   /* background: linear-gradient(to right, var(--gblue), var(--blue)); */
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
-  height: 100vh;
+  height: 90vh;
 }
 
 .login-form-wrapper {
@@ -31,6 +31,11 @@
   bottom: 5px;
   padding: 0 1rem;
   text-align: left;
-  text-decoration: underline;
+  color: var(--btn-disabled);
+  text-decoration: none;
   z-index: 4;
+}
+
+.form-switcher:hover {
+  text-decoration: underline;
 }
