@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Input } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -46,6 +45,12 @@ const LoginForm = () => {
     } catch (err) {
       console.log(err);
     }
+
+    setLoginData({
+      email: '',
+      password: ''
+    });
+    setErr('');
   };
 
   return (
@@ -57,13 +62,13 @@ const LoginForm = () => {
         log in
       </label>
       <div className="password-wrapper">
-        <Input
-          variant='filled'
+        <input
           type='text'
           name='email'
           onChange={handleInputChange}
           value={loginData.email}
           placeholder='email'
+          required
           className='login-input'
         />
         <span 
@@ -74,13 +79,13 @@ const LoginForm = () => {
       </div>
 
       <div className="password-wrapper">
-        <Input
-          variant='filled'
+        <input
           type={showPwd ? "text" : "password"}
           name='password'
           onChange={handleInputChange}
           value={loginData.password}
           placeholder='password'
+          required
           className='login-input'
           id='change-pwd'
         />
@@ -115,6 +120,7 @@ const LoginForm = () => {
         <button
           type='submit'
           className="submit-btn"
+          disabled={!(loginData.email && loginData.password)}
         >
           Log In
         </button>

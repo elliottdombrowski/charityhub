@@ -9,40 +9,50 @@
 }
 
 .login-input {
+  width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 5px;
   margin: 8px 0;
   color: black;
+  transition: 0.2s ease-in-out;
 }
 
 .signup-left {
   position: absolute;
-  right: 0;
+  top: 0;
   height: 100%;
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  background: var(--login-background-two);
   transition: 0.2s ease-in-out;
   z-index: 2;
 }
 
 .signup-right {
   position: absolute;
-  left: 0;
-  height: 100%;
-  background: linear-gradient(to left, var(--ddblue), var(--dblue));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  height: 85%;
+  background: var(--login-background-two);
   transition: 0.2s ease-in-out;
   z-index: 1;
 }
 
 .signup-right.active {
-  left: 50%;
-  border-radius: 0 10px 10px 0;
+  top: 100%;
+  border-radius: 0 0 10px 10px;
 }
 
 .signup-left.active {
-  right: 50%;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .login-label {
   margin-right: 10px;
+  color: var(--black);
 }
 
 .double-password-wrapper {
@@ -61,7 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 1rem;
+  right: .2rem;
   background: var(--dgreen);
   padding: 10px 0;
   width: 40px;
@@ -129,6 +139,7 @@
 .location-services-button {
   padding: 4px 15px;
   width: 30%;
+  color: var(--black);
 }
 
 .location-services-secondary {
@@ -141,6 +152,7 @@
 .location-services-primary {
   background: var(--dgreen);
   border-radius: 10px;
+  color: var(--white);
 }
 
 .location-input-wrapper {
@@ -148,13 +160,10 @@
   flex-direction: row;
 }
 
-.login-input-state {
-  color: white;
-}
-
 .signup-location-header {
   text-decoration: underline;
   cursor: pointer;
+  color: var(--btn-disabled);
 }
 
 .arrow-icon {
@@ -164,6 +173,10 @@
 
 .arrow-right {
   margin-right: 10px;
+}
+
+.arrow-down > path {
+  color: var(--btn-disabled);
 }
 
 .arrow-icon.animate {
@@ -198,6 +211,27 @@
   color: red;
 }
 
-.submit-btn {
+.submit-btn,
+.save-login-checkbox {
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.login-input + select:invalid,
+.login-input + select option[value=""] {
+  color: var(--input-placeholder);
+}
+
+::placeholder {
+  color: var(--input-placeholder);
+}
+
+:disabled {
+  background: var(--btn-disabled);
+  cursor: initial;
+}
+
+.login-input:hover,
+.login-input:focus {
+  outline: 1px solid var(--input-placeholder);
 }
