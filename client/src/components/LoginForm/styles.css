@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   height: 100%;
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  background: var(--login-background-two);
   transition: 0.2s ease-in-out;
   z-index: 2;
 }
@@ -35,7 +35,7 @@
   justify-content: space-between;
   top: 0;
   height: 85%;
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  background: var(--login-background-two);
   transition: 0.2s ease-in-out;
   z-index: 1;
 }
@@ -51,6 +51,7 @@
 
 .login-label {
   margin-right: 10px;
+  color: var(--black);
 }
 
 .double-password-wrapper {
@@ -137,6 +138,7 @@
 .location-services-button {
   padding: 4px 15px;
   width: 30%;
+  color: var(--black);
 }
 
 .location-services-secondary {
@@ -149,6 +151,7 @@
 .location-services-primary {
   background: var(--dgreen);
   border-radius: 10px;
+  color: var(--white);
 }
 
 .location-input-wrapper {
@@ -159,6 +162,7 @@
 .signup-location-header {
   text-decoration: underline;
   cursor: pointer;
+  color: var(--black);
 }
 
 .arrow-icon {

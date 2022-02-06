@@ -10,6 +10,8 @@
   --white: white;
   --black: black;
   
+  --login-background: #dbe5e5;
+  --login-background-two: #d4dce6;
   --input-placeholder: #a0aec0;
   --input-outline: #d9e2dd;
 }
