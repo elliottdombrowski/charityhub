@@ -10,6 +10,8 @@ import Homepage from './pages/Homepage';
 import LoginWrapper from './pages/LoginWrapper';
 import Profile from './pages/Profile';
 import EmissionDonation from './pages/EmissionDonation';
+import Footer from './components/Footer';
+
 import FooterSvg from './components/FooterSvg';
 
 import './App.css';
@@ -41,6 +43,7 @@ function App() {
           <Router>
             <Navbar />
             <Toolbar />
+            <Footer />
             <Route exact path='/'>
               <Homepage />
               <EmissionDonation />
