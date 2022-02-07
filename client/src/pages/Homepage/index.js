@@ -1,4 +1,5 @@
 import React from 'react';
+import HomepageSvg from '../../components/HomepageSvg';
 
 import './styles.css';
 import './query.css';
@@ -6,7 +7,9 @@ import './query.css';
 const Homepage = () => {
   return (
     <main className='homepage-wrapper'>
-      <p>homepage</p>
+      <div className='homepage-inner'>
+        <HomepageSvg />
+      </div>
     </main>
   );
 };
