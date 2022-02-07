@@ -10,8 +10,8 @@
 }
 
 .footer-developers {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: 0px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,25 @@
   display: none;
 }
 
+.footer-developer-info {
+  margin: 1rem 0;
+}
+
+.developer-contact-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.developer-contact-item {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  margin-right: 10px;
+}
+
 .footer-github {
   position: absolute;
   right: 1rem;
@@ -43,11 +62,12 @@
 }
 
 .footer-developers:hover {
-  width: 40%;
-  height: 300px;
+  width: 35%;
+  height: 180px;
   border-radius: 10px 10px 0 0;
   border-left: 1px solid white;
   border-right: 1px solid white;
+  background: linear-gradient(to right, var(--ddblue), var(--dblue));
 }
 
 .footer-developers:hover > .footer-developer-info {
