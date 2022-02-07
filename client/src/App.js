@@ -6,6 +6,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Navbar from './components/Navbar';
 import Toolbar from './components/Toolbar';
+import Homepage from './pages/Homepage';
 import LoginWrapper from './pages/LoginWrapper';
 import Profile from './pages/Profile';
 import EmissionDonation from './pages/EmissionDonation';
@@ -39,7 +40,10 @@ function App() {
           <Router>
             <Navbar />
             <Toolbar />
-            <Route exact path='/' component={EmissionDonation} />
+            <Route exact path='/'>
+              <Homepage />
+              <EmissionDonation />
+            </Route>
             <Route exact path='/login' component={LoginWrapper} />
             <Route exact path='/profile' component={Profile} />
           </Router>
