@@ -1,3 +1,10 @@
+.footer-svg-wrapper {
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem 0 0;
+}
+
 .cls-1 {
   isolation: isolate;
 }

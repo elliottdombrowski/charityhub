@@ -10,6 +10,7 @@ import Homepage from './pages/Homepage';
 import LoginWrapper from './pages/LoginWrapper';
 import Profile from './pages/Profile';
 import EmissionDonation from './pages/EmissionDonation';
+import FooterSvg from './components/FooterSvg';
 
 import './App.css';
 
@@ -43,6 +44,7 @@ function App() {
             <Route exact path='/'>
               <Homepage />
               <EmissionDonation />
+              <FooterSvg />
             </Route>
             <Route exact path='/login' component={LoginWrapper} />
             <Route exact path='/profile' component={Profile} />

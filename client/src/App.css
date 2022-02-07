@@ -26,3 +26,7 @@
   font-size: 100%;
   color: var(--white);
 }
+
+#root {
+  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+}
