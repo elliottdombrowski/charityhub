@@ -1,0 +1,43 @@
+.donation-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.donation-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  height: 350px;
+  width: 30%;
+  border-radius: 10px;
+  background: var(--login-background-two);
+}
+
+.card-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-header {
+  color: var(--black);
+  font-size: 130%;
+}
+
+.card-img {
+  width: 70%;
+  height: auto;
+}
+
+.donate-btn {
+  width: 70%;
+  padding: 8px 0;
+  border-radius: 10px;
+  background: var(--dgreen);
+  text-align: center;
+}
