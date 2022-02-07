@@ -6,7 +6,7 @@ import './query.css';
 const Homepage = () => {
   return (
     <main className='homepage-wrapper'>
-      <p style={{ color: 'black' }}>homepage</p>
+      <p>homepage</p>
     </main>
   );
 };
