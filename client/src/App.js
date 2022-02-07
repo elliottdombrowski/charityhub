@@ -43,7 +43,6 @@ function App() {
           <Router>
             <Navbar />
             <Toolbar />
-            <Footer />
             <Route exact path='/'>
               <Homepage />
               <EmissionDonation />
@@ -51,6 +50,7 @@ function App() {
             </Route>
             <Route exact path='/login' component={LoginWrapper} />
             <Route exact path='/profile' component={Profile} />
+            <Footer />
           </Router>
         </div>
       </ChakraProvider>
