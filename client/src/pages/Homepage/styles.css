@@ -1,3 +1,14 @@
-.homepage-wrapper > * {
+.homepage-wrapper {
+  display: flex;
+  flex-direction: row;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
+}
+
+.homepage-left,
+.homepage-right {
+  width: 50%;
+}
+
+.homepage-right {
+  margin-top: 5rem;
 }

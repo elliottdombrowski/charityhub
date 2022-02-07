@@ -7,9 +7,13 @@ import './query.css';
 const Homepage = () => {
   return (
     <main className='homepage-wrapper'>
-      <div className='homepage-inner'>
+      <section className='homepage-left'>
+
+      </section>
+      
+      <section className='homepage-right'>
         <HomepageSvg />
-      </div>
+      </section>
     </main>
   );
 };
