@@ -11,6 +11,9 @@ const Footer = () => {
   return (
     <footer className='footer-wrapper'>
       <span className='footer-developers'>
+        <div className='footer-developer-info'>
+          <h1 className='developer-info-header'>developed by elliott dombrowski.</h1>
+        </div>
         {developers}
       </span>
     </footer>
