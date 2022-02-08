@@ -6,6 +6,12 @@
   height: 85vh;
 }
 
+.notfound-header {
+  margin-bottom: 3rem;
+  font-size: 200%;
+  font-weight: bold;
+}
+
 .notfound-svg-wrapper {
   width: 60%;
   height: auto;
