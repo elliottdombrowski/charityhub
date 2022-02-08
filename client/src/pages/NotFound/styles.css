@@ -5,3 +5,8 @@
   align-items: center;
   height: 85vh;
 }
+
+.notfound-svg-wrapper {
+  width: 60%;
+  height: auto;
+}
