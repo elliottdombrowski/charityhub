@@ -11,6 +11,7 @@ import LoginWrapper from './pages/LoginWrapper';
 import Profile from './pages/Profile';
 import EmissionDonation from './pages/EmissionDonation';
 import Footer from './components/Footer';
+import NotFound from './pages/NotFound';
 
 import FooterSvg from './components/FooterSvg';
 
@@ -41,15 +42,21 @@ function App() {
       <ChakraProvider>
         <div className="App">
           <Router>
+
             <Navbar />
             <Toolbar />
-            <Route exact path='/'>
-              <Homepage />
-              <EmissionDonation />
-              <FooterSvg />
-            </Route>
-            <Route exact path='/login' component={LoginWrapper} />
-            <Route exact path='/profile' component={Profile} />
+
+            <Switch>
+              <Route exact path='/'>
+                <Homepage />
+                <EmissionDonation />
+                <FooterSvg />
+              </Route>
+              <Route exact path='/login' component={LoginWrapper} />
+              <Route exact path='/profile' component={Profile} />
+              <Route component={NotFound} />
+            </Switch>
+            
             <Footer />
           </Router>
         </div>
