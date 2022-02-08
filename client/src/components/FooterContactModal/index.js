@@ -48,16 +48,6 @@ const FooterContactModal = () => {
               linkedin.com/elliottdombrowski
             </a>
           </li>
-          <li className='developer-contact-item developer-contact-github'>
-            <a
-              href='https://twitter.com/dupagewasteland'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              {twitter}
-              twitter.com/dupagewasteland
-            </a>
-          </li>
         </ul>
       </div>
       {developers}
