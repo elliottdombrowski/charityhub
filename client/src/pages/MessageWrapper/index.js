@@ -5,7 +5,7 @@ import MessageContainer from '../../components/MessageContainer';
 import './styles.css';
 import './query.css';
 
-const Messages = () => {
+const MessageWrapper = () => {
   return (
     <main className='message-page-wrapper'>
       main
@@ -15,4 +15,4 @@ const Messages = () => {
   );
 };
 
-export default Messages;
+export default MessageWrapper;
