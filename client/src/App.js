@@ -56,7 +56,7 @@ function App() {
               <Route exact path='/profile' component={Profile} />
               <Route component={NotFound} />
             </Switch>
-            
+
             <Footer />
           </Router>
         </div>
