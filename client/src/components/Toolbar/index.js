@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 import CurrDate from '../CurrDate';
 import ProfileIcon from '../ProfileIcon';
+import MessengerIcon from '../MessengerIcon';
 
 import './styles.css';
 import './query.css';
@@ -37,6 +39,11 @@ const Toolbar = () => {
 
       <nav className='toolbar-right'>
         <ul className='nav-item-wrapper'>
+          {Auth.loggedIn() ? (
+            <MessengerIcon />
+          ) : (
+            <></>
+          )}
           <ProfileIcon />
         </ul>
       </nav>
