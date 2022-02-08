@@ -1,0 +1,15 @@
+.back-to-home-icon {
+  margin-right: 10px;
+}
+
+.back-to-home-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(to right, var(--gblue), var(--blue));
+  padding: 8px 25px;
+  margin-top: 2rem;
+  border: 1px solid var(--white); 
+  border-radius: 10px;
+  font-size: 25px;
+}

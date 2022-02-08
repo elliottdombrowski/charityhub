@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.css';
 import './query.css';
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />
+const arrowLeft = <FontAwesomeIcon className='back-to-home-icon' icon={faArrowCircleLeft} />
 
 const BackToHomeBtn = () => {
   return (
@@ -15,7 +15,8 @@ const BackToHomeBtn = () => {
       to='/'
       className="back-to-home-btn"
     >
-      test
+      {arrowLeft}
+      Back to Homepage
     </Link>
   );
 };
