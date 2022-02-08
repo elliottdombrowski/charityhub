@@ -15,8 +15,10 @@ const BackToHomeBtn = () => {
       to='/'
       className="back-to-home-btn"
     >
-      {arrowLeft}
-      Back to Homepage
+      <div className="back-to-home-inner">
+        {arrowLeft}
+        Back to Homepage
+      </div>
     </Link>
   );
 };
