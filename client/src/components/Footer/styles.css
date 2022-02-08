@@ -1,0 +1,10 @@
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3rem;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  background: var(--blue);
+}
