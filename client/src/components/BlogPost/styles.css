@@ -45,6 +45,8 @@
 }
 
 .blog-post-toolbar > * > svg > path:hover,
-.blog-post-comment-icon > * > svg > path:hover {
+.blog-post-comment-icon > * > svg > path:hover,
+.blog-post-toolbar > * > svg > path:focus,
+.blog-post-comment-icon > * > svg > path:focus {
   color: var(--black);
 }
