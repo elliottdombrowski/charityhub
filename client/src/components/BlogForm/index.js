@@ -28,16 +28,20 @@ const BlogForm = () => {
     }
   }
   
-  const postWrapperFunction = (event) => {
-    setCharCount(event.target.value.length);
-    setBlogPostData(event.target.value);
+  // const postWrapperFunction = (event) => {
+  //   // setBlogPostData(event.target.value);
+  //   setCharCount(event.target.value.length);
 
-    charCount >= 500 ? setErr('your post is too long!') : setErr('');
-  };
+  //   charCount >= 500 ? setErr('your post is too long!') : setErr('');
+  // };
 
   const handleBlogInputChange = (event) => {
     const { name, value } = event.target;
     setBlogPostData({ ...blogPostData, [name]: value });
+
+    setCharCount(event.target.value.length);
+
+    charCount >= 500 ? setErr('your post is too long!') : setErr('');
   };
 
   const postSubmit = async (event) => {
@@ -73,10 +77,23 @@ const BlogForm = () => {
               </p>
             </span>
           </span>
+          <input
+            type='text'
+            name='blog_title'
+            onChange={handleBlogInputChange}
+            value={blogPostData.blog_title}
+            placeholder='Post Title'
+            required
+            className='blog-title-input'
+          />
+
           <textarea 
             className='blog-textarea'
+            name='blog_body'
             value={blogPostData.blog_body}
-            onChange={postWrapperFunction}
+            onChange={handleBlogInputChange}
+            required
+            placeholder='Write your post!'
           />
 
           <div className='blog-post-btn-wrapper'>
@@ -88,7 +105,7 @@ const BlogForm = () => {
               required
               className='blog-category-select'
             >
-              <option value="" selected disabled hidden>Choose a Category</option>
+              <option value="" defaultValue disabled hidden>Choose a Category</option>
               <option value="1">OPTION ONE</option>
               <option value="2">OPTION TWO</option>
               <option value="3">OPTION THREE</option>
@@ -99,6 +116,8 @@ const BlogForm = () => {
             <button
               type='submit'
               className='blog-post-btn'
+              // disabled={!(blogPostData.blog_title && blogPostData.body && blogPostData.blog_category)}
+              onSubmit={postSubmit}
             >
               Submit Post!
             </button>
