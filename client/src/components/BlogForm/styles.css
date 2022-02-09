@@ -28,6 +28,10 @@
   color: black;
 }
 
+.blog-category-select {
+  color: black;
+}
+
 .blog-char-count-wrapper {
   display: flex;
   flex-direction: row;
@@ -49,9 +53,12 @@
 }
 
 .blog-post-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: .5rem;
-  text-align: right;
 }
 
 .blog-post-btn {

@@ -6,7 +6,7 @@ import './styles.css';
 import './query.css';
 
 const BlogForm = () => {
-  const [blogPost, setBlogPost] = useState({
+  const [blogPostData, setBlogPostData] = useState({
     blog_author: '',
     blog_title: '',
     blog_body: '',
@@ -30,15 +30,20 @@ const BlogForm = () => {
   
   const postWrapperFunction = (event) => {
     setCharCount(event.target.value.length);
-    setBlogPost(event.target.value);
+    setBlogPostData(event.target.value);
 
     charCount >= 500 ? setErr('your post is too long!') : setErr('');
+  };
+
+  const handleBlogInputChange = (event) => {
+    const { name, value } = event.target;
+    setBlogPostData({ ...blogPostData, [name]: value });
   };
 
   const postSubmit = async (event) => {
     event.preventDefault();
 
-    setBlogPost('');
+    setBlogPostData('');
     setCharCount(0);
     setErr('');
   };
@@ -70,7 +75,7 @@ const BlogForm = () => {
           </span>
           <textarea 
             className='blog-textarea'
-            value={blogPost}
+            value={blogPostData.blog_body}
             onChange={postWrapperFunction}
           />
 
@@ -79,9 +84,16 @@ const BlogForm = () => {
               type='text'
               name='category'
               onChange={handleBlogInputChange}
-              value
+              value={blogPostData.blog_category}
+              required
+              className='blog-category-select'
             >
-              
+              <option value="" selected disabled hidden>Choose a Category</option>
+              <option value="1">OPTION ONE</option>
+              <option value="2">OPTION TWO</option>
+              <option value="3">OPTION THREE</option>
+              <option value="4">OPTION FOUR</option>
+              <option value="5">OPTION FIVE</option>
             </select>
 
             <button
