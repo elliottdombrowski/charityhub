@@ -7,9 +7,9 @@ import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 
 const thumbsDown = <FontAwesomeIcon icon={faThumbsDown} className='fa-2x' />
 
-const ThumbsUpIcon = () => {
+const ThumbsDownIcon = () => {
   return (
-    <li className='nav-item thumbs-up'>
+    <li className='nav-item thumbs-down'>
       {thumbsDown}
     </li>
   );

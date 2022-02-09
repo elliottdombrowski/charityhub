@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentIcon from '../CommentIcon';
+import ThumbsUpIcon from '../ThumbsUpIcon';
+import ThumbsDownIcon from '../ThumbsDownIcon';
 
 import './styles.css';
 import './query.css';
@@ -52,10 +54,15 @@ const BlogPost = () => {
                 {singlePost.body}
               </p>
 
-              <span className='blog-post-toolbar'>
-                <Link to='/blog:id' className='blog-post-comment-icon'>
-                  <CommentIcon />
-                </Link>
+              <span className='blog-post-toolbar-wrapper'>
+                <ul className='blog-post-toolbar'>
+                  <ThumbsUpIcon />
+                  <ThumbsDownIcon />
+                  
+                  <Link to='/blog:id' className='blog-post-comment-icon'>
+                    <CommentIcon />
+                  </Link>
+                </ul>
               </span>
             </section>
           );

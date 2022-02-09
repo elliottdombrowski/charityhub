@@ -31,6 +31,20 @@
   font-size: 18px;
 }
 
-.comment-icon > svg > path {
+.blog-post-toolbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.blog-post-toolbar > * > svg > path,
+.blog-post-comment-icon > * > svg > path {
+  color: var(--btn-disabled);
+  transition: 0.2s ease-in-out;
+}
+
+.blog-post-toolbar > * > svg > path:hover,
+.blog-post-comment-icon > * > svg > path:hover {
   color: var(--black);
 }
