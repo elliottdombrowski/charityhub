@@ -6,7 +6,13 @@ import './styles.css';
 import './query.css';
 
 const BlogForm = () => {
-  const [blogPost, setBlogPost] = useState('');
+  const [blogPost, setBlogPost] = useState({
+    blog_author: '',
+    blog_title: '',
+    blog_body: '',
+    blog_category: '',
+  });
+
   const [charCount, setCharCount] = useState(0);
   const [err, setErr] = useState('');
 
@@ -26,7 +32,7 @@ const BlogForm = () => {
     setCharCount(event.target.value.length);
     setBlogPost(event.target.value);
 
-    charCount >= 500 ? setErr('your post is too long!') : charCount >= 450 ? setErr('characters left: ') : setErr('');
+    charCount >= 500 ? setErr('your post is too long!') : setErr('');
   };
 
   const postSubmit = async (event) => {
@@ -47,8 +53,8 @@ const BlogForm = () => {
           <span className='blog-header-wrapper'>
             <label className='blog-label'>Create a post!</label>
             <span className='blog-char-count-wrapper'>
-              <p 
-                style={charCount >= 500 ? styles.error : charCount >= 450 ? styles.warning : styles.clear}
+              <p
+                style={charCount >= 500 ? styles.error : styles.clear}
                 className='blog-char-err'
               >
                 {err}
@@ -69,6 +75,15 @@ const BlogForm = () => {
           />
 
           <div className='blog-post-btn-wrapper'>
+            <select
+              type='text'
+              name='category'
+              onChange={handleBlogInputChange}
+              value
+            >
+              
+            </select>
+
             <button
               type='submit'
               className='blog-post-btn'
