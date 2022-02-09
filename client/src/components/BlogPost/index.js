@@ -35,7 +35,23 @@ let dummyPosts = [
   },
 ];
 
+// const dummyComments = [
+//   {
+//     post_id: 1,
+//     comment_id: 1,
+//     comment_author: 'commenter one',
+//     comment_body: 'testing for comments 1234 testing',
+//   },
+//   {
+//     post_id: 1,
+//     comment_id: 2,
+//     comment_author: 'commenter two',
+//     comment_body: 'testing for comments 1234 testing',
+//   }
+// ]
+
 const BlogPost = () => {
+  // console.log(dummyPosts.comments.comment_author);
   return (
     <section className='blog-post-wrapper'>
       {
@@ -59,7 +75,7 @@ const BlogPost = () => {
                 <ul className='blog-post-toolbar-left'>
                   <BookmarkIcon />
                 </ul>
-                
+
                 <ul className='blog-post-toolbar-right'>
                   <ThumbsUpIcon />
                   <ThumbsDownIcon />
@@ -69,6 +85,11 @@ const BlogPost = () => {
                   </Link>
                 </ul>
               </span>
+
+              <section className='single-blog-post-comments'>
+                <h1>
+                </h1>
+              </section>
             </section>
           );
         })
