@@ -1,0 +1,22 @@
+.charity-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.single-charity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 2rem;
+  text-align: center;
+}
+
+.charity-card-img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}

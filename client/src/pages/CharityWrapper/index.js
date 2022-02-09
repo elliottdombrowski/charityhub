@@ -9,8 +9,8 @@ const CharityWrapper = () => {
   return (
     <main className='charity-wrapper'>
       <h1>charity homepage</h1>
-      <CharityFilter />
       <CharityCard />
+      <CharityFilter />
     </main>
   );
 };

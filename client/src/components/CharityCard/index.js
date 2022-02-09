@@ -39,7 +39,27 @@ let dummyCharities = [
 const CharityCard = () => {
   return (
     <section className="charity-card-wrapper">
-      <h1>charity card</h1>
+      {
+        dummyCharities.map((singleCharity) => {
+          return (
+            <section className="single-charity-card" key={singleCharity.id}>
+              <div className="charity-card-header-wrapper">
+                <h1 className="charity-name">
+                  {singleCharity.charity_name}
+                </h1>
+
+                <p className="charity-desc">
+                  {singleCharity.charity_desc}
+                </p>
+
+                <div className="charity-card-img">
+                  <img src={require('./placeholder.jpeg')}></img>
+                </div>
+              </div>
+            </section>
+          )
+        })
+      }
     </section>
   );
 };
