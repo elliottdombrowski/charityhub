@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentIcon from '../CommentIcon';
 
 import './styles.css';
 import './query.css';
@@ -52,7 +53,9 @@ const BlogPost = () => {
               </p>
 
               <span className='blog-post-toolbar'>
-                <Link to='/blog:id'></Link>
+                <Link to='/blog:id' className='blog-post-comment-icon'>
+                  <CommentIcon />
+                </Link>
               </span>
             </section>
           );

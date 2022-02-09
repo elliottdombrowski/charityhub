@@ -12,8 +12,6 @@ import '../LoginForm/styles.css';
 const arrowDown = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-down' id='arrow-down' />
 const arrowRight = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-right' id='arrow-right' />
 
-const red = 'red'
-
 const SignupForm = () => {
   //SIGNUP DATA STATE
   const [signupData, setSignupData] = useState({

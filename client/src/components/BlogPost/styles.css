@@ -30,3 +30,7 @@
 .blog-post-body {
   font-size: 18px;
 }
+
+.comment-icon > svg > path {
+  color: var(--black);
+}
