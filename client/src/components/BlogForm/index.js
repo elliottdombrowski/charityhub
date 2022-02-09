@@ -11,7 +11,7 @@ const BlogForm = () => {
 
   const styles = {
     clear: {
-      color: 'white',
+      color: 'black',
     },
     warning: {
       color: 'yellow',
@@ -66,6 +66,15 @@ const BlogForm = () => {
             value={blogPost}
             onChange={postWrapperFunction}
           />
+
+          <div className='blog-post-btn-wrapper'>
+            <button
+              type='submit'
+              className='blog-post-btn'
+            >
+              Submit Post!
+            </button>
+          </div>
         </form>
       ) : (
        <></> 
