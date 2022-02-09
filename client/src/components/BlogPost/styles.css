@@ -1,0 +1,60 @@
+.blog-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.single-blog-post > *,
+.blog-post-header-wrapper > * {
+  color: var(--black);
+}
+
+.single-blog-post {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  background: var(--login-background-two);
+}
+
+.blog-post-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 23px;
+}
+
+.blog-post-body {
+  font-size: 18px;
+}
+
+.blog-post-toolbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--btn-disabled);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+}
+
+.blog-post-toolbar-right > * > svg > path,
+.blog-post-toolbar-left > * > svg > path,
+.blog-post-comment-icon > * > svg > path {
+  color: var(--login-background-two);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.blog-post-toolbar-right > * > svg > path:hover,
+.blog-post-toolbar-left > * > svg > path:hover,
+.blog-post-comment-icon > * > svg > path:hover,
+.blog-post-toolbar-right > * > svg > path:focus,
+.blog-post-toolbar-left > * > svg > path:focus,
+.blog-post-comment-icon > * > svg > path:focus {
+  color: var(--input-placeholder);
+}
