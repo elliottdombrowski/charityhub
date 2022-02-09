@@ -1,0 +1,36 @@
+.blog-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 5rem 0;
+}
+
+.blog-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.blog-char-count-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-char-err {
+  color: red;
+  margin-right: 10px;
+}
+
+.blog-textarea {
+  width: 100%;
+  height: 300px;
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 20px;
+  resize: none;
+  /* overflow-y: scroll; */
+}
