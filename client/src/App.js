@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import MessageWrapper from './pages/MessageWrapper';
 import BlogWrapper from './pages/BlogWrapper';
 import CharityWrapper from './pages/CharityWrapper';
+import NewsWrapper from './pages/NewsWrapper';
 import NotFound from './pages/NotFound';
 
 import FooterSvg from './components/FooterSvg';
@@ -60,6 +61,7 @@ function App() {
               <Route exact path='/messages' component={MessageWrapper} />
               <Route exact path='/blog' component={BlogWrapper} />
               <Route exact path='/charities' component={CharityWrapper} />
+              <Route exact path='/news' component={NewsWrapper} />
               <Route component={NotFound} />
             </Switch>
 
