@@ -36,23 +36,23 @@ const BlogPost = () => {
       {
         dummyPosts.map((singlePost) => {
           return (
-            <span className='single-blog-post' key={singlePost.id}>
+            <section className='single-blog-post' key={singlePost.id}>
               <div className='blog-post-header-wrapper'>
-                <h1 className='blog-post-author'>
-                  {singlePost.author}
-                </h1>
-                <h2 className='blog-post-title'>
+                <h1 className='blog-post-title'>
                   {singlePost.title}
+                </h1>
+                <h2 className='blog-post-author'>
+                  {singlePost.author}
                 </h2>
               </div>
 
               <p className='blog-post-body'>
                 {singlePost.body}
               </p>
-            </span>
+            </section>
           );
         })
-      };
+      }
     </section>
   );
 };

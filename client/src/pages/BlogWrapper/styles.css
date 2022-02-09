@@ -3,4 +3,5 @@
   flex-direction: column;
   align-items: center;
   background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  margin-bottom: 5rem;
 }

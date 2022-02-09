@@ -1,0 +1,32 @@
+.blog-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.single-blog-post > *,
+.blog-post-header-wrapper > * {
+  color: var(--black);
+}
+
+.single-blog-post {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  background: var(--login-background-two);
+}
+
+.blog-post-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 23px;
+}
+
+.blog-post-body {
+  font-size: 18px;
+}
