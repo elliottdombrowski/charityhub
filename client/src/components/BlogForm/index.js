@@ -24,6 +24,8 @@ const BlogForm = () => {
   const postWrapperFunction = (event) => {
     setCharCount(event.target.value.length);
     setBlogPost(event.target.value);
+
+    charCount >= 500 ? setErr('your post is too long!') : charCount >= 450 ? setErr('characters left: ') : setErr('');
   };
 
   const postSubmit = async (event) => {
@@ -44,7 +46,10 @@ const BlogForm = () => {
           <span className='blog-header-wrapper'>
             <label className='blog-label'>Create a post!</label>
             <span className='blog-char-count-wrapper'>
-              <p className='blog-char-err'>
+              <p 
+                style={charCount >= 500 ? styles.error : charCount >= 450 ? styles.warning : styles.clear}
+                className='blog-char-err'
+              >
                 {err}
               </p>
 
