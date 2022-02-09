@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 import './query.css';
@@ -49,6 +50,10 @@ const BlogPost = () => {
               <p className='blog-post-body'>
                 {singlePost.body}
               </p>
+
+              <span className='blog-post-toolbar'>
+                <Link to='/blog:id'></Link>
+              </span>
             </section>
           );
         })
