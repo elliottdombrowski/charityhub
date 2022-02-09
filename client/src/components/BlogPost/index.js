@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CommentIcon from '../CommentIcon';
 import ThumbsUpIcon from '../ThumbsUpIcon';
 import ThumbsDownIcon from '../ThumbsDownIcon';
+import BookmarkIcon from '../BookmarkIcon';
 
 import './styles.css';
 import './query.css';
@@ -55,10 +56,14 @@ const BlogPost = () => {
               </p>
 
               <span className='blog-post-toolbar-wrapper'>
-                <ul className='blog-post-toolbar'>
+                <ul className='blog-post-toolbar-left'>
+                  <BookmarkIcon />
+                </ul>
+                
+                <ul className='blog-post-toolbar-right'>
                   <ThumbsUpIcon />
                   <ThumbsDownIcon />
-                  
+
                   <Link to='/blog:id' className='blog-post-comment-icon'>
                     <CommentIcon />
                   </Link>

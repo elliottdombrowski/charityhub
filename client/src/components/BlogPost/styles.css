@@ -34,10 +34,10 @@
 .blog-post-toolbar-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background: var(--btn-disabled);
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   margin-top: 1rem;
   border-radius: 50px;
 }
