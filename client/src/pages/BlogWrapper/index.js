@@ -16,6 +16,10 @@ const BlogWrapper = () => {
       <BlogForm />
       
       <form className='blog-search-bar-form'>
+        <label className='blog-label'>
+          Search for your favorite posts.
+        </label>
+
         <div className='blog-search-bar-wrapper'>
           <input 
             type='text'
