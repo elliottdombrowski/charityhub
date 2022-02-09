@@ -36,17 +36,24 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  background: var(--btn-disabled);
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  border-radius: 50px;
 }
 
-.blog-post-toolbar > * > svg > path,
+.blog-post-toolbar-right > * > svg > path,
+.blog-post-toolbar-left > * > svg > path,
 .blog-post-comment-icon > * > svg > path {
-  color: var(--btn-disabled);
+  color: var(--login-background-two);
   transition: 0.2s ease-in-out;
 }
 
-.blog-post-toolbar > * > svg > path:hover,
+.blog-post-toolbar-right > * > svg > path:hover,
+.blog-post-toolbar-left > * > svg > path:hover,
 .blog-post-comment-icon > * > svg > path:hover,
-.blog-post-toolbar > * > svg > path:focus,
+.blog-post-toolbar-right > * > svg > path:focus,
+.blog-post-toolbar-left > * > svg > path:focus,
 .blog-post-comment-icon > * > svg > path:focus {
-  color: var(--black);
+  color: var(--input-placeholder);
 }
