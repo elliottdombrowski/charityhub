@@ -33,5 +33,10 @@
   border-radius: 10px;
   font-size: 20px;
   resize: none;
-  /* overflow-y: scroll; */
+  transition: 0.2s ease-in-out;
+}
+
+.blog-textarea:hover,
+.blog-textarea:focus {
+  outline: 1px solid var(--input-placeholder);
 }
