@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LoginBtn from '../LoginBtn';
 import Auth from '../../utils/auth';
 
 import './styles.css';
@@ -37,10 +38,10 @@ const BlogForm = () => {
   };
 
   return (
-    <>
+    <section className='blog-form-wrapper'>
       {Auth.loggedIn() ? (
         <form 
-          className='blog-form-wrapper'
+          className='blog-form'
           onSubmit={postSubmit}
         >
           <span className='blog-header-wrapper'>
@@ -77,9 +78,15 @@ const BlogForm = () => {
           </div>
         </form>
       ) : (
-       <></> 
+       <span className='blog-prompt-sign-in'>
+         <h1 className='blog-prompt-sign-in-header'>
+          Log In to create or comment on posts!
+         </h1>
+
+         <LoginBtn />
+       </span>
       )}
-    </>
+    </section>
   );
 };
 

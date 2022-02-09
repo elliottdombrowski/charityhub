@@ -1,11 +1,16 @@
 .blog-form-wrapper {
+  width: 60%;
+  margin: 5rem 0;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+}
+
+.blog-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
-  margin: 5rem 0;
+  width: 100%;
   padding: 1rem;
-  border: 1px solid var(--white);
   border-radius: 10px;
   background: var(--login-background-two);
 }
@@ -59,4 +64,16 @@
 .blog-textarea:hover,
 .blog-textarea:focus {
   outline: 1px solid var(--input-placeholder);
+}
+
+.blog-prompt-sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 1.7rem;
+  font-size: 1.5em;
+}
+
+.blog-prompt-sign-in-header {
+  margin-bottom: 10px;
 }
