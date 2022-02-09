@@ -46,6 +46,7 @@
 .blog-post-toolbar-left > * > svg > path,
 .blog-post-comment-icon > * > svg > path {
   color: var(--login-background-two);
+  cursor: pointer;
   transition: 0.2s ease-in-out;
 }
 
