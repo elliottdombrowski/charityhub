@@ -12,6 +12,7 @@ import Profile from './pages/Profile';
 import EmissionDonation from './pages/EmissionDonation';
 import Footer from './components/Footer';
 import MessageWrapper from './pages/MessageWrapper';
+import BlogWrapper from './pages/BlogWrapper';
 import NotFound from './pages/NotFound';
 
 import FooterSvg from './components/FooterSvg';
@@ -56,6 +57,7 @@ function App() {
               <Route exact path='/login' component={LoginWrapper} />
               <Route exact path='/profile' component={Profile} />
               <Route exact path='/messages' component={MessageWrapper} />
+              <Route exact path='/blog' component={BlogWrapper} />
               <Route component={NotFound} />
             </Switch>
 
