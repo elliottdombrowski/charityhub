@@ -19,7 +19,7 @@ import NotFound from './pages/NotFound';
 
 import FooterSvg from './components/FooterSvg';
 
-import './App.css';
+import './App.scss';
 
 const httpLink = createHttpLink({
   uri: '/graphql',

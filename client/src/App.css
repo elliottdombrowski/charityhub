@@ -1,32 +1,14 @@
-:root {
-  --dblue: #1e425e;
-  --ddblue: #18354b;
-  --blue: #256670;
-  --gblue: #1e525a;
-  --dgreen: #407056;
-  --green: #ade28a;
-  --lgreen: #edfa8b;
-  
-  --white: white;
-  --black: black;
-
-  --btn-disabled: #335067;
-  --link-optional: #7c949c;
-  --login-background: #dbe5e5;
-  --login-background-two: #d4dce6;
-  --input-placeholder: #a0aec0;
-  --input-focus: #e2e8f0;
-  --input-outline: #d9e2dd;
-}
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 100%;
-  color: var(--white);
+  color: white;
 }
 
 #root {
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
+  background: linear-gradient(to right, #18354b, #1e425e);
 }
+/*# sourceMappingURL=App.css.map */
