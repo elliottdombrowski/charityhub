@@ -1,0 +1,12 @@
+@media all and (min-width: 1200px) {
+  .donation-card-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .donation-card {
+    margin: 0 1rem;
+    width: 20%;
+  }
+}
+/*# sourceMappingURL=query.css.map */

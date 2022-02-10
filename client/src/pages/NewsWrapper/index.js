@@ -1,9 +1,9 @@
 import React from 'react';
 import NewsArticle from '../../components/NewsArticle';
-import NewsFilter from '../../components/NewsFilter';
+import NewsFilter from '../../components/Forms/NewsFilter';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const NewsWrapper = () => {
   return (

@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.toolbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(to right, $gblue, $blue);
+  padding: .5rem 2rem;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  font-size: 1.2em;
+}

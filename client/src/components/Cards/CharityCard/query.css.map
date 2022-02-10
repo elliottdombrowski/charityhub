@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "query.scss",
+        "../../../_variables.scss"
+    ],
+    "names": [],
+    "file": "query.css"
+}

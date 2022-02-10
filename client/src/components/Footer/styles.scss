@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3rem;
+  border-top: 1px solid $white;
+  border-bottom: 1px solid $white;
+  background: $blue;
+}

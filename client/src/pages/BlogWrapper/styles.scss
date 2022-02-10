@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, $ddblue, $dblue);
+  margin-bottom: 5rem;
+}
+
+.blog-search-bar-form {
+  width: 60%;
+  margin-bottom: 5rem;
+}
+
+.blog-search-label {
+  color: $white;
+  font-size: 25px;
+}
+
+.blog-search-bar-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.blog-search-bar {
+  padding: 8px 15px;
+  border-radius: 50px;
+  width: 100%;
+  color: $black;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.blog-search-icon-btn {
+  position: absolute;
+  right: 1rem;
+  transition: 0.2s ease-in-out;
+  z-index: 4;
+}
+
+.blog-search-bar:hover,
+.blog-search-bar:focus {
+  outline: 1px solid $input-placeholder;
+}
+
+.blog-search-icon-btn:hover > .blog-search-icon > path,
+.blog-search-icon-btn:focus > .blog-search-icon > path {
+  color: $login-background-two;
+}
+
+.blog-search-icon > path {
+  transition: 0.2s ease-in-out;
+  color: $btn-disabled;
+}

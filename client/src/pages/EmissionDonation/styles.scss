@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+/* .emission-donation-wrapper {
+  height: 100%;
+  padding: 1rem 0;
+  background: linear-gradient(to right, var(--gblue), var(--blue));
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+} */
+
+.emission-donation-wrapper {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background: linear-gradient(to right, var(--gblue), var(--blue));
+  border: 1px solid var(--white);
+  border-radius: 10px;
+}
+
+.emission-donation-text {
+  width: 100%;
+  text-align: center;
+}
+
+.emission-donation-header {
+  padding-bottom: 1rem;
+  font-size: 30px;
+}
+
+.emission-donation-subheader {
+  font-size: 22px;
+}
+
+.emission-donation-desc {
+  font-size: 20px;
+}
+
+.emission-donation-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const MessageContainer = () => {
   return (

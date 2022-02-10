@@ -1,0 +1,12 @@
+@import '../../../variables.scss';
+
+@media all and (min-width: 1200px) {
+  .donation-card-wrapper {
+    justify-content: center;
+  }
+
+  .donation-card {
+    margin: 0 1rem;
+    width: 20%;
+  }
+}

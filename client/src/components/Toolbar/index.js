@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 
 import CurrDate from '../CurrDate';
-import ProfileIcon from '../ProfileIcon';
-import MessengerIcon from '../MessengerIcon';
+import ProfileIcon from '../Icons/ProfileIcon';
+import MessengerIcon from '../Icons/MessengerIcon';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const Toolbar = () => {
   const [apiData, setApiData] = useState({});

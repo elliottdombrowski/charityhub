@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import LoginForm from '../../components/LoginForm';
-import SignupForm from '../../components/SignupForm';
-import LoginSvg from '../../components/LoginSvg';
+import LoginForm from '../../components/Forms/LoginForm';
+import SignupForm from '../../components/Forms/SignupForm';
+import LoginSvg from '../../components/Svgs/LoginSvg';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 
 const LoginWrapper = () => {
