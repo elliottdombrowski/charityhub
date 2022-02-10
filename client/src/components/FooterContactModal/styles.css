@@ -23,15 +23,12 @@
   transition: 0.2s ease-in-out;
 }
 
-.footer-developers > .footer-developer-info {
+.footer-developers .footer-developer-info {
   display: none;
-}
-
-.footer-developer-info {
   margin: 1rem 0;
 }
 
-.developer-contact-list {
+.footer-developers .developer-contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,15 +42,15 @@
   margin-top: 1rem;
 }
 
-.developer-contact-item {
+.footer-developers .developer-contact-list .developer-contact-item {
   text-decoration: underline;
 }
 
-.footer-icon {
+.footer-developers .developer-contact-list .developer-contact-item .footer-icon {
   margin-right: 10px;
 }
 
-.footer-github {
+.footer-developers .footer-github {
   position: absolute;
   right: 1rem;
   bottom: .5rem;
@@ -76,7 +73,7 @@
   background: linear-gradient(to right, #18354b, #1e425e);
 }
 
-.footer-developers:hover > .footer-developer-info {
+.footer-developers:hover .footer-developer-info {
   display: block;
 }
 /*# sourceMappingURL=styles.css.map */
