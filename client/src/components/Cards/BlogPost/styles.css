@@ -65,6 +65,11 @@
   border-radius: 50px;
 }
 
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-right li:nth-child(1),
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-left li:nth-child(1) {
+  margin: 0 1rem;
+}
+
 .single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-right svg path,
 .single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-left svg path {
   color: #d4dce6;

@@ -44,6 +44,13 @@
 
     .blog-post-toolbar-right,
     .blog-post-toolbar-left {
+      li:nth-child(1) {
+        margin: 0 1rem;
+      }
+    }
+
+    .blog-post-toolbar-right,
+    .blog-post-toolbar-left {
       svg {
         path {
           color: $login-background-two;
