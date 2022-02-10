@@ -26,7 +26,7 @@
   background: #d4dce6;
 }
 
-.blog-post-header-wrapper {
+.single-blog-post .blog-post-header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,11 +41,11 @@
   font-size: 23px;
 }
 
-.blog-post-body {
+.single-blog-post .blog-post-body {
   font-size: 18px;
 }
 
-.blog-post-toolbar-wrapper {
+.single-blog-post .blog-post-toolbar-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,21 +65,21 @@
   border-radius: 50px;
 }
 
-.blog-post-toolbar-right > * > svg > path,
-.blog-post-toolbar-left > * > svg > path,
-.blog-post-comment-icon > * > svg > path {
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-right svg path,
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-left svg path {
   color: #d4dce6;
   cursor: pointer;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-.blog-post-toolbar-right > * > svg > path:hover,
-.blog-post-toolbar-left > * > svg > path:hover,
-.blog-post-comment-icon > * > svg > path:hover,
-.blog-post-toolbar-right > * > svg > path:focus,
-.blog-post-toolbar-left > * > svg > path:focus,
-.blog-post-comment-icon > * > svg > path:focus {
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-right svg path:hover,
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-left svg path:hover {
+  color: #a0aec0;
+}
+
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-right svg path:focus,
+.single-blog-post .blog-post-toolbar-wrapper .blog-post-toolbar-left svg path:focus {
   color: #a0aec0;
 }
 /*# sourceMappingURL=styles.css.map */

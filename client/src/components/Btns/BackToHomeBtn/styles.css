@@ -1,7 +1,3 @@
-.back-to-home-icon {
-  margin-right: 10px;
-}
-
 .back-to-home-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,10 +17,14 @@
   border: 1px solid white;
 }
 
-.back-to-home-inner {
+.back-to-home-btn .back-to-home-inner {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   padding: 8px 25px;
+}
+
+.back-to-home-btn .back-to-home-inner .back-to-home-icon {
+  margin-right: 10px;
 }
 
 .back-to-home-inner:hover {
