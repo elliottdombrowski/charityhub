@@ -1,0 +1,60 @@
+.charity-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.single-charity-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #d4dce6;
+  text-align: center;
+}
+
+.charity-card-header-wrapper > * {
+  color: black;
+  margin: 0.5rem;
+}
+
+.charity-name {
+  font-size: 25px;
+}
+
+.charity-desc {
+  font-size: 18px;
+}
+
+.charity-card-img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.charity-donate-btn {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */

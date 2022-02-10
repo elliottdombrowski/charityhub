@@ -3,7 +3,7 @@
     "mappings": "",
     "sources": [
         "query.scss",
-        "../../_variables.scss"
+        "../../../_variables.scss"
     ],
     "names": [],
     "file": "query.css"
