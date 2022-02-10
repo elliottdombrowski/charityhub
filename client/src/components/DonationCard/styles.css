@@ -33,11 +33,3 @@
   width: 70%;
   height: auto;
 }
-
-.donate-btn {
-  width: 70%;
-  padding: 8px 0;
-  border-radius: 10px;
-  background: var(--dgreen);
-  text-align: center;
-}
