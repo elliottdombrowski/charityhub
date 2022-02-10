@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import DonationBtn from "../DonationBtn";
 
 import './styles.scss';
-import './query.css';
+import './query.scss';
 
 let places = [
   {

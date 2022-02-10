@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import DonationBtn from '../DonationBtn';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 let dummyCharities = [
   {

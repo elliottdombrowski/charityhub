@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import './styles.css';
+import './styles.scss';
 
 const { DateTime } = require('luxon');
 let getTime = DateTime.now().toFormat("D',' ttt");

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import LoginBtn from '../LoginBtn';
 import Auth from '../../utils/auth';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const BlogForm = () => {
   const [blogPostData, setBlogPostData] = useState({

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';

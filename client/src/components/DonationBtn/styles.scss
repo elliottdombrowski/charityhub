@@ -1,7 +1,9 @@
+@import '../../variables.scss';
+
 .donate-btn {
   width: 200px;;
   padding: 8px 0;
   border-radius: 10px;
-  background: var(--dgreen);
+  background: $dgreen;
   text-align: center;
 }

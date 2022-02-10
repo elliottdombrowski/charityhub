@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const LoginBtn = () => {
   return (

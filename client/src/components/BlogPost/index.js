@@ -7,8 +7,8 @@ import ThumbsUpIcon from '../ThumbsUpIcon';
 import ThumbsDownIcon from '../ThumbsDownIcon';
 import BookmarkIcon from '../BookmarkIcon';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 let dummyPosts = [
   {

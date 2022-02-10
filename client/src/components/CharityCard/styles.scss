@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .charity-card-wrapper {
   display: flex;
   flex-direction: row;
@@ -14,12 +16,12 @@
   margin: 2rem;
   padding: 1rem;
   border-radius: 10px;
-  background: var(--login-background-two);
+  background: $login-background-two;
   text-align: center;
 }
 
 .charity-card-header-wrapper > * {
-  color: var(--black);
+  color: $black;
   margin: 0.5rem;
 }
 

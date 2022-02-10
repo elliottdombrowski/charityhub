@@ -1,8 +1,13 @@
 .login-form,
 .signup-left,
 .signup-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   padding: 1rem;
   border-radius: 10px;
@@ -17,6 +22,7 @@
   border-radius: 5px;
   margin: 8px 0;
   color: black;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
@@ -24,19 +30,28 @@
   position: absolute;
   top: 0;
   height: 100%;
-  background: var(--login-background-two);
+  background: #d4dce6;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   z-index: 2;
 }
 
 .signup-right {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   top: 0;
   height: 85%;
-  background: var(--login-background-two);
+  background: #d4dce6;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   z-index: 1;
 }
@@ -52,7 +67,7 @@
 
 .login-label {
   margin-right: 10px;
-  color: var(--black);
+  color: black;
 }
 
 .double-password-wrapper {
@@ -61,18 +76,31 @@
 
 .password-wrapper {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .show-password {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   right: .2rem;
-  background: var(--dgreen);
+  background: #407056;
   padding: 10px 0;
   width: 40px;
   border-radius: 10px;
@@ -96,7 +124,7 @@
 .submit-btn {
   padding: 4px 15px;
   border-radius: 8px;
-  background: var(--dgreen);
+  background: #407056;
 }
 
 .login-options {
@@ -104,18 +132,32 @@
   bottom: 25px;
   right: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 8px 0;
   padding: 0 1rem;
   z-index: 4;
 }
 
 .location-signup-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .location-wrapper-left {
@@ -128,10 +170,19 @@
 }
 
 .location-services-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   margin: 10px 0 0;
 }
@@ -139,7 +190,7 @@
 .location-services-button {
   padding: 4px 15px;
   width: 30%;
-  color: var(--black);
+  color: black;
 }
 
 .location-services-secondary {
@@ -150,24 +201,30 @@
 }
 
 .location-services-primary {
-  background: var(--dgreen);
+  background: #407056;
   border-radius: 10px;
-  color: var(--white);
+  color: white;
 }
 
 .location-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .signup-location-header {
   text-decoration: underline;
   cursor: pointer;
-  color: var(--btn-disabled);
+  color: #335067;
 }
 
 .arrow-icon {
   margin-left: 8px;
+  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -176,22 +233,33 @@
 }
 
 .arrow-down > path {
-  color: var(--btn-disabled);
+  color: #335067;
 }
 
 .arrow-icon.animate {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .signup-location-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 0;
   margin-top: 0.5rem;
-  background: var(--dgreen);
+  background: #407056;
   overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -214,24 +282,38 @@
 .submit-btn,
 .save-login-checkbox {
   cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
 .login-input + select:invalid,
 .login-input + select option[value=""] {
-  color: var(--input-placeholder);
+  color: #a0aec0;
+}
+
+::-webkit-input-placeholder {
+  color: #a0aec0;
+}
+
+:-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+::-ms-input-placeholder {
+  color: #a0aec0;
 }
 
 ::placeholder {
-  color: var(--input-placeholder);
+  color: #a0aec0;
 }
 
 :disabled {
-  background: var(--btn-disabled);
+  background: #335067;
   cursor: initial;
 }
 
 .login-input:hover,
 .login-input:focus {
-  outline: 1px solid var(--input-placeholder);
+  outline: 1px solid #a0aec0;
 }
+/*# sourceMappingURL=styles.css.map */

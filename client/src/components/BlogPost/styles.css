@@ -1,28 +1,42 @@
 .blog-post-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 60%;
 }
 
 .single-blog-post > *,
 .blog-post-header-wrapper > * {
-  color: var(--black);
+  color: black;
 }
 
 .single-blog-post {
   width: 100%;
   padding: 1rem;
   margin: 1rem 0;
-  border: 1px solid var(--white);
+  border: 1px solid white;
   border-radius: 10px;
-  background: var(--login-background-two);
+  background: #d4dce6;
 }
 
 .blog-post-header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 1rem;
   font-size: 23px;
 }
@@ -32,11 +46,20 @@
 }
 
 .blog-post-toolbar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--btn-disabled);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #335067;
   padding: 0.5rem;
   margin-top: 1rem;
   border-radius: 50px;
@@ -45,8 +68,9 @@
 .blog-post-toolbar-right > * > svg > path,
 .blog-post-toolbar-left > * > svg > path,
 .blog-post-comment-icon > * > svg > path {
-  color: var(--login-background-two);
+  color: #d4dce6;
   cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
@@ -56,5 +80,6 @@
 .blog-post-toolbar-right > * > svg > path:focus,
 .blog-post-toolbar-left > * > svg > path:focus,
 .blog-post-comment-icon > * > svg > path:focus {
-  color: var(--input-placeholder);
+  color: #a0aec0;
 }
+/*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,8 @@
 import React from 'react';
 import FooterContactModal from '../FooterContactModal';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const Footer = () => {
   return (
