@@ -15,18 +15,18 @@
   height: 90vh;
 }
 
-.notfound-header {
+.notfound-wrapper .notfound-header {
   font-size: 100px;
   font-weight: bold;
 }
 
-.notfound-svg-wrapper {
+.notfound-wrapper .notfound-svg-wrapper {
   width: 30%;
   height: auto;
   margin: 3rem 0;
 }
 
-.notfound-subheader {
+.notfound-wrapper .notfound-subheader {
   font-size: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -10,12 +10,12 @@
   background: linear-gradient(to right, #18354b, #1e425e);
 }
 
-.homepage-left,
-.homepage-right {
+.homepage-wrapper .homepage-left,
+.homepage-wrapper .homepage-right {
   width: 50%;
 }
 
-.homepage-right {
+.homepage-wrapper .homepage-right {
   margin-top: 5rem;
 }
 /*# sourceMappingURL=styles.css.map */

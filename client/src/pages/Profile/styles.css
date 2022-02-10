@@ -1,0 +1,110 @@
+.profile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 90vh;
+  background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
+  background: linear-gradient(to right, #18354b, #1e425e);
+}
+
+.profile-wrapper .profile-body-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.profile-wrapper .profile-body-left .profile-img-wrapper {
+  width: 100px;
+  height: auto;
+  margin-top: 5rem;
+  border: 4px solid #407056;
+  border-radius: 100%;
+}
+
+.profile-wrapper .profile-body-left .profile-img-wrapper .profile-img {
+  border-radius: 100%;
+}
+
+.profile-wrapper .profile-body-left .profile-name {
+  margin: .5rem 0 1rem 0;
+  font-size: 120%;
+}
+
+.profile-wrapper .profile-body-left .profile-info {
+  width: 100%;
+  padding: 0 8px;
+  border-top: 1px solid white;
+}
+
+.profile-wrapper .profile-body-left .profile-email {
+  margin: 1rem 0 0.3rem;
+}
+
+.profile-settings-wrapper {
+  width: 100%;
+  padding: 1rem .5rem;
+}
+
+.profile-settings-wrapper .profile-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-settings-wrapper .profile-option {
+  margin: 3px 0;
+  padding: 0 8px;
+  background: #407056;
+  border-radius: 5px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.profile-settings-wrapper .profile-option .settings-icon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.profile-settings-wrapper .settings-btn {
+  padding: 4px 15px;
+  width: 100%;
+  background: #1e425e;
+  border: 2px solid #256670;
+  border-radius: 10px;
+}
+
+.profile-settings-wrapper .settings-btn:nth-child(2) {
+  margin-top: .8rem;
+}
+
+.profile-settings-wrapper .settings-option {
+  height: 0;
+  overflow: hidden;
+}
+
+.profile-settings-wrapper .settings-option.active {
+  height: 100%;
+  margin: 1rem 0;
+}
+
+.profile-settings-wrapper .logout-btn {
+  margin-top: 1rem;
+  font-size: 130%;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -8,13 +8,12 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  /* background: linear-gradient(to right, $gblue, $blue); */
   background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
   background: linear-gradient(to right, #18354b, #1e425e);
   height: 90vh;
 }
 
-.login-form-wrapper {
+.login-page-wrapper .login-form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,23 +33,22 @@
   border-radius: 10px;
 }
 
-.login-page-right {
-  width: 40%;
-  margin-top: 5rem;
-}
-
-.form-switcher {
+.login-page-wrapper .form-switcher {
   position: absolute;
   left: 0;
   bottom: 5px;
   padding: 0 1rem;
   text-align: left;
   color: #335067;
-  text-decoration: none;
   z-index: 4;
 }
 
-.form-switcher:hover {
+.login-page-wrapper .login-page-right {
+  width: 40%;
+  margin-top: 5rem;
+}
+
+.login-page-wrapper .form-switcher:hover {
   text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */
