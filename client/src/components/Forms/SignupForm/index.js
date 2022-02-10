@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../../utils/mutations';
-import { validateEmail } from '../../utils/helpers';
-import Auth from '../../utils/auth';
+import { ADD_USER } from '../../../utils/mutations';
+import { validateEmail } from '../../../utils/helpers';
+import Auth from '../../../utils/auth';
 
 import '../LoginForm/styles.css';
 

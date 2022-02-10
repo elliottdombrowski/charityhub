@@ -1,5 +1,5 @@
 import React from 'react';
-import HomepageSvg from '../../components/HomepageSvg';
+import HomepageSvg from '../../components/Svgs/HomepageSvg';
 
 import './styles.scss';
 import './query.scss';

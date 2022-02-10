@@ -1,6 +1,6 @@
 import React from 'react';
-import NotFoundSvg from '../../components/NotFoundSvg';
-import BackToHomeBtn from '../../components/BackToHomeBtn';
+import NotFoundSvg from '../../components/Svgs/NotFoundSvg';
+import BackToHomeBtn from '../../components/Btns/BackToHomeBtn';
 
 import './styles.scss';
 import './query.scss';

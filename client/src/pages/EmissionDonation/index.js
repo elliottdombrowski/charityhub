@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DonationCard from '../../components/DonationCard';
+import DonationCard from '../../components/Cards/DonationCard';
 
 import './styles.scss';
 import './query.scss';

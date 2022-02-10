@@ -1,6 +1,6 @@
 import React from 'react';
-import BlogForm from '../../components/BlogForm';
-import BlogPost from '../../components/BlogPost';
+import BlogForm from '../../components/Forms/BlogForm';
+import BlogPost from '../../components/Cards/BlogPost';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';

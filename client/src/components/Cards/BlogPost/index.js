@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Auth from '../../utils/auth';
+import Auth from '../../../utils/auth';
 
-import CommentIcon from '../CommentIcon';
-import ThumbsUpIcon from '../ThumbsUpIcon';
-import ThumbsDownIcon from '../ThumbsDownIcon';
-import BookmarkIcon from '../BookmarkIcon';
+import CommentIcon from '../../Icons/CommentIcon';
+import ThumbsUpIcon from '../../Icons/ThumbsUpIcon';
+import ThumbsDownIcon from '../../Icons/ThumbsDownIcon';
+import BookmarkIcon from '../../Icons/BookmarkIcon';
 
 import './styles.scss';
 import './query.scss';

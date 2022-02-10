@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoginBtn from '../../components/LoginBtn';
+import LoginBtn from '../../components/Btns/LoginBtn';
 import ProfileSettings from '../../components/ProfileSettings';
 
 import { useParams } from 'react-router-dom';

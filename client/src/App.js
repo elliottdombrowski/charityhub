@@ -17,7 +17,7 @@ import CharityWrapper from './pages/CharityWrapper';
 import NewsWrapper from './pages/NewsWrapper';
 import NotFound from './pages/NotFound';
 
-import FooterSvg from './components/FooterSvg';
+import FooterSvg from './components/Svgs/FooterSvg';
 
 import './App.scss';
 
