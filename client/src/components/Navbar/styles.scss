@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+li,
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, $ddblue, $dblue);
+  padding: 0 2rem;
+
+  .nav-right {
+    font-size: 1.5em;
+  }
+
+  .nav-left {
+    font-size: 2rem;
+  }
+
+  .nav-item {
+    margin: 0 1rem;
+  }
+}
+
+

@@ -1,10 +1,19 @@
 .toolbar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: linear-gradient(to right, var(--gblue), var(--blue));
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: -webkit-gradient(linear, left top, right top, from(#1e525a), to(#256670));
+  background: linear-gradient(to right, #1e525a, #256670);
   padding: .5rem 2rem;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
   font-size: 1.2em;
 }
+/*# sourceMappingURL=styles.css.map */

@@ -6,8 +6,8 @@ import CurrDate from '../CurrDate';
 import ProfileIcon from '../ProfileIcon';
 import MessengerIcon from '../MessengerIcon';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const Toolbar = () => {
   const [apiData, setApiData] = useState({});
