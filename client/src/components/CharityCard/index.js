@@ -60,7 +60,7 @@ const CharityCard = () => {
                 </div>
               </div>
 
-              <Link to='/'>
+              <Link to='/' className="charity-donate-btn">
                 <DonationBtn />
               </Link>
             </section>

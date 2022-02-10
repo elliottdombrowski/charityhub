@@ -12,11 +12,31 @@
   align-items: center;
   width: 40%;
   margin: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--login-background-two);
   text-align: center;
 }
 
+.charity-card-header-wrapper > * {
+  color: var(--black);
+  margin: 0.5rem;
+}
+
+.charity-name {
+  font-size: 25px;
+}
+
+.charity-desc {
+  font-size: 18px;
+}
+
 .charity-card-img {
-  width: 70%;
+  width: 80%;
   height: auto;
   margin: 0 auto;
+}
+
+.charity-donate-btn {
+  margin-top: 1rem;
 }
