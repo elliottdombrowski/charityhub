@@ -6,8 +6,8 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../../utils/queries';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 
 const Profile = () => {

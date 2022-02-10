@@ -5,8 +5,8 @@ import BlogPost from '../../components/BlogPost';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const searchIcon = <FontAwesomeIcon icon={faSearch} className='fa-2x blog-search-icon' />
 

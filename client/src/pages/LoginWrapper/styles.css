@@ -1,18 +1,32 @@
 .login-page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  /* background: linear-gradient(to right, var(--gblue), var(--blue)); */
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /* background: linear-gradient(to right, $gblue, $blue); */
+  background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
+  background: linear-gradient(to right, #18354b, #1e425e);
   height: 90vh;
 }
 
 .login-form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  background: var(--login-background-two);
+  background: #d4dce6;
   color: black;
   width: 40%;
   margin-top: 5rem;
@@ -31,7 +45,7 @@
   bottom: 5px;
   padding: 0 1rem;
   text-align: left;
-  color: var(--btn-disabled);
+  color: #335067;
   text-decoration: none;
   z-index: 4;
 }
@@ -39,3 +53,4 @@
 .form-switcher:hover {
   text-decoration: underline;
 }
+/*# sourceMappingURL=styles.css.map */

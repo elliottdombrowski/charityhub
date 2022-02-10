@@ -1,8 +1,8 @@
 import React from 'react';
 import HomepageSvg from '../../components/HomepageSvg';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const Homepage = () => {
   return (

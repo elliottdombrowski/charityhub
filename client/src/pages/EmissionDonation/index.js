@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import DonationCard from '../../components/DonationCard';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const EmissionDonation = () => {
   return (

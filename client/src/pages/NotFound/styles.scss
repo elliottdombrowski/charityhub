@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.notfound-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.notfound-header {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.notfound-svg-wrapper {
+  width: 30%;
+  height: auto;
+  margin: 3rem 0;
+}
+
+.notfound-subheader {
+  font-size: 30px;
+}

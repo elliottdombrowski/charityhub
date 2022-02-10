@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.login-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background: linear-gradient(to right, $gblue, $blue); */
+  background: linear-gradient(to right, $ddblue, $dblue);
+  height: 90vh;
+}
+
+.login-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: $login-background-two;
+  color: black;
+  width: 40%;
+  margin-top: 5rem;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.login-page-right {
+  width: 40%;
+  margin-top: 5rem;
+}
+
+.form-switcher {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  padding: 0 1rem;
+  text-align: left;
+  color: $btn-disabled;
+  text-decoration: none;
+  z-index: 4;
+}
+
+.form-switcher:hover {
+  text-decoration: underline;
+}

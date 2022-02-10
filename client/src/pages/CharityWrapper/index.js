@@ -2,8 +2,8 @@ import React from 'react';
 import CharityCard from '../../components/CharityCard';
 import CharityFilter from '../../components/CharityFilter';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 const CharityWrapper = () => {
   return (

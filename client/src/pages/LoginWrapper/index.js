@@ -4,8 +4,8 @@ import LoginForm from '../../components/LoginForm';
 import SignupForm from '../../components/SignupForm';
 import LoginSvg from '../../components/LoginSvg';
 
-import './styles.css';
-import './query.css';
+import './styles.scss';
+import './query.scss';
 
 
 const LoginWrapper = () => {

@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.homepage-wrapper {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to right, $ddblue, $dblue);
+}
+
+.homepage-left,
+.homepage-right {
+  width: 50%;
+}
+
+.homepage-right {
+  margin-top: 5rem;
+}

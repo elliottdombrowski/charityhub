@@ -1,7 +1,13 @@
 .homepage-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  background: linear-gradient(to right, var(--ddblue), var(--dblue));
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
+  background: linear-gradient(to right, #18354b, #1e425e);
 }
 
 .homepage-left,
@@ -12,3 +18,4 @@
 .homepage-right {
   margin-top: 5rem;
 }
+/*# sourceMappingURL=styles.css.map */
