@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import DonationBtn from "../DonationBtn";
+
 import './styles.css';
 import './query.css';
 
@@ -38,8 +40,8 @@ const DonationCard = () => {
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
               </div>
-              <Link to='/' className='donate-btn'>
-                test
+              <Link to='/'>
+                <DonationBtn />
               </Link>
             </section>
           );

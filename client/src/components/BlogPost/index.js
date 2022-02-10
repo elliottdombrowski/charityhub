@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../../utils/auth';
+
 import CommentIcon from '../CommentIcon';
 import ThumbsUpIcon from '../ThumbsUpIcon';
 import ThumbsDownIcon from '../ThumbsDownIcon';
@@ -80,7 +82,7 @@ const BlogPost = () => {
                   <ThumbsUpIcon />
                   <ThumbsDownIcon />
 
-                  <Link to='/blog:id' className='blog-post-comment-icon'>
+                  <Link to={Auth.loggedIn() ? '/blog:id' : '/login'} className='blog-post-comment-icon'>
                     <CommentIcon />
                   </Link>
                 </ul>
