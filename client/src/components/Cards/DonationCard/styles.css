@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.donation-card {
+.donation-card-wrapper .donation-card {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@
   background: #d4dce6;
 }
 
-.card-info-wrapper {
+.donation-card-wrapper .donation-card .card-info-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,12 +47,12 @@
           align-items: center;
 }
 
-.card-header {
+.donation-card-wrapper .donation-card .card-info-wrapper .card-header {
   color: black;
   font-size: 130%;
 }
 
-.card-img {
+.donation-card-wrapper .donation-card .card-info-wrapper .card-img {
   width: 70%;
   height: auto;
 }

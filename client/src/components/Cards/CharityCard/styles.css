@@ -13,7 +13,7 @@
       flex-wrap: wrap;
 }
 
-.single-charity-card {
+.charity-card-wrapper .single-charity-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,26 +35,26 @@
   text-align: center;
 }
 
-.charity-card-header-wrapper > * {
+.charity-card-wrapper .single-charity-card .charity-card-header-wrapper > * {
   color: black;
   margin: 0.5rem;
 }
 
-.charity-name {
-  font-size: 25px;
-}
-
-.charity-desc {
-  font-size: 18px;
-}
-
-.charity-card-img {
+.charity-card-wrapper .single-charity-card .charity-card-header-wrapper > * .charity-card-img {
   width: 80%;
   height: auto;
   margin: 0 auto;
 }
 
-.charity-donate-btn {
+.charity-card-wrapper .single-charity-card .charity-name {
+  font-size: 25px;
+}
+
+.charity-card-wrapper .single-charity-card .charity-desc {
+  font-size: 18px;
+}
+
+.charity-card-wrapper .single-charity-card .charity-donate-btn {
   margin-top: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */
