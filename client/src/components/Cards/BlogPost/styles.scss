@@ -19,44 +19,63 @@
   border: 1px solid $white;
   border-radius: 10px;
   background: $login-background-two;
-}
 
-.blog-post-header-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  font-size: 23px;
-}
+  .blog-post-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 23px;
+  }
 
-.blog-post-body {
-  font-size: 18px;
-}
+  .blog-post-body {
+    font-size: 18px;
+  }
 
-.blog-post-toolbar-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: $btn-disabled;
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border-radius: 50px;
-}
+  .blog-post-toolbar-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $btn-disabled;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 50px;
 
-.blog-post-toolbar-right > * > svg > path,
-.blog-post-toolbar-left > * > svg > path,
-.blog-post-comment-icon > * > svg > path {
-  color: $login-background-two;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
+    .blog-post-toolbar-right,
+    .blog-post-toolbar-left {
+      li:nth-child(1) {
+        margin: 0 1rem;
+      }
+    }
 
-.blog-post-toolbar-right > * > svg > path:hover,
-.blog-post-toolbar-left > * > svg > path:hover,
-.blog-post-comment-icon > * > svg > path:hover,
-.blog-post-toolbar-right > * > svg > path:focus,
-.blog-post-toolbar-left > * > svg > path:focus,
-.blog-post-comment-icon > * > svg > path:focus {
-  color: $input-placeholder;
+    .blog-post-toolbar-right,
+    .blog-post-toolbar-left {
+      svg {
+        path {
+          color: $login-background-two;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .blog-post-toolbar-right,
+    .blog-post-toolbar-left {
+      svg {
+        path:hover {
+          color: $input-placeholder;
+        }
+      }
+    }
+
+    .blog-post-toolbar-right,
+    .blog-post-toolbar-left {
+      svg {
+        path:focus {
+          color: $input-placeholder;
+        }
+      }
+    }
+  }
 }

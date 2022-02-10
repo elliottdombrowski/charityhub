@@ -1,9 +1,5 @@
 @import '../../../variables.scss';
 
-.back-to-home-icon {
-  margin-right: 10px;
-}
-
 .back-to-home-btn {
   display: flex;
   flex-direction: row;
@@ -13,11 +9,15 @@
   border-radius: 10px;
   font-size: 25px;
   border: 1px solid $white; 
-}
 
-.back-to-home-inner {
-  transition: 0.2s ease-in-out;
-  padding: 8px 25px;
+  .back-to-home-inner {
+    transition: 0.2s ease-in-out;
+    padding: 8px 25px;
+  
+    .back-to-home-icon {
+      margin-right: 10px;
+    }
+  }
 }
 
 .back-to-home-inner:hover {

@@ -1,4 +1,4 @@
-.login-page-wrapper {
+.profile-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,14 +6,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  height: 90vh;
   background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
   background: linear-gradient(to right, #18354b, #1e425e);
-  height: 90vh;
 }
 
-.login-page-wrapper .login-form-wrapper {
+.profile-wrapper .profile-body-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,31 +22,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  background: #d4dce6;
-  color: black;
-  width: 40%;
+  width: 50%;
+}
+
+.profile-wrapper .profile-body-left .profile-img-wrapper {
+  width: 100px;
+  height: auto;
   margin-top: 5rem;
-  padding-bottom: 1rem;
-  border-radius: 10px;
+  border: 4px solid #407056;
+  border-radius: 100%;
 }
 
-.login-page-wrapper .form-switcher {
-  position: absolute;
-  left: 0;
-  bottom: 5px;
-  padding: 0 1rem;
-  text-align: left;
-  color: #335067;
-  z-index: 4;
+.profile-wrapper .profile-body-left .profile-img-wrapper .profile-img {
+  border-radius: 100%;
 }
 
-.login-page-wrapper .login-page-right {
-  width: 40%;
-  margin-top: 5rem;
+.profile-wrapper .profile-body-left .profile-name {
+  margin: .5rem 0 1rem 0;
+  font-size: 120%;
 }
 
-.login-page-wrapper .form-switcher:hover {
-  text-decoration: underline;
+.profile-wrapper .profile-body-left .profile-info {
+  width: 100%;
+  padding: 0 8px;
+  border-top: 1px solid white;
+}
+
+.profile-wrapper .profile-body-left .profile-email {
+  margin: 1rem 0 0.3rem;
 }
 /*# sourceMappingURL=styles.css.map */

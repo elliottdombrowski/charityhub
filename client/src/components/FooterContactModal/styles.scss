@@ -15,37 +15,34 @@
   border-right: none;
   background: $blue;
   transition: 0.2s ease-in-out;
-}
 
-.footer-developers > .footer-developer-info {
-  display: none;
-}
+  .footer-developer-info {
+    display: none;
+    margin: 1rem 0;
+  }
+  
+  .developer-contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
 
-.footer-developer-info {
-  margin: 1rem 0;
-}
-
-.developer-contact-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.developer-contact-item {
-  text-decoration: underline;
-}
-
-.footer-icon {
-  margin-right: 10px;
-}
-
-.footer-github {
-  position: absolute;
-  right: 1rem;
-  bottom: .5rem;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+    .developer-contact-item {
+      text-decoration: underline;
+      
+      .footer-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  .footer-github {
+    position: absolute;
+    right: 1rem;
+    bottom: .5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .footer-github:hover {
@@ -59,8 +56,8 @@
   border-left: 1px solid white;
   border-right: 1px solid white;
   background: linear-gradient(to right, $ddblue, $dblue);
-}
 
-.footer-developers:hover > .footer-developer-info {
-  display: block;
+  .footer-developer-info {
+    display: block;
+  }
 }

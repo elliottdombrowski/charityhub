@@ -1,1 +1,51 @@
 @import '../../variables.scss';
+
+.profile-settings-wrapper {
+  width: 100%;
+  padding: 1rem .5rem;
+
+  .profile-settings {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-option {
+    margin: 3px 0;
+    padding: 0 8px;
+    background: $dgreen;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+
+    .settings-icon {
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .settings-btn {
+    padding: 4px 15px;
+    width: 100%;
+    background: $dblue;
+    border: 2px solid $blue;
+    border-radius: 10px;
+  }
+  
+  .settings-btn:nth-child(2) {
+    margin-top: .8rem;
+  }
+  
+  .settings-option {
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .settings-option.active {
+    height: 100%;
+    margin: 1rem 0;
+  }
+
+  .logout-btn {
+    margin-top: 1rem;
+    font-size: 130%;
+  }
+}
