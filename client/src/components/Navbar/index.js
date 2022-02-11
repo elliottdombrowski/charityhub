@@ -8,7 +8,7 @@ import './query.scss';
 
 const Navbar = () => {
   return (
-    <div className='navbar-wrapper'>
+    <header className='navbar-wrapper' id='navbar'>
       <nav className='nav-left'>
         <Link to='/'>
           center
@@ -35,7 +35,7 @@ const Navbar = () => {
           <LoginBtn />
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 

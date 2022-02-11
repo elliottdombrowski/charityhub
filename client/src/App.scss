@@ -8,6 +8,10 @@
   color: $white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   background: linear-gradient(to right, $ddblue, $dblue);
 }

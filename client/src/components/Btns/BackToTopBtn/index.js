@@ -10,7 +10,9 @@ const backToTop = <FontAwesomeIcon icon={faArrowCircleUp} className='fa-3x back-
 const BackToTopBtn = () => {
   return (
     <button className='back-to-top' id='to-top'>
-      {backToTop}
+      <a href='#navbar'>
+        {backToTop}
+      </a>
     </button>
   );
 };
