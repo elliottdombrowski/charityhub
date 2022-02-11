@@ -10,7 +10,7 @@
   cursor: pointer;
   z-index: 100;
   transition: transform 0.2s, background-color 0.2s;
-  animation: pulse 600ms;
+  animation: backToHomeBtnPulse 600ms;
 
   path {
     color: $login-background-two;
@@ -27,7 +27,7 @@
   animation: none;
 }
 
-@keyframes pulse {
+@keyframes backToHomeBtnPulse {
   from {
     box-shadow: #ade28a 0 0 0;
   }
