@@ -1,0 +1,15 @@
+.back-to-top-icon {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border: 3px solid #407056;
+  border-radius: 50px;
+  background: #1e425e;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.back-to-top-icon path {
+  color: #d4dce6;
+}
+/*# sourceMappingURL=styles.css.map */

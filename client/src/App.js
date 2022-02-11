@@ -15,6 +15,7 @@ import MessageWrapper from './pages/MessageWrapper';
 import BlogWrapper from './pages/BlogWrapper';
 import CharityWrapper from './pages/CharityWrapper';
 import NewsWrapper from './pages/NewsWrapper';
+import BackToTopBtn from './components/Btns/BackToTopBtn';
 import NotFound from './pages/NotFound';
 
 import FooterSvg from './components/Svgs/FooterSvg';
@@ -49,6 +50,7 @@ function App() {
 
             <Navbar />
             <Toolbar />
+            <BackToTopBtn />
 
             <Switch>
               <Route exact path='/'>

@@ -5,9 +5,11 @@
           box-sizing: border-box;
   font-size: 100%;
   color: white;
+  scroll-behavior: smooth;
 }
 
 #root {
+  scroll-behavior: smooth;
   background: -webkit-gradient(linear, left top, right top, from(#18354b), to(#1e425e));
   background: linear-gradient(to right, #18354b, #1e425e);
 }
