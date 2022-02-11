@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterContactModal from '../FooterContactModal';
+import FooterContactModal from '../FooterContactModal/index.tsx';
 
 import './styles.scss';
 import './query.scss';

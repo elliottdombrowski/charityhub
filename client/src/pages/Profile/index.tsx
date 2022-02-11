@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import LoginBtn from '../../components/Btns/LoginBtn';
-import ProfileSettings from '../../components/ProfileSettings';
+import LoginBtn from '../../components/Btns/LoginBtn/index.tsx';
+import ProfileSettings from '../../components/ProfileSettings/index.tsx';
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';

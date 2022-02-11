@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoginBtn from '../../Btns/LoginBtn';
+import LoginBtn from '../../Btns/LoginBtn/index.tsx';
 import Auth from '../../../utils/auth';
 
 import './styles.scss';
