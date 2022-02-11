@@ -1,6 +1,6 @@
 import React from 'react';
-import CharityCard from '../../components/Cards/CharityCard';
-import CharityFilter from '../../components/Forms/CharityFilter';
+import CharityCard from '../../components/Cards/CharityCard/index.tsx';
+import CharityFilter from '../../components/Forms/CharityFilter/index.tsx';
 
 import './styles.scss';
 import './query.scss';

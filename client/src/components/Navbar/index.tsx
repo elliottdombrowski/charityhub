@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import LoginBtn from '../Btns/LoginBtn';
+import LoginBtn from '../Btns/LoginBtn/index.tsx';
 
 import './styles.scss';
 import './query.scss';

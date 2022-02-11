@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../../utils/auth';
 
-import CommentIcon from '../../Icons/CommentIcon';
-import ThumbsUpIcon from '../../Icons/ThumbsUpIcon';
-import ThumbsDownIcon from '../../Icons/ThumbsDownIcon';
-import BookmarkIcon from '../../Icons/BookmarkIcon';
+import CommentIcon from '../../Icons/CommentIcon/index.tsx';
+import ThumbsUpIcon from '../../Icons/ThumbsUpIcon/index.tsx';
+import ThumbsDownIcon from '../../Icons/ThumbsDownIcon/index.tsx';
+import BookmarkIcon from '../../Icons/BookmarkIcon/index.tsx';
 
 import './styles.scss';
 import './query.scss';

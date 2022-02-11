@@ -1,6 +1,6 @@
 import React from 'react';
-import NewsArticle from '../../components/NewsArticle';
-import NewsFilter from '../../components/Forms/NewsFilter';
+import NewsArticle from '../../components/NewsArticle/index.tsx';
+import NewsFilter from '../../components/Forms/NewsFilter/index.tsx';
 
 import './styles.scss';
 import './query.scss';
