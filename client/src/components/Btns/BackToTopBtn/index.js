@@ -12,16 +12,25 @@ const BackToTopBtn = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      window.pageYOffset > 300 ? setShowBackToTopBtn(true) : setShowBackToTopBtn(false);
+      window.pageYOffset > 300 ? setShowBackToTopBtn(true) : setShowBackToTopBtn(false);  
     })
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <button className='back-to-top' id='to-top'>
-      <a href='#navbar'>
+    <>
+    {showBackToTopBtn && (
+      <button onClick={scrollToTop} className='back-to-top'>
         {backToTop}
-      </a>
-    </button>
+      </button>
+    )}
+    </>
   );
 };
 
