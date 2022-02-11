@@ -1,0 +1,16 @@
+@import '../../../variables';
+
+.back-to-top-icon {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border: 3px solid $dgreen;
+  border-radius: 50px;
+  background: $dblue;
+  cursor: pointer;
+  z-index: 100;
+
+  path {
+    color: $login-background-two;
+  }
+}
