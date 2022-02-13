@@ -4,19 +4,19 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Navbar from './components/Navbar/index.tsx';
-import Toolbar from './components/Toolbar/index.tsx';
-import Homepage from './pages/Homepage/index.tsx';
-import LoginWrapper from './pages/LoginWrapper/index.tsx';
-import Profile from './pages/Profile/index.tsx';
-import EmissionDonation from './pages/EmissionDonation/index.tsx';
-import Footer from './components/Footer/index.tsx';
-import MessageWrapper from './pages/MessageWrapper/index.tsx';
-import BlogWrapper from './pages/BlogWrapper/index.tsx';
-import CharityWrapper from './pages/CharityWrapper/index.tsx';
-import NewsWrapper from './pages/NewsWrapper/index.tsx';
-import BackToTopBtn from './components/Btns/BackToTopBtn/index.tsx';
-import NotFound from './pages/NotFound/index.tsx';
+import Navbar from './components/Navbar/';
+import Toolbar from './components/Toolbar/';
+import Homepage from './pages/Homepage/';
+import LoginWrapper from './pages/LoginWrapper/';
+import Profile from './pages/Profile/';
+import EmissionDonation from './pages/EmissionDonation/';
+import Footer from './components/Footer/';
+import MessageWrapper from './pages/MessageWrapper/';
+import BlogWrapper from './pages/BlogWrapper/';
+import CharityWrapper from './pages/CharityWrapper/';
+import NewsWrapper from './pages/NewsWrapper/';
+import BackToTopBtn from './components/Btns/BackToTopBtn/';
+import NotFound from './pages/NotFound/';
 
 import FooterSvg from './components/Svgs/FooterSvg';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import LoginForm from '../../components/Forms/LoginForm/index.tsx';
-import SignupForm from '../../components/Forms/SignupForm/index.tsx';
+import LoginForm from '../../components/Forms/LoginForm/';
+import SignupForm from '../../components/Forms/SignupForm/';
 import LoginSvg from '../../components/Svgs/LoginSvg';
 
 import './styles.scss';

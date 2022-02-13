@@ -1,6 +1,6 @@
 import React from 'react';
-import FriendList from '../../components/FriendList/index.tsx';
-import MessageContainer from '../../components/MessageContainer/index.tsx';
+import FriendList from '../../components/FriendList/';
+import MessageContainer from '../../components/MessageContainer/';
 
 import './styles.scss';
 import './query.scss';
