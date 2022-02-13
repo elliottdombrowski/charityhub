@@ -64,6 +64,7 @@ function App() {
               <Route exact path='/blog' component={BlogWrapper} />
               <Route exact path='/charities' component={CharityWrapper} />
               <Route exact path='/news' component={NewsWrapper} />
+              <Route exact path='/emissions' component={EmissionDonation} />
               <Route component={NotFound} />
             </Switch>
 
