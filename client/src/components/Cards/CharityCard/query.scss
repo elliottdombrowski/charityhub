@@ -1,1 +1,26 @@
 @import '../../../variables.scss';
+
+@media all and (max-width: 800px) {
+  .charity-card-wrapper {
+    .single-charity-card {
+      width: 40%;
+    }
+  }
+}
+
+@media all and (max-width: 674px) {
+  .charity-card-wrapper {
+    .single-charity-card {
+      width: 80%;
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .charity-card-wrapper {
+    .single-charity-card {
+      width: 100%;
+      margin: 1.5rem 1rem;
+    }
+  }
+}
