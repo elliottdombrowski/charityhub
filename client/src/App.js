@@ -59,12 +59,7 @@ function App() {
                 key={location.pathname}
                 location={location}
               >
-                <Route exact path='/'>
-                  <Homepage />
-                  <EmissionHeader />
-                  <EmissionDonation />
-                  <FooterSvg />
-                </Route>
+                <Route exact path='/' component={HomepageWrapper} />
                 <Route exact path='/login' component={LoginWrapper} />
                 <Route exact path='/profile' component={Profile} />
                 <Route exact path='/messages' component={MessageWrapper} />

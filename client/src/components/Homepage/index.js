@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimatePage from '../../AnimatePage';
-import HomepageSvg from '../../components/Svgs/HomepageSvg';
+import HomepageSvg from '../Svgs/HomepageSvg';
 
 import './styles.scss';
 import './query.scss';
