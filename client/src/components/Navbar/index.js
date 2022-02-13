@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 import LoginBtn from '../Btns/LoginBtn/';
 
@@ -95,7 +96,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className='nav-item mobile-nav-item'>
-            <Link to='/profile'>
+            <Link to={Auth.loggedIn() ? '/profile' : '/login'}>
               {profileIcon}
               profile
               <div 
@@ -109,13 +110,13 @@ const Navbar = () => {
           </li>
           <div className='nav-profile-settings-wrapper' id='nav-settings-wrapper'>
             <li className='nav-item mobile-nav-item'>
-              <Link to='/profile'>
+              <Link to={Auth.loggedIn() ? '/profile' : '/login'}>
                 {settingsIcon}
                 settings
               </Link>
             </li>
             <li className='nav-item mobile-nav-item'>
-              <Link to='/profile'>
+              <Link to={Auth.loggedIn() ? '/profile' : '/login'}>
                 {locationIcon}
                 location services
               </Link>
