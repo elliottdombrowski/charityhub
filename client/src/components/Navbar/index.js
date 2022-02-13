@@ -33,6 +33,8 @@ const angleDown = <FontAwesomeIcon icon={faAngleDown} className='dropdown-icon' 
 const locationIcon = <FontAwesomeIcon icon={faLocationArrow} className='mobile-nav-icons location-icon' />
 
 const Navbar = () => {
+  const loggedIn = Auth.loggedIn() ? '/profile' : '/login';
+
   const mobileMenu = () => {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('navbar-right').classList.toggle('active');
@@ -96,7 +98,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className='nav-item mobile-nav-item'>
-            <Link to={Auth.loggedIn() ? '/profile' : '/login'}>
+            <Link to={loggedIn}>
               {profileIcon}
               profile
               <div 
@@ -110,13 +112,13 @@ const Navbar = () => {
           </li>
           <div className='nav-profile-settings-wrapper' id='nav-settings-wrapper'>
             <li className='nav-item mobile-nav-item'>
-              <Link to={Auth.loggedIn() ? '/profile' : '/login'}>
+              <Link to={loggedIn}>
                 {settingsIcon}
                 settings
               </Link>
             </li>
             <li className='nav-item mobile-nav-item'>
-              <Link to={Auth.loggedIn() ? '/profile' : '/login'}>
+              <Link to={loggedIn}>
                 {locationIcon}
                 location services
               </Link>
