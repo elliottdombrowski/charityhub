@@ -4,90 +4,65 @@ import './styles.scss';
 import './query.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faCog } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAngleDown,
+  faCog,
+  faCamera,
+  faSun,
+  faLocationArrow
+} from '@fortawesome/free-solid-svg-icons';
 
-const angleDown = <FontAwesomeIcon className='location-profile-icon' id='location-profile' icon={faAngleDown} />
-const settings = <FontAwesomeIcon className='settings-profile-icon' icon={faCog} />
+const profileAngleDown = <FontAwesomeIcon className='location-profile-icon profile-icon' id='location-profile' icon={faAngleDown} />
+const profileSettings = <FontAwesomeIcon className='settings-profile-icon profile-icon' icon={faCog} />
+const profilePhoto = <FontAwesomeIcon className='photo-profile-icon profile-icon' icon={faCamera} />
+const profileDarkMode = <FontAwesomeIcon className='darkmode-profile-icon profile-icon' icon={faSun} />
+const profileLocation = <FontAwesomeIcon className='location-profile-icon profile-icon' icon={faLocationArrow} />
 
 const ProfileSettings = () => {
   const [showSettingsOne, setShowSettingsOne] = useState(false);
   const [showSettingsTwo, setShowSettingsTwo] = useState(false);
   const [showLocationSettings, setShowLocationSettings] = useState(false);
 
-  const displaySettingsOne = () => {
-    setShowSettingsOne(!showSettingsOne);
-    showSettingsOne
-      ? document.getElementById('settings-option-one').classList.add('active')
-      : document.getElementById('settings-option-one').classList.remove('active')
+  const userSettingsDropdown = () => {
+    document.getElementById('profile-options').classList.toggle('active');
   };
 
-  const displaySettingsTwo = () => {
-    setShowSettingsTwo(!showSettingsTwo);
-    showSettingsTwo
-      ? document.getElementById('settings-option-two').classList.add('active')
-      : document.getElementById('settings-option-two').classList.remove('active')
-  };
-
-  const displayLocationSettings = () => {
-    document.getElementById('location-profile').classList.toggle('active');
-  };
-
-  const angleOne = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsOne} />
-  const angleTwo = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsTwo} />
-  
   return (
     <>
       <h3 className='profile-settings-header'>
-        {settings}
+        {profileSettings}
         Settings
       </h3>
       <ul className='profile-settings'>
         <li className='profile-option profile-darkmode-wrapper'>
-          <p>dark mode</p>
+          <div>
+            {profileDarkMode}
+            dark mode
+          </div>
           <label className='darkmode-switch'>
             <input type='checkbox' />
             <span className='darkmode-slider' />
           </label>
         </li>
-        <li className='profile-option'>
-          {angleOne}
+        <li 
+          className='profile-option'
+          onClick={userSettingsDropdown}
+        >
+          {profileSettings}
           user settings
-          <div className='settings-option' id='settings-option-one'>
-            <button
-              type='text'
-              className='settings-btn'
-            >
-              Change Profile Picture
-            </button>
-
-            <button
-              type='text'
-              className='settings-btn'
-            >
-              Reset Password
-            </button>
-          </div>
         </li>
+        <div 
+          className='profile-options-dropdown-wrapper'
+          id='profile-options'
+        >
+          <li className='profile-option profile-dropdown-option'>
+            {profilePhoto}
+            change profile photo
+          </li>
+        </div>
         <li className='profile-option'>
-          {angleTwo}
+          {profileLocation}
           location settings
-          <div className='settings-option' id='settings-option-two'>
-            <button
-              type='text'
-              className='settings-btn'
-              onClick={displayLocationSettings}
-            >
-              {angleDown}
-              Change Location
-            </button>
-
-            <button
-              type='text'
-              className='settings-btn'
-            >
-              Disable Location Services
-            </button>
-          </div>
         </li>
       </ul>
     </>
