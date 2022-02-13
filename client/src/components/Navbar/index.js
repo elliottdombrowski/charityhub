@@ -92,7 +92,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className='nav-item mobile-nav-item'>
-            <Link to='/blog'>
+            <Link to='/emissions'>
               {emissionsIcon}
               carbon offsets
             </Link>

@@ -21,6 +21,7 @@ const EmissionDonation = () => {
       <span className='emission-donation-cards'>
         <DonationCard />
       </span>
+      <a href='emissions' rel='noopener noreferrer' />
     </section>
   );
 };
