@@ -44,8 +44,13 @@
             position: absolute;
             right: 1rem;
             padding: 0 10px;
-            z-index: 100;
-            cursor: pointer;
+            z-index: 200;
+            background: red;
+            cursor: default;
+
+            .dropdown-icon {
+              transition: 0.2s ease-in-out;
+            }
           }
         }
 
@@ -91,6 +96,12 @@
   .hamburger.active {
     .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  .mobile-nav-dropdown-wrapper.active {
+    .dropdown-icon {
+      transform: rotate(180deg);
     }
   }
 }

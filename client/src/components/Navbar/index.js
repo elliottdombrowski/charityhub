@@ -31,10 +31,14 @@ const Navbar = () => {
   };
 
   window.onclick = (event) => {
-    if (event.target !== document.getElementById('hamburger') && event.target !== document.getElementById('bar-one') && event.target !== document.getElementById('bar-two') && event.target !== document.getElementById('bar-three')) {
+    if (event.target !== document.getElementById('hamburger') && event.target !== document.getElementById('bar-one') && event.target !== document.getElementById('bar-two') && event.target !== document.getElementById('bar-three') && event.target !== document.getElementById('mobile-dropdown')) {
       document.getElementById('hamburger').classList.remove('active');
       document.getElementById('navbar-right').classList.remove('active');
     }
+  };
+
+  const mobileDropdown = () => {
+    document.getElementById('mobile-dropdown').classList.toggle('active');
   };
 
   return (
@@ -81,7 +85,11 @@ const Navbar = () => {
             <Link to='/profile'>
               {profileIcon}
               profile
-              <div className='mobile-nav-dropdown-wrapper'>
+              <div 
+                className='mobile-nav-dropdown-wrapper'
+                id='mobile-dropdown'
+                onClick={mobileDropdown}
+              >
                 {angleDown}
               </div>
             </Link>
