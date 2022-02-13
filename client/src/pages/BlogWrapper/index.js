@@ -26,7 +26,8 @@ const BlogWrapper = () => {
             <input 
               type='text'
               className='blog-search-bar'
-            ></input>
+              placeholder='Search for posts'
+            />
 
             <button
               type='submit'
