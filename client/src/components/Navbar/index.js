@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 
 import LoginBtn from '../Btns/LoginBtn/';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandHoldingHeart, faNewspaper, faBlog } from '@fortawesome/free-solid-svg-icons';
+
 import './styles.scss';
 import './query.scss';
+
+const charityIcon = <FontAwesomeIcon icon={faHandHoldingHeart} className='mobile-nav-icons charity-icon' />
+const newsIcon = <FontAwesomeIcon icon={faNewspaper} className='mobile-nav-icons news-icon' />
+const blogIcon = <FontAwesomeIcon icon={faBlog} className='mobile-nav-icons blog-icon' />
 
 const Navbar = () => {
   const mobileMenu = () => {
@@ -36,16 +43,19 @@ const Navbar = () => {
         <ul className='nav-item-wrapper'>
           <li className='nav-item'>
             <Link to='/charities'>
+              {charityIcon}
               charities
             </Link>
           </li>
           <li className='nav-item'>
             <Link to='/news'>
+              {newsIcon}
               news
             </Link>
           </li>
           <li className='nav-item'>
             <Link to='/blog'>
+              {blogIcon}
               blog
             </Link>
           </li>
