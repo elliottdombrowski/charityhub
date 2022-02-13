@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import LoginBtn from '../Btns/LoginBtn/';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandHoldingHeart, faNewspaper, faBlog, faUserCircle, faPaperPlane, faStar, faCog, faSmog } from '@fortawesome/free-solid-svg-icons';
+import { faHandHoldingHeart, faNewspaper, faBlog, faUserCircle, faPaperPlane, faStar, faCog, faSmog, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 import './query.scss';
@@ -17,6 +17,7 @@ const messageIcon = <FontAwesomeIcon icon={faPaperPlane} className='mobile-nav-i
 const starIcon = <FontAwesomeIcon icon={faStar} className='mobile-nav-icons star-icon' />
 const settingsIcon = <FontAwesomeIcon icon={faCog} className='mobile-nav-icons settings-icon' />
 const emissionsIcon = <FontAwesomeIcon icon={faSmog} className='mobile-nav-icons emissions-icon' />
+const angleDown = <FontAwesomeIcon icon={faAngleDown} className='mobile-nav-icon dropdown-icon' />
 
 const Navbar = () => {
   const mobileMenu = () => {
@@ -80,6 +81,9 @@ const Navbar = () => {
             <Link to='/profile'>
               {profileIcon}
               profile
+              <div className='mobile-nav-dropdown-wrapper'>
+                {angleDown}
+              </div>
             </Link>
           </li>
           <li className='nav-item mobile-nav-item'>

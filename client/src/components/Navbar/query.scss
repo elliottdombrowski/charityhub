@@ -39,6 +39,14 @@
             display: block;
             margin-right: 10px;
           }
+
+          .mobile-nav-dropdown-wrapper {
+            position: absolute;
+            right: 1rem;
+            padding: 0 10px;
+            z-index: 100;
+            cursor: pointer;
+          }
         }
 
         :hover {
