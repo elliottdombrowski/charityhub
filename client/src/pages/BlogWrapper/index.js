@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatePage from '../../AnimatePage';
 import BlogForm from '../../components/Forms/BlogForm/';
 import BlogPost from '../../components/Cards/BlogPost/';
 
@@ -12,30 +13,32 @@ const searchIcon = <FontAwesomeIcon icon={faSearch} className='fa-2x blog-search
 
 const BlogWrapper = () => {
   return (
-    <main className='blog-wrapper'>
-      <BlogForm />
-      
-      <form className='blog-search-bar-form'>
-        <h1 className='blog-search-label'>
-          Search for your favorite posts.
-        </h1>
+    <AnimatePage>
+      <main className='blog-wrapper'>
+        <BlogForm />
+        
+        <form className='blog-search-bar-form'>
+          <h1 className='blog-search-label'>
+            Search for your favorite posts.
+          </h1>
 
-        <div className='blog-search-bar-wrapper'>
-          <input 
-            type='text'
-            className='blog-search-bar'
-          ></input>
+          <div className='blog-search-bar-wrapper'>
+            <input 
+              type='text'
+              className='blog-search-bar'
+            ></input>
 
-          <button
-            type='submit'
-            className='blog-search-icon-btn'>
-              {searchIcon}
-            </button>
-        </div>
-      </form>
+            <button
+              type='submit'
+              className='blog-search-icon-btn'>
+                {searchIcon}
+              </button>
+          </div>
+        </form>
 
-      <BlogPost />
-    </main>
+        <BlogPost />
+      </main>
+    </AnimatePage>
   );
 };
 

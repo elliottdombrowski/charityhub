@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatePage from '../../AnimatePage';
 import FriendList from '../../components/FriendList/';
 import MessageContainer from '../../components/MessageContainer/';
 
@@ -7,11 +8,13 @@ import './query.scss';
 
 const MessageWrapper = () => {
   return (
-    <main className='message-page-wrapper'>
-      main
-      <FriendList />
-      <MessageContainer />
-    </main>
+    <AnimatePage>
+      <main className='message-page-wrapper'>
+        main
+        <FriendList />
+        <MessageContainer />
+      </main>
+    </AnimatePage>
   );
 };
 

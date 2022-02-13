@@ -7,7 +7,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Navbar from './components/Navbar/';
 import Toolbar from './components/Toolbar/';
-import Homepage from './pages/Homepage/';
+import Homepage from './components/Homepage/';
 import LoginWrapper from './pages/LoginWrapper/';
 import Profile from './pages/Profile/';
 import EmissionDonation from './pages/EmissionDonation/';
