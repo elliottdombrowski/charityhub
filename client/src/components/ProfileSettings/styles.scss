@@ -34,7 +34,9 @@
     padding: 8px;
     background: $btn-disabled;
     border-bottom: 1px solid $white;
+    width: 100%;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 
     .profile-icon {
       margin-right: 8px;
@@ -44,6 +46,23 @@
 
   .profile-dropdown-option {
     width: 100%;
+    padding-left: 20px;
+  }
+
+  .profile-location-option {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 50;
+
+    .disable-services-btn {
+      position: absolute;
+      right: 10px;
+      background: $dgreen;
+      padding: 0px 10px;
+      border-radius: 5px;
+      z-index: 100;
+    }
   }
   
   .profile-darkmode-wrapper {
@@ -138,6 +157,10 @@
   }
   
   .profile-options-dropdown-wrapper.active {
-    height: 41px;
+    height: 82px;
+  }
+
+  .profile-option:hover {
+    background: $dblue;
   }
 }
