@@ -9,9 +9,9 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 const ProfileSettings = () => {
   const [showSettingsOne, setShowSettingsOne] = useState(false);
   const [showSettingsTwo, setShowSettingsTwo] = useState(false);
+  const [showLocationSettings, setShowLocationSettings] = useState(false);
 
   const displaySettingsOne = () => {
-    console.log('displaying settings');
     setShowSettingsOne(!showSettingsOne);
     showSettingsOne
       ? document.getElementById('settings-option-one').classList.add('active')
@@ -19,15 +19,19 @@ const ProfileSettings = () => {
   };
 
   const displaySettingsTwo = () => {
-    console.log('displaying settings');
     setShowSettingsTwo(!showSettingsTwo);
     showSettingsTwo
       ? document.getElementById('settings-option-two').classList.add('active')
       : document.getElementById('settings-option-two').classList.remove('active')
   };
 
+  const displayLocationSettings = () => {
+    document.getElementById('location-profile').classList.toggle('active');
+  };
+
   const angleOne = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsOne} />
   const angleTwo = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsTwo} />
+  const angleDown = <FontAwesomeIcon className='location-profile-icon' id='location-profile' icon={faAngleDown} />
 
   return (
     <>
@@ -64,7 +68,9 @@ const ProfileSettings = () => {
             <button
               type='text'
               className='settings-btn'
+              onClick={displayLocationSettings}
             >
+              {angleDown}
               Change Location
             </button>
 

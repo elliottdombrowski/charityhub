@@ -47,15 +47,6 @@ const Profile = () => {
           </div>
         </span>
       </section>
-
-      <section className='profile-body-right'>
-
-      </section>
-      {/* <input 
-        type='file'
-        name='profile-image'
-        accept='image/*'
-      /> */}
     </main>
   );
 };

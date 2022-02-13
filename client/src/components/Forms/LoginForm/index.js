@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Spinner } from "@chakra-ui/react";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,7 +22,7 @@ const LoginForm = () => {
   const check = <FontAwesomeIcon icon={faCheck} />
   const cross = <FontAwesomeIcon icon={faTimes} />
 
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [login, { error, data, loading }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     if (!validateEmail(loginData.email)) {
@@ -54,78 +56,80 @@ const LoginForm = () => {
   };
 
   return (
-    <form
-      className="login-form"
-      onSubmit={loginSubmit}
-    >
-      <label className="login-label">
-        log in
-      </label>
-      <div className="password-wrapper">
-        <input
-          type='text'
-          name='email'
-          onChange={handleInputChange}
-          value={loginData.email}
-          placeholder='email'
-          required
-          className='login-input'
-        />
-        <span 
-          className='show-password valid-email'
-        >
-          {err ? cross : check}
-        </span>
-      </div>
-
-      <div className="password-wrapper">
-        <input
-          type={showPwd ? "text" : "password"}
-          name='password'
-          onChange={handleInputChange}
-          value={loginData.password}
-          placeholder='password'
-          required
-          className='login-input'
-          id='change-pwd'
-        />
-        <span 
-          className='show-password'
-          onClick={() => setShowPwd((prev) => !prev)} 
-        >
-          {showPwd ? eyeSlash : eye}
-        </span>
-      </div>
-      {error ? (
-        <pre className='apollo-errors'>
-          {error.graphQLErrors.map(({ message }, i) => (
-            <span key={i}>{message}</span>
-          ))}
-        </pre>
-      ) : (
-        <>
-        </>
-      )}
-
-      <div className='login-options'>
-        <span className="save-login">
-          <label className="login-label">
-            remember me?
-          </label>
+    <>
+      <form
+        className="login-form"
+        onSubmit={loginSubmit}
+      >
+        <label className="login-label">
+          log in
+        </label>
+        <div className="password-wrapper">
           <input
-            className="save-login-checkbox"
-            type='checkbox'
+            type='text'
+            name='email'
+            onChange={handleInputChange}
+            value={loginData.email}
+            placeholder='email'
+            required
+            className='login-input'
           />
-        </span>
-        <button
-          type='submit'
-          className="submit-btn"
-          disabled={!(loginData.email && loginData.password)}
-        >
-          Log In
-        </button>
-      </div>
-    </form>
+          <span
+            className='show-password valid-email'
+          >
+            {err ? cross : check}
+          </span>
+        </div>
+
+        <div className="password-wrapper">
+          <input
+            type={showPwd ? "text" : "password"}
+            name='password'
+            onChange={handleInputChange}
+            value={loginData.password}
+            placeholder='password'
+            required
+            className='login-input'
+            id='change-pwd'
+          />
+          <span
+            className='show-password'
+            onClick={() => setShowPwd((prev) => !prev)}
+          >
+            {showPwd ? eyeSlash : eye}
+          </span>
+        </div>
+        {error ? (
+          <pre className='apollo-errors'>
+            {error.graphQLErrors.map(({ message }, i) => (
+              <span key={i}>{message}</span>
+            ))}
+          </pre>
+        ) : (
+          <>
+          </>
+        )}
+
+        <div className='login-options'>
+          <span className="save-login">
+            <label className="login-label">
+              remember me?
+            </label>
+            <input
+              className="save-login-checkbox"
+              type='checkbox'
+            />
+          </span>
+          <button
+            type='submit'
+            className="submit-btn"
+            disabled={!(loginData.email && loginData.password)}
+          >
+            Log In
+          </button>
+        </div>
+      </form>
+    </>
   );
 };
 

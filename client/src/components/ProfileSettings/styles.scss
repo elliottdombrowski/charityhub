@@ -4,6 +4,10 @@
   width: 100%;
   padding: 1rem .5rem;
 
+  h3 {
+    color: $black;
+  }
+
   .profile-settings {
     display: flex;
     flex-direction: column;
@@ -12,7 +16,7 @@
   .profile-option {
     margin: 3px 0;
     padding: 0 8px;
-    background: $dgreen;
+    background: $dblue;
     border-radius: 5px;
     transition: .3s ease-in-out;
 
@@ -25,9 +29,14 @@
   .settings-btn {
     padding: 4px 15px;
     width: 100%;
-    background: $dblue;
+    background: $dgreen;
     border: 2px solid $blue;
     border-radius: 10px;
+
+    .location-profile-icon {
+      margin-right: 10px;
+      transition: 0.2s ease-in-out;
+    }
   }
   
   .settings-btn:nth-child(2) {
@@ -47,5 +56,9 @@
   .logout-btn {
     margin-top: 1rem;
     font-size: 130%;
+  }
+
+  .location-profile-icon.active {
+    transform: rotate(180deg);
   }
 }
