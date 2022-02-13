@@ -40,7 +40,11 @@ const ProfileSettings = () => {
       </h3>
       <ul className='profile-settings'>
         <li className='profile-option'>
-          dark mode
+          <p>dark mode</p>
+          <label className='darkmode-switch'>
+            <input type='checkbox' />
+            <span className='darkmode-slider' />
+          </label>
         </li>
         <li className='profile-option'>
           {angleOne}
