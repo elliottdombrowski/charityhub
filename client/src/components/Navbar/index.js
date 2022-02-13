@@ -17,7 +17,7 @@ const messageIcon = <FontAwesomeIcon icon={faPaperPlane} className='mobile-nav-i
 const starIcon = <FontAwesomeIcon icon={faStar} className='mobile-nav-icons star-icon' />
 const settingsIcon = <FontAwesomeIcon icon={faCog} className='mobile-nav-icons settings-icon' />
 const emissionsIcon = <FontAwesomeIcon icon={faSmog} className='mobile-nav-icons emissions-icon' />
-const angleDown = <FontAwesomeIcon icon={faAngleDown} className='mobile-nav-icon dropdown-icon' />
+const angleDown = <FontAwesomeIcon icon={faAngleDown} className='mobile-nav-icon dropdown-icon' id='navicon' />
 
 const Navbar = () => {
   const mobileMenu = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   window.onclick = (event) => {
-    if (event.target !== document.getElementById('hamburger') && event.target !== document.getElementById('bar-one') && event.target !== document.getElementById('bar-two') && event.target !== document.getElementById('bar-three') && event.target !== document.getElementById('mobile-dropdown')) {
+    if (event.target !== document.getElementById('hamburger') && event.target !== document.getElementById('bar-one') && event.target !== document.getElementById('bar-two') && event.target !== document.getElementById('bar-three') && event.target !== document.getElementById('mobile-dropdown') && event.target !== document.getElementById('navicon')) {
       document.getElementById('hamburger').classList.remove('active');
       document.getElementById('navbar-right').classList.remove('active');
     }
@@ -39,6 +39,7 @@ const Navbar = () => {
 
   const mobileDropdown = () => {
     document.getElementById('mobile-dropdown').classList.toggle('active');
+    document.getElementById('nav-settings-wrapper').classList.toggle('active');
   };
 
   return (
@@ -94,16 +95,18 @@ const Navbar = () => {
               </div>
             </Link>
           </li>
+          <div className='nav-profile-settings-wrapper' id='nav-settings-wrapper'>
+            <li className='nav-item mobile-nav-item'>
+              <Link to='/profile'>
+                {settingsIcon}
+                settings
+              </Link>
+            </li>
+          </div>
           <li className='nav-item mobile-nav-item'>
             <Link to='/messages'>
               {messageIcon}
               messages
-            </Link>
-          </li>
-          <li className='nav-item mobile-nav-item'>
-            <Link to='/profile'>
-              {settingsIcon}
-              settings
             </Link>
           </li>
           <LoginBtn />

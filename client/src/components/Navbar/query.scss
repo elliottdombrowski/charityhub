@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 @media all and (max-width: 768px) {
   .nav-right {
@@ -13,7 +13,6 @@
     transition: 0.2s ease-in-out;
     z-index: 100;
 
-    
     .nav-item-wrapper {
       display: flex;
       flex-direction: column;
@@ -21,13 +20,22 @@
       margin-top: 47px;
       border-top: 1px solid $white;
       background: $btn-disabled;
-      
-      
+
+      .nav-profile-settings-wrapper {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+      }
+
+      .nav-profile-settings-wrapper.active {
+        height: 57px;
+      }
+
       .nav-item {
         width: 100%;
         border-bottom: 1px solid $white;
-        
-        
+
         a {
           display: flex;
           flex-direction: row;
@@ -45,8 +53,6 @@
             right: 1rem;
             padding: 0 10px;
             z-index: 200;
-            background: red;
-            cursor: default;
 
             .dropdown-icon {
               transition: 0.2s ease-in-out;
@@ -69,30 +75,29 @@
       }
     }
   }
-  
+
   .nav-right.active {
     right: 0;
   }
-  
+
   .hamburger {
     display: block;
     position: static;
     z-index: 100;
   }
-  
-  
+
   .hamburger.active {
     .bar:nth-child(2) {
       opacity: 0;
     }
   }
-  
+
   .hamburger.active {
     .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
   }
-  
+
   .hamburger.active {
     .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
