@@ -4,7 +4,10 @@ import './styles.scss';
 import './query.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faCog } from '@fortawesome/free-solid-svg-icons';
+
+const angleDown = <FontAwesomeIcon className='location-profile-icon' id='location-profile' icon={faAngleDown} />
+const settings = <FontAwesomeIcon className='settings-profile-icon' icon={faCog} />
 
 const ProfileSettings = () => {
   const [showSettingsOne, setShowSettingsOne] = useState(false);
@@ -31,15 +34,15 @@ const ProfileSettings = () => {
 
   const angleOne = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsOne} />
   const angleTwo = <FontAwesomeIcon className='settings-icon' icon={faAngleDown} onClick={displaySettingsTwo} />
-  const angleDown = <FontAwesomeIcon className='location-profile-icon' id='location-profile' icon={faAngleDown} />
-
+  
   return (
     <>
       <h3 className='profile-settings-header'>
+        {settings}
         Settings
       </h3>
       <ul className='profile-settings'>
-        <li className='profile-option'>
+        <li className='profile-option profile-darkmode-wrapper'>
           <p>dark mode</p>
           <label className='darkmode-switch'>
             <input type='checkbox' />

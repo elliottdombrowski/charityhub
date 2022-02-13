@@ -3,15 +3,25 @@
 .profile-settings-wrapper {
   width: 100%;
   padding: 1rem 0.5rem;
+  margin-top: 10px;
 
   h3 {
-    color: $black;
+    color: $btn-disabled;
+    cursor: default;
+
+    path {
+      color: $btn-disabled;
+    }
+
+    .settings-profile-icon {
+      margin-right: 5px;
+    }
   }
 
   .profile-settings {
     display: flex;
     flex-direction: column;
-    background: $mobile-nav-background;
+    margin-top: 1rem;
   }
 
   .profile-option {
@@ -22,15 +32,21 @@
 
     .settings-icon {
       margin-right: 8px;
-      cursor: pointer;
+      cursor: default;
     }
+  }
+  
+  .profile-darkmode-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     .darkmode-switch {
       position: relative;
       display: inline-block;
       width: 42px;
       height: 24px;
-
+  
       .darkmode-slider {
         position: absolute;
         top: 0;
@@ -42,7 +58,7 @@
         cursor: pointer;
         transition: 0.4s;
       }
-
+  
       .darkmode-slider::before {
         position: absolute;
         content: "";
@@ -54,19 +70,19 @@
         background: $white;
         transition: 0.4s;
       }
-
+  
       input:checked + .darkmode-slider {
         background: $dgreen;
       }
-
+  
       input:checked + .darkmode-slider:before {
         transform: translateX(18px);
       }
-
+  
       input:focus + .darkmode-slider {
         box-shadow: 0 0 1px #2196f3;
       }
-
+  
       input {
         opacity: 0;
         width: 0;
@@ -75,8 +91,13 @@
     }
   }
 
+  .profile-option:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
   .profile-option:last-child {
     border-bottom: none;
+    border-radius: 0 0 8px 8px;
   }
 
   .settings-btn {
