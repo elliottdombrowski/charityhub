@@ -10,6 +10,7 @@ import Homepage from './pages/Homepage/';
 import LoginWrapper from './pages/LoginWrapper/';
 import Profile from './pages/Profile/';
 import EmissionDonation from './pages/EmissionDonation/';
+import EmissionHeader from './components/EmissionHeader';
 import Footer from './components/Footer/';
 import MessageWrapper from './pages/MessageWrapper/';
 import BlogWrapper from './pages/BlogWrapper/';
@@ -55,6 +56,7 @@ function App() {
             <Switch>
               <Route exact path='/'>
                 <Homepage />
+                <EmissionHeader />
                 <EmissionDonation />
                 <FooterSvg />
               </Route>
