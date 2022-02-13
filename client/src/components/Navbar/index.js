@@ -98,17 +98,19 @@ const Navbar = () => {
             </Link>
           </li>
           <li className='nav-item mobile-nav-item'>
-            <Link to={loggedIn}>
-              {profileIcon}
-              profile
-              <div 
-                className='mobile-nav-dropdown-wrapper'
-                id='mobile-dropdown'
-                onClick={mobileDropdown}
-              >
-                {angleDown}
-              </div>
-            </Link>
+            <div className='mobile-nav-profile-wrapper'>
+              <Link to={loggedIn}>
+                {profileIcon}
+                profile
+              </Link>
+            </div>
+            <div
+              className='mobile-nav-dropdown-wrapper'
+              id='mobile-dropdown'
+              onClick={mobileDropdown}
+            >
+              {angleDown}
+            </div>
           </li>
           <div className='nav-profile-settings-wrapper' id='nav-settings-wrapper'>
             <li className='nav-item mobile-nav-item'>
@@ -134,7 +136,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div 
+      <div
         className='hamburger'
         id='hamburger'
         onClick={() => mobileMenu()}

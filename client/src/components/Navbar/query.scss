@@ -21,18 +21,8 @@
       border-top: 1px solid $white;
       background: $btn-disabled;
 
-      .nav-profile-settings-wrapper {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        transition: 0.2s ease-in-out;
-      }
-
-      .nav-profile-settings-wrapper.active {
-        height: 114px;
-      }
-
       .nav-item {
+        position: relative;
         width: 100%;
         border-bottom: 1px solid $white;
 
@@ -47,22 +37,46 @@
             display: block;
             margin-right: 10px;
           }
-
-          .mobile-nav-dropdown-wrapper {
-            position: absolute;
-            right: 1rem;
-            padding: 0 10px;
-            z-index: 200;
-
-            .dropdown-icon {
-              transition: 0.2s ease-in-out;
-            }
-          }
         }
 
+        
         :hover {
           background: $dblue;
         }
+      }
+
+      .mobile-nav-item {
+        .mobile-nav-profile-wrapper {
+          width: 80%;
+        }
+
+        .mobile-nav-dropdown-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 20%;
+          height: 56px;
+          cursor: pointer;
+          z-index: 200;
+  
+          .dropdown-icon {
+            transition: 0.2s ease-in-out;
+          }
+        }
+
+      }
+
+      .nav-profile-settings-wrapper {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+
+      }
+
+      .nav-profile-settings-wrapper.active {
+        height: 114px;
       }
 
       .mobile-nav-item {
