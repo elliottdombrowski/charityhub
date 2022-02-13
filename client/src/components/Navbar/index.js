@@ -4,7 +4,18 @@ import { Link } from 'react-router-dom';
 import LoginBtn from '../Btns/LoginBtn/';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandHoldingHeart, faNewspaper, faBlog, faUserCircle, faPaperPlane, faStar, faCog, faSmog, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHandHoldingHeart,
+  faNewspaper,
+  faBlog,
+  faUserCircle,
+  faPaperPlane,
+  faStar,
+  faCog,
+  faSmog,
+  faAngleDown,
+  faLocationArrow
+} from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 import './query.scss';
@@ -17,7 +28,8 @@ const messageIcon = <FontAwesomeIcon icon={faPaperPlane} className='mobile-nav-i
 const starIcon = <FontAwesomeIcon icon={faStar} className='mobile-nav-icons star-icon' />
 const settingsIcon = <FontAwesomeIcon icon={faCog} className='mobile-nav-icons settings-icon' />
 const emissionsIcon = <FontAwesomeIcon icon={faSmog} className='mobile-nav-icons emissions-icon' />
-const angleDown = <FontAwesomeIcon icon={faAngleDown} className='mobile-nav-icon dropdown-icon' id='navicon' />
+const angleDown = <FontAwesomeIcon icon={faAngleDown} className='dropdown-icon' id='navicon' />
+const locationIcon = <FontAwesomeIcon icon={faLocationArrow} className='mobile-nav-icons location-icon' />
 
 const Navbar = () => {
   const mobileMenu = () => {
@@ -100,6 +112,12 @@ const Navbar = () => {
               <Link to='/profile'>
                 {settingsIcon}
                 settings
+              </Link>
+            </li>
+            <li className='nav-item mobile-nav-item'>
+              <Link to='/profile'>
+                {locationIcon}
+                location services
               </Link>
             </li>
           </div>
