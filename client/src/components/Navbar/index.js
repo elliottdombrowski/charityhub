@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import LoginBtn from '../Btns/LoginBtn/';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandHoldingHeart, faNewspaper, faBlog, faUserCircle, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faHandHoldingHeart, faNewspaper, faBlog, faUserCircle, faPaperPlane, faStar, faCog, faSmog } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 import './query.scss';
@@ -14,6 +14,9 @@ const newsIcon = <FontAwesomeIcon icon={faNewspaper} className='mobile-nav-icons
 const blogIcon = <FontAwesomeIcon icon={faBlog} className='mobile-nav-icons blog-icon' />
 const profileIcon = <FontAwesomeIcon icon={faUserCircle} className='mobile-nav-icons profile-icon' />
 const messageIcon = <FontAwesomeIcon icon={faPaperPlane} className='mobile-nav-icons message-icon' />
+const starIcon = <FontAwesomeIcon icon={faStar} className='mobile-nav-icons star-icon' />
+const settingsIcon = <FontAwesomeIcon icon={faCog} className='mobile-nav-icons settings-icon' />
+const emissionsIcon = <FontAwesomeIcon icon={faSmog} className='mobile-nav-icons emissions-icon' />
 
 const Navbar = () => {
   const mobileMenu = () => {
@@ -49,6 +52,12 @@ const Navbar = () => {
               charities
             </Link>
           </li>
+          <li className='nav-item mobile-nav-item'>
+            <Link to='/charities'>
+              {starIcon}
+              charity of the year
+            </Link>
+          </li>
           <li className='nav-item'>
             <Link to='/news'>
               {newsIcon}
@@ -62,6 +71,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li className='nav-item mobile-nav-item'>
+            <Link to='/blog'>
+              {emissionsIcon}
+              carbon offsets
+            </Link>
+          </li>
+          <li className='nav-item mobile-nav-item'>
             <Link to='/profile'>
               {profileIcon}
               profile
@@ -71,6 +86,12 @@ const Navbar = () => {
             <Link to='/messages'>
               {messageIcon}
               messages
+            </Link>
+          </li>
+          <li className='nav-item mobile-nav-item'>
+            <Link to='/profile'>
+              {settingsIcon}
+              settings
             </Link>
           </li>
           <LoginBtn />
