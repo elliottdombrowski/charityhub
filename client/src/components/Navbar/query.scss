@@ -13,6 +13,7 @@
     transition: 0.2s ease-in-out;
     z-index: 100;
 
+    
     .nav-item-wrapper {
       display: flex;
       flex-direction: column;
@@ -20,14 +21,24 @@
       margin-top: 47px;
       border-top: 1px solid $white;
       background: $btn-disabled;
-
+      
+      
       .nav-item {
         width: 100%;
         border-bottom: 1px solid $white;
-
+        
+        
         a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
           padding: 10px;
           width: 100%;
+
+          .mobile-nav-icons {
+            display: block;
+            margin-right: 10px;
+          }
         }
 
         :hover {
