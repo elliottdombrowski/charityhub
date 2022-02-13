@@ -28,8 +28,8 @@
     .darkmode-switch {
       position: relative;
       display: inline-block;
-      width: 60px;
-      height: 34px;
+      width: 42px;
+      height: 24px;
 
       .darkmode-slider {
         position: absolute;
@@ -38,7 +38,7 @@
         right: 0;
         bottom: 0;
         background-color: $login-background-two;
-        border-radius: 34px;
+        border-radius: 24px;
         cursor: pointer;
         transition: 0.4s;
       }
@@ -46,8 +46,8 @@
       .darkmode-slider::before {
         position: absolute;
         content: "";
-        height: 26px;
-        width: 26px;
+        height: 16px;
+        width: 16px;
         left: 4px;
         bottom: 4px;
         border-radius: 50%;
@@ -60,7 +60,7 @@
       }
 
       input:checked + .darkmode-slider:before {
-        transform: translateX(26px);
+        transform: translateX(18px);
       }
 
       input:focus + .darkmode-slider {
