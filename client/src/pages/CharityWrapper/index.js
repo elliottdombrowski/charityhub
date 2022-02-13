@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatePage from '../../AnimatePage';
 import CharityCard from '../../components/Cards/CharityCard/';
 import CharityFilter from '../../components/Forms/CharityFilter/';
 
@@ -7,11 +8,13 @@ import './query.scss';
 
 const CharityWrapper = () => {
   return (
-    <main className='charity-wrapper'>
-      <h1>charity homepage</h1>
-      <CharityCard />
-      <CharityFilter />
-    </main>
+    <AnimatePage>
+      <main className='charity-wrapper'>
+        <h1>charity homepage</h1>
+        <CharityCard />
+        <CharityFilter />
+      </main>
+    </AnimatePage>
   );
 };
 

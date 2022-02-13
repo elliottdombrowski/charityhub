@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -43,35 +44,39 @@ const client = new ApolloClient({
 });
 
 function App() {
+  let location = useLocation();
+
   return (
     <ApolloProvider client={client}>
       <ChakraProvider>
         <div className="App">
-          <Router>
-
             <Navbar />
             <Toolbar />
             <BackToTopBtn />
 
-            <Switch>
-              <Route exact path='/'>
-                <Homepage />
-                <EmissionHeader />
-                <EmissionDonation />
-                <FooterSvg />
-              </Route>
-              <Route exact path='/login' component={LoginWrapper} />
-              <Route exact path='/profile' component={Profile} />
-              <Route exact path='/messages' component={MessageWrapper} />
-              <Route exact path='/blog' component={BlogWrapper} />
-              <Route exact path='/charities' component={CharityWrapper} />
-              <Route exact path='/news' component={NewsWrapper} />
-              <Route exact path='/emissions' component={EmissionDonation} />
-              <Route component={NotFound} />
-            </Switch>
+            <AnimatePresence exitBeforeEnter>
+              <Switch 
+                key={location.pathname}
+                location={location}
+              >
+                <Route exact path='/'>
+                  <Homepage />
+                  <EmissionHeader />
+                  <EmissionDonation />
+                  <FooterSvg />
+                </Route>
+                <Route exact path='/login' component={LoginWrapper} />
+                <Route exact path='/profile' component={Profile} />
+                <Route exact path='/messages' component={MessageWrapper} />
+                <Route exact path='/blog' component={BlogWrapper} />
+                <Route exact path='/charities' component={CharityWrapper} />
+                <Route exact path='/news' component={NewsWrapper} />
+                <Route exact path='/emissions' component={EmissionDonation} />
+                <Route component={NotFound} />
+              </Switch>
+            </AnimatePresence>
 
             <Footer />
-          </Router>
         </div>
       </ChakraProvider>
     </ApolloProvider>
