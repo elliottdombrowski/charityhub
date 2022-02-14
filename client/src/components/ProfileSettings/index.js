@@ -83,7 +83,10 @@ const ProfileSettings = () => {
               {profileLocation}
               disable location services
             </div>
-            <button className='disable-services-btn'>
+            <button 
+              className='disable-services-btn'
+              onClick={() => console.log('clicking profile btn')}
+            >
               disable
             </button>
           </li>
