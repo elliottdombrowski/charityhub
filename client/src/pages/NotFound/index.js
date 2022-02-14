@@ -1,5 +1,5 @@
 import React from 'react';
-import BackToHomeBtn from '../../components/Btns/BackToHomeBtn/index.tsx';
+import BackToHomeBtn from '../../components/Btns/BackToHomeBtn/';
 import NotFoundSvg from '../../components/Svgs/NotFoundSvg';
 
 import './styles.scss';

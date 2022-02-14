@@ -1,1 +1,13 @@
 @import '../../variables.scss';
+
+@media all and (max-width: 800px) {
+  .charity-wrapper {
+    width: 95%;
+  }
+}
+
+@media all and (max-width: 674px) {
+  .charity-wrapper {
+    width: 100%;
+  }
+}

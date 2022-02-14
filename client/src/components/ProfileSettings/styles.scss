@@ -1,44 +1,147 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .profile-settings-wrapper {
   width: 100%;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
+  margin-top: 10px;
+
+  h3 {
+    color: $btn-disabled;
+    cursor: default;
+
+    path {
+      color: $btn-disabled;
+    }
+
+    .settings-profile-icon {
+      margin-right: 5px;
+    }
+  }
 
   .profile-settings {
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
+
+    .profile-options-dropdown-wrapper {
+      height: 0px;
+      overflow: hidden;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  .profile-option {
+    padding: 8px;
+    background: $btn-disabled;
+    border-bottom: 1px solid $white;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    .profile-icon {
+      margin-right: 8px;
+      cursor: default;
+    }
+  }
+
+  .profile-dropdown-option {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .profile-location-option {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 50;
+
+    .disable-services-btn {
+      position: absolute;
+      right: 10px;
+      background: $dgreen;
+      padding: 0px 10px;
+      border-radius: 5px;
+      z-index: 100;
+    }
   }
   
-  .profile-option {
-    margin: 3px 0;
-    padding: 0 8px;
-    background: $dgreen;
-    border-radius: 5px;
-    transition: .3s ease-in-out;
+  .profile-darkmode-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    .settings-icon {
-      margin-right: 8px;
-      cursor: pointer;
+    .darkmode-switch {
+      position: relative;
+      display: inline-block;
+      width: 42px;
+      height: 24px;
+  
+      .darkmode-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $login-background-two;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+  
+      .darkmode-slider::before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        border-radius: 50%;
+        background: $white;
+        transition: 0.4s;
+      }
+  
+      input:checked + .darkmode-slider {
+        background: $dgreen;
+      }
+  
+      input:checked + .darkmode-slider:before {
+        transform: translateX(18px);
+      }
+  
+      input:focus + .darkmode-slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+  
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
     }
   }
 
   .settings-btn {
     padding: 4px 15px;
     width: 100%;
-    background: $dblue;
+    background: $dgreen;
     border: 2px solid $blue;
     border-radius: 10px;
+
+    .location-profile-icon {
+      margin-right: 10px;
+      transition: 0.2s ease-in-out;
+    }
   }
-  
+
   .settings-btn:nth-child(2) {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
   }
-  
+
   .settings-option {
     height: 0;
     overflow: hidden;
   }
-  
+
   .settings-option.active {
     height: 100%;
     margin: 1rem 0;
@@ -47,5 +150,17 @@
   .logout-btn {
     margin-top: 1rem;
     font-size: 130%;
+  }
+
+  .location-profile-icon.active {
+    transform: rotate(180deg);
+  }
+  
+  .profile-options-dropdown-wrapper.active {
+    height: 82px;
+  }
+
+  .profile-option:hover {
+    background: $dblue;
   }
 }

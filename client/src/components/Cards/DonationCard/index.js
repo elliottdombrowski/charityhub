@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-import DonationBtn from "../../Btns/DonationBtn/index.tsx";
+import DonationBtn from "../../Btns/DonationBtn/";
 
 import './styles.scss';
 import './query.scss';

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 
-import CurrDate from '../CurrDate/index.tsx';
-import ProfileIcon from '../Icons/ProfileIcon/index.tsx';
-import MessengerIcon from '../Icons/MessengerIcon/index.tsx';
+import CurrDate from '../CurrDate';
+import ProfileIcon from '../Icons/ProfileIcon';
+import MessengerIcon from '../Icons/MessengerIcon';
 
 import './styles.scss';
 import './query.scss';

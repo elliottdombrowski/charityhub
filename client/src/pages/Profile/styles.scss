@@ -3,6 +3,7 @@
 .profile-wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   height: 90vh;
   background: linear-gradient(to right, $ddblue, $dblue);
 
@@ -10,12 +11,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    height: fit-content;
+    width: 60%;
+    background: $login-background-two;
+
+    h1, h2 {
+      color: $black;
+    }
+
+    h1 {
+      text-transform: capitalize;
+    }
 
     .profile-img-wrapper {
       width: 100px;
       height: auto;
-      margin-top: 5rem;
       border: 4px solid $dgreen;
       border-radius: 100%;
     
@@ -38,5 +51,10 @@
     .profile-email {
       margin: 1rem 0 0.3rem;
     }
+  }
+
+  .profile-settings-wrapper {
+    background: $input-placeholder;
+    border-radius: 10px;
   }
 }

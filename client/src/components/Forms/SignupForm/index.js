@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import { Spinner } from '@chakra-ui/react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,7 +35,7 @@ const SignupForm = () => {
   const [pwdErr, setPwdErr] = useState(true);
 
   //LOGIN MUTATION
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error, data, loading }] = useMutation(ADD_USER);
 
   //HANDLING FONTAWESOME ICONS HERE TO ALLOW STATE CHANGE
   const eye = <FontAwesomeIcon icon={faEye} />

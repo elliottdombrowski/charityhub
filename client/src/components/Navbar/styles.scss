@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 li,
 a {
@@ -16,15 +16,27 @@ a {
 
   .nav-right {
     font-size: 1.5em;
+
+    .mobile-nav-icons {
+      display: none;
+    }
   }
 
   .nav-left {
     font-size: 2rem;
   }
 
-  .nav-item {
-    margin: 0 1rem;
-    transition: 0.2s ease-in-out;
+  .nav-item-wrapper {
+    display: flex;
+
+    .nav-item {
+      margin: 0 1rem;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  .mobile-nav-item {
+    display: none;
   }
 }
 
@@ -41,5 +53,3 @@ a {
     background: $white;
   }
 }
-
-
