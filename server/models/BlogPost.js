@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const { Schema } = mongoose;
+const Comments = require('./Comments');
 
 const postSchema = new Schema({
   author: {
@@ -21,12 +22,7 @@ const postSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  comments: [{
-    comment_author: {
-      type: String,
-      max: 255
-    }
-  }]
+  comments: [Comments.schema]
 });
 
 const BlogPost = mongoose.model('BlogPost', postSchema);
