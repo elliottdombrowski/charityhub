@@ -7,6 +7,9 @@ import ThumbsUpIcon from '../../Icons/ThumbsUpIcon/';
 import ThumbsDownIcon from '../../Icons/ThumbsDownIcon/';
 import BookmarkIcon from '../../Icons/BookmarkIcon/';
 
+import { useQuery } from '@apollo/client';
+import { QUERY_ALLPOSTS } from '../../../utils/queries';
+
 import './styles.scss';
 import './query.scss';
 
@@ -53,7 +56,11 @@ let dummyPosts = [
 // ]
 
 const BlogPost = () => {
-  // console.log(dummyPosts.comments.comment_author);
+
+  const { loading, data } = useQuery(QUERY_ALLPOSTS);
+  const blogPosts = data?.allPosts;
+  console.log('all posts ', blogPosts);
+
   return (
     <section className='blog-post-wrapper'>
       {

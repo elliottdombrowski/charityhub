@@ -21,3 +21,14 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_ALLPOSTS = gql`
+  query allPosts {
+    allPosts {
+      _id
+      author
+      title
+      body
+    }
+  }
+`;

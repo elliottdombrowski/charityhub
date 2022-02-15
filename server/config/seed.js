@@ -22,4 +22,4 @@ db.once('open', async () => {
 
   console.log('seeded posts');
   process.exit();
-})
+});
