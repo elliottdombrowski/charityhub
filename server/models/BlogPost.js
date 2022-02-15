@@ -17,6 +17,10 @@ const postSchema = new Schema({
     type: String,
     max: 500
   },
+  postedAt: {
+    type: Date,
+    default: Date.now
+  },
   comments: [{
     comment_author: {
       type: String,
