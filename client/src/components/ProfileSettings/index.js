@@ -85,7 +85,8 @@ const ProfileSettings = () => {
             </div>
             <button 
               className='disable-services-btn'
-              onClick={() => console.log('clicking profile btn')}
+              onClick={() => 
+                console.log('clicking profile btn')}
             >
               disable
             </button>
