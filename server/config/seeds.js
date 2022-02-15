@@ -2,20 +2,24 @@ const db = require('./connection');
 const { User, BlogPost } = require('../models');
 
 db.once('open', async () => {
-  await User.insertMany([
+  await BlogPost.insertMany([
     {
-      name: 'testing',
-      email: 'testing@test.com',
-      password: 'testing123',
-      city: 'Chicago',
-      state: 'IL',
+      author: 'Charlie Pace',
+      title: 'Testing One',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
     {
-      name: 'Charlie Pace',
-      email: 'drive@shaft.com',
-      password: 'youalleverybody',
-      city: 'Austin',
-      state: 'TX',
-    }
-  ])
+      author: 'John Locke',
+      title: 'Testing Two',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
+    },
+    {
+      author: 'Hugo Reyes',
+      title: 'Testing Three',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
+    },
+  ]);
+
+  console.log('seeded posts');
+  process.exit();
 })
