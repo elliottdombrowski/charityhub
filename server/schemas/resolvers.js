@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, BlogPost, Comments } = require('../models');
 const { signToken, authMiddleware } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
 
@@ -13,6 +13,10 @@ const resolvers = {
         return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You must be logged in.');
+    },
+
+    allPosts: async () => {
+      return await BlogPost.find();
     },
   },
 

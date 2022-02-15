@@ -18,10 +18,4 @@ db.once('open', async () => {
       state: 'TX',
     }
   ])
-
-  await BlogPost.insertMany([
-    {
-      
-    }
-  ])
 })

@@ -7,6 +7,16 @@ const typeDefs = gql`
     email: String!
     city: String!
     state: String!
+    posts: [BlogPost]
+    comments: [Comments]
+  }
+
+  type Post {
+    _id: ID!
+    author: User
+    title: String
+    body: String
+    comments: [Comments]
   }
 
   type Auth {
@@ -18,6 +28,7 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(userId: ID!): User
+    allPosts: [BlogPost]
   }
 
   type Mutation {
