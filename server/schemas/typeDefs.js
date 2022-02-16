@@ -11,7 +11,7 @@ const typeDefs = gql`
 
   type Post {
     _id: ID!
-    author: User
+    author: String
     title: String
     body: String
   }

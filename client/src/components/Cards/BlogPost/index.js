@@ -58,7 +58,7 @@ let dummyPosts = [
 const BlogPost = () => {
 
   const { loading, data } = useQuery(QUERY_ALLPOSTS);
-  const blogPosts = data?.allPosts;
+  const blogPosts = data?.allPosts || [];
   console.log('all posts ', blogPosts);
 
   return (

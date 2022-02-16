@@ -16,7 +16,7 @@ const resolvers = {
     },
 
     allPosts: async () => {
-      return await BlogPost.find();
+      return await BlogPost.find({});
     },
   },
 
