@@ -64,9 +64,9 @@ const BlogPost = () => {
   return (
     <section className='blog-post-wrapper'>
       {
-        dummyPosts.map((singlePost) => {
+        blogPosts.map((singlePost) => {
           return (
-            <section className='single-blog-post' key={singlePost.id}>
+            <section className='single-blog-post' key={singlePost._id}>
               <div className='blog-post-header-wrapper'>
                 <h1 className='blog-post-title'>
                   {singlePost.title}
