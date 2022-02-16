@@ -32,6 +32,11 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  contacts: {
+    type: Number,
+    default: 0,
+    max: 500
+  },
   posts: [BlogPost.schema],
   comments: [Comments.schema]
 });
