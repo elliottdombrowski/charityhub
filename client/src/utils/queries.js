@@ -18,6 +18,7 @@ export const QUERY_ME = gql`
       email
       city
       state
+      contacts
     }
   }
 `;
