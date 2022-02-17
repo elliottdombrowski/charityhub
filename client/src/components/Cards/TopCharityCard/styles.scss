@@ -20,10 +20,15 @@
     background: $login-background-two;
     text-align: center;
 
+    h1, h2 {
+      font-size: 120%;
+      color: $black;
+    }
+
     .top-charity-card-img {
       width: 80%;
       height: auto;
-      margin: 0 auto;
+      margin: 15px auto;
     }
   }
 }

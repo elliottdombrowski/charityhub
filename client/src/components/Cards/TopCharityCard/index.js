@@ -47,8 +47,8 @@ const TopCharityCard = () => {
           return (
             <div className='single-top-charity-card' key={top.top_id}>
               <div>
-                <h1>{top.topCharityName}</h1>
-                <h1>{top.topCharityDesc}</h1>
+                <h1 className='top-charitiy-name'>{top.topCharityName}</h1>
+                <h2 className='top-charity-desc'>{top.topCharityDesc}</h2>
                 <div className="top-charity-card-img">
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
