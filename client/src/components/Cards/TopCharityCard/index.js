@@ -44,7 +44,7 @@ const TopCharityCard = () => {
           <h1>one</h1>
           <h1>two</h1>
           <div className="top-charity-card-img">
-            {/* <img src={require('./placeholder.jpeg')}></img> */}
+            <img src={require('./placeholder.jpeg')}></img>
           </div>
         </div>
       </div>

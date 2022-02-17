@@ -1,11 +1,27 @@
 @import '../../../variables.scss';
 
-.single-top-charity-card {
-  height: 100px;
-}
+.top-charity-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 
-.top-charity-card-img {
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
+  .single-top-charity-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: $login-background-two;
+    text-align: center;
+
+    .top-charity-card-img {
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
 }
