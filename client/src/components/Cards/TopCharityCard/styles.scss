@@ -3,16 +3,17 @@
 .top-charity-card-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-y: scroll;
 
   .single-top-charity-card {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    margin: 2rem;
+    width: 250px;
+    margin: 1rem;
     padding: 1rem;
     border-radius: 10px;
     background: $login-background-two;

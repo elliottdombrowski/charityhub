@@ -39,11 +39,11 @@ let topCharities = [
 const TopCharityCard = () => {
   console.log(topCharities)
   return (
-    <section className='top-charity-card-wrapper'>
+    <div className='top-charity-card-wrapper'>
       {
         topCharities.map((top) => {
           return (
-            <span className='single-top-charity-card' key={top.top_id}>
+            <div className='single-top-charity-card' key={top.top_id}>
               <div>
                 <h1>{top.topCharityName}</h1>
                 <h1>{top.topCharityDesc}</h1>
@@ -51,11 +51,11 @@ const TopCharityCard = () => {
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
               </div>
-            </span>
+            </div>
           );
         })
       }
-    </section>
+    </div>
   );
 };
 
