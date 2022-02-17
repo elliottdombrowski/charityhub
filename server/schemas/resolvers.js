@@ -1,4 +1,4 @@
-const { User, BlogPost, Comments } = require('../models');
+const { User, BlogPost, Comments, Charities } = require('../models');
 const { signToken, authMiddleware } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
 
@@ -17,6 +17,10 @@ const resolvers = {
 
     allPosts: async () => {
       return await BlogPost.find({});
+    },
+
+    allCharities: async () => {
+      return await Charities.find({});
     },
   },
 
