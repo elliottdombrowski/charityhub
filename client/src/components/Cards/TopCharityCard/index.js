@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DonationBtn from '../../Btns/DonationBtn';
+
 import './styles.scss';
 import './query.scss';
 
@@ -50,6 +52,7 @@ const TopCharityCard = () => {
                 <div className="top-charity-card-img">
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
+                <DonationBtn />
               </div>
             </div>
           );
