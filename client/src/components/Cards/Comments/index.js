@@ -14,6 +14,7 @@ const Comments = () => {
     variables: { postId: postId },
   });
   const singlePost = data?.singlePost || [];
+  console.log('single post- ', singlePost);
 
   return (
     <div className='comments-wrapper'>

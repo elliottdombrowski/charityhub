@@ -5,7 +5,7 @@ db.once('open', async () => {
   await User.deleteMany();
   await User.insertMany([
     {
-      id: "1",
+      id: "621016b4632ce51010e281c3",
       name: 'Charlie Pace',
       email: 'cpace@gmail.com',
       password: 'Test123!',
@@ -13,7 +13,7 @@ db.once('open', async () => {
       state: 'TX'
     },
     {
-      id: "2",
+      id: "621016b4632ce51010e281c4",
       name: 'Hugo Reyes',
       email: 'hugo@gmail.com',
       password: '4815162342!',
@@ -25,17 +25,17 @@ db.once('open', async () => {
   await BlogPost.deleteMany();
   await BlogPost.insertMany([
     {
-      authorId: "1",
+      authorId: "621016b4632ce51010e281c3",
       title: 'Testing One',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
     {
-      authorId: "1",
+      authorId: "621016b4632ce51010e281c3",
       title: 'Testing Two',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
     {
-      authorId: "2",
+      authorId: "621016b4632ce51010e281c4",
       title: 'Testing Three',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
