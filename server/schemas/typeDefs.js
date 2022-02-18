@@ -21,6 +21,8 @@ const typeDefs = gql`
     _id: ID!
     charityName: String
     charityDescription: String
+    charityEmail: String
+    charityAddress: String
   }
 
   type Auth {
