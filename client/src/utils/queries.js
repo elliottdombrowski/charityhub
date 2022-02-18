@@ -33,3 +33,15 @@ export const QUERY_ALLPOSTS = gql`
     }
   }
 `;
+
+export const QUERY_ALLCHARITIES = gql`
+  query allCharities {
+    allCharities {
+      _id
+      charityName
+      charityDescription
+      charityEmail
+      charityAddress
+    }
+  }
+`;
