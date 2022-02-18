@@ -13,7 +13,7 @@ import {
   faLock
 } from '@fortawesome/free-solid-svg-icons';
 
-const profileAngleDown = <FontAwesomeIcon className='location-profile-icon profile-icon' id='location-profile' icon={faAngleDown} />
+const profileAngleDown = <FontAwesomeIcon className='location-profile-icon profile-icon fa-xl' id='location-profile' icon={faAngleDown} />
 const profileSettings = <FontAwesomeIcon className='settings-profile-icon profile-icon' icon={faCog} />
 const profilePhoto = <FontAwesomeIcon className='photo-profile-icon profile-icon' icon={faCamera} />
 const profileDarkMode = <FontAwesomeIcon className='darkmode-profile-icon profile-icon' icon={faSun} />
@@ -21,9 +21,6 @@ const profileLocation = <FontAwesomeIcon className='location-profile-icon profil
 const profilePassword = <FontAwesomeIcon className='password-profile-icon profile-icon' icon={faLock} />
 
 const ProfileSettings = () => {
-  const [showSettingsOne, setShowSettingsOne] = useState(false);
-  const [showSettingsTwo, setShowSettingsTwo] = useState(false);
-  const [showLocationSettings, setShowLocationSettings] = useState(false);
 
   const userSettingsDropdown = () => {
     document.getElementById('profile-user-options').classList.toggle('active');
@@ -44,8 +41,11 @@ const ProfileSettings = () => {
           className='profile-option'
           onClick={userSettingsDropdown}
         >
-          {profileSettings}
-          user settings
+          <div>
+            {profileSettings}
+            user settings
+          </div>
+          {profileAngleDown}
         </li>
 
         <div 
@@ -53,12 +53,16 @@ const ProfileSettings = () => {
           id='profile-user-options'
         >
           <li className='profile-option profile-dropdown-option'>
-            {profilePhoto}
-            change profile photo
+            <div>
+              {profilePhoto}
+              change profile photo
+            </div>
           </li>
           <li className='profile-option profile-dropdown-option'>
-            {profilePassword}
-            change password
+            <div>
+              {profilePassword}
+              change password
+            </div>
           </li>
         </div>
 
@@ -66,8 +70,11 @@ const ProfileSettings = () => {
           className='profile-option'
           onClick={locationSettingsDropdown}
         >
-          {profileLocation}
-          location settings
+          <div>
+            {profileLocation}
+            location settings
+          </div>
+          {profileAngleDown}
         </li>
 
         <div 
@@ -75,8 +82,10 @@ const ProfileSettings = () => {
           id='profile-location-options'
         >
           <li className='profile-option profile-dropdown-option'>
-            {profileLocation}
-            change location
+            <div>
+              {profileLocation}
+              change location
+            </div>
           </li>
           <li className='profile-option profile-dropdown-option profile-location-option'>
             <div>
