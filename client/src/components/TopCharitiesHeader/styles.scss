@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+.top-charities-header-wrapper {
+  text-align: center;
+
+  .top-charities-header {
+    font-size: 180%;
+  }
+
+  .top-charities-subheader {
+    margin-top: 10px;
+    font-size: 140%;
+  }
+}

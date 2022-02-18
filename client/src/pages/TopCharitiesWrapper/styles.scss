@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+.top-charity-wrapper {
+  padding: 1rem 0;
+  margin: 3rem auto 0;
+  width: 90vw;
+  background: linear-gradient(to right, $gblue, $blue);
+  border: 1px solid $white;
+  border-radius: 10px;
+}

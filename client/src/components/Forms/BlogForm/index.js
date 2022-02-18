@@ -27,13 +27,6 @@ const BlogForm = () => {
       color: 'red',
     }
   }
-  
-  // const postWrapperFunction = (event) => {
-  //   // setBlogPostData(event.target.value);
-  //   setCharCount(event.target.value.length);
-
-  //   charCount >= 500 ? setErr('your post is too long!') : setErr('');
-  // };
 
   const handleBlogInputChange = (event) => {
     const { name, value } = event.target;

@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const { Schema } = mongoose;
+const BlogPost = require('./BlogPost');
+const Comments = require('./Comments');
 
 const userSchema = new Schema({
   name: {
@@ -29,7 +31,14 @@ const userSchema = new Schema({
   state: {
     type: String,
     required: true
-  }
+  },
+  contacts: {
+    type: Number,
+    default: 0,
+    max: 500
+  },
+  posts: [BlogPost.schema],
+  comments: [Comments.schema]
 });
 
 //SAVE USER SCHEMA AND HASH / SALT PASSWORD 

@@ -39,6 +39,7 @@ const Profile = () => {
           <section className='profile-info'>
             <h2 className='profile-email profile-data'>{user.email}</h2>
             <h2 className='profile-location profile-data'>{user.city}, {user.state}</h2>
+            <h2 className='profile-contacts profile-data'>Contacts: {user.contacts}</h2>
           </section>
 
           <span className='profile-settings-wrapper'>

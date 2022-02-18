@@ -18,6 +18,30 @@ export const QUERY_ME = gql`
       email
       city
       state
+      contacts
+    }
+  }
+`;
+
+export const QUERY_ALLPOSTS = gql`
+  query allPosts {
+    allPosts {
+      _id
+      author
+      title
+      body
+    }
+  }
+`;
+
+export const QUERY_ALLCHARITIES = gql`
+  query allCharities {
+    allCharities {
+      _id
+      charityName
+      charityDescription
+      charityEmail
+      charityAddress
     }
   }
 `;

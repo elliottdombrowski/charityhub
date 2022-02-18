@@ -31,6 +31,10 @@
   }
 
   .profile-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 8px;
     background: $btn-disabled;
     border-bottom: 1px solid $white;
@@ -41,6 +45,14 @@
     .profile-icon {
       margin-right: 8px;
       cursor: default;
+    }
+
+    .dropdown-icon {
+      transition: 0.3s ease-in-out;
+    }
+
+    .dropdown-icon.active {
+      transform: rotate(180deg);
     }
   }
 

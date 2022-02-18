@@ -7,59 +7,23 @@ import ThumbsUpIcon from '../../Icons/ThumbsUpIcon/';
 import ThumbsDownIcon from '../../Icons/ThumbsDownIcon/';
 import BookmarkIcon from '../../Icons/BookmarkIcon/';
 
+import { useQuery } from '@apollo/client';
+import { QUERY_ALLPOSTS } from '../../../utils/queries';
+
 import './styles.scss';
 import './query.scss';
 
-let dummyPosts = [
-  {
-    id: 1,
-    author: 'dummy one',
-    title: 'post one',
-    body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-  },
-  {
-    id: 2,
-    author: 'dummy two',
-    title: 'post two',
-    body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-  },
-  {
-    id: 3,
-    author: 'dummy three',
-    title: 'post three',
-    body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-  },
-  {
-    id: 4,
-    author: 'dummy four',
-    title: 'post four',
-    body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-  },
-];
-
-// const dummyComments = [
-//   {
-//     post_id: 1,
-//     comment_id: 1,
-//     comment_author: 'commenter one',
-//     comment_body: 'testing for comments 1234 testing',
-//   },
-//   {
-//     post_id: 1,
-//     comment_id: 2,
-//     comment_author: 'commenter two',
-//     comment_body: 'testing for comments 1234 testing',
-//   }
-// ]
-
 const BlogPost = () => {
-  // console.log(dummyPosts.comments.comment_author);
+
+  const { loading, data } = useQuery(QUERY_ALLPOSTS);
+  const blogPosts = data?.allPosts || [];
+
   return (
     <section className='blog-post-wrapper'>
       {
-        dummyPosts.map((singlePost) => {
+        blogPosts.map((singlePost) => {
           return (
-            <section className='single-blog-post' key={singlePost.id}>
+            <section className='single-blog-post' key={singlePost._id}>
               <div className='blog-post-header-wrapper'>
                 <h1 className='blog-post-title'>
                   {singlePost.title}
