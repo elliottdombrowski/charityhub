@@ -15,6 +15,7 @@ import EmissionHeader from './components/EmissionHeader';
 import Footer from './components/Footer/';
 import MessageWrapper from './pages/MessageWrapper/';
 import BlogWrapper from './pages/BlogWrapper/';
+import Comments from './components/Cards/Comments';
 import CharityWrapper from './pages/CharityWrapper/';
 import NewsWrapper from './pages/NewsWrapper/';
 import BackToTopBtn from './components/Btns/BackToTopBtn/';
@@ -64,6 +65,7 @@ function App() {
                 <Route exact path='/profile' component={Profile} />
                 <Route exact path='/messages' component={MessageWrapper} />
                 <Route exact path='/blog' component={BlogWrapper} />
+                <Route exact path='/comments/:postId' component={Comments} />
                 <Route exact path='/charities' component={CharityWrapper} />
                 <Route exact path='/news' component={NewsWrapper} />
                 <Route exact path='/emissions' component={EmissionDonation} />

@@ -34,6 +34,17 @@ export const QUERY_ALLPOSTS = gql`
   }
 `;
 
+export const QUERY_SINGLEPOST = gql`
+  query singlePost($postId: ID!) {
+    singlePost(postId: $postId) {
+      _id
+      author
+      title
+      body
+    }
+  }
+`;
+
 export const QUERY_ALLCHARITIES = gql`
   query allCharities {
     allCharities {

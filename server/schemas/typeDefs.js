@@ -12,7 +12,7 @@ const typeDefs = gql`
 
   type Post {
     _id: ID!
-    author: String
+    authorId: String
     title: String
     body: String
   }
@@ -35,6 +35,7 @@ const typeDefs = gql`
     users: [User]
     user(userId: ID!): User
     allPosts: [Post]
+    singlePost(postId: ID!): Post
     allCharities: [Charities]
   }
 
