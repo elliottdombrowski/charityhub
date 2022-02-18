@@ -65,7 +65,7 @@ function App() {
                 <Route exact path='/profile' component={Profile} />
                 <Route exact path='/messages' component={MessageWrapper} />
                 <Route exact path='/blog' component={BlogWrapper} />
-                <Route exact path='/comments' component={Comments} />
+                <Route exact path='/comments/:postId' component={Comments} />
                 <Route exact path='/charities' component={CharityWrapper} />
                 <Route exact path='/news' component={NewsWrapper} />
                 <Route exact path='/emissions' component={EmissionDonation} />

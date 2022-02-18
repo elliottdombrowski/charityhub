@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Auth from '../../../utils/auth';
 
 import CommentIcon from '../../Icons/CommentIcon/';
@@ -46,7 +46,7 @@ const BlogPost = () => {
                   <ThumbsUpIcon />
                   <ThumbsDownIcon />
 
-                  <Link to={Auth.loggedIn() ? '/comments' : '/login'} className='blog-post-comment-icon'>
+                  <Link to={`/comments/${singlePost._id}`} className='blog-post-comment-icon'>
                     <CommentIcon />
                   </Link>
                 </ul>
