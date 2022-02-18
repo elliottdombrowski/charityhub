@@ -1,1 +1,55 @@
 @import '../../../variables.scss';
+
+.charity-search-bar-form {
+  width: 70%;
+  margin: 5rem 0;
+}
+
+.charity-search-label {
+  color: $white;
+  font-size: 25px;
+}
+
+.charity-search-bar-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.charity-search-bar {
+  padding: 8px 15px;
+  border-radius: 50px;
+  width: 100%;
+  color: $black;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+
+}
+
+.charity-search-icon-btn {
+  // position: absolute;
+  right: 1rem;
+  transition: 0.2s ease-in-out;
+  z-index: 5;
+
+  .charity-search-icon > path {
+    color: $btn-disabled;
+  }
+}
+
+.charity-search-bar:hover,
+.charity-search-bar:focus {
+  outline: 1px solid $input-placeholder;
+}
+
+.charity-search-icon-btn:hover > .charity-search-icon > path,
+.charity-search-icon-btn:focus > .charity-search-icon > path {
+  color: $dgreen;
+}
+
+.blog-search-icon > path {
+  transition: 0.2s ease-in-out;
+  color: $btn-disabled;
+}
