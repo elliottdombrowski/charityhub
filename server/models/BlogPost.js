@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 const { Schema } = mongoose;
+const User = require('./User');
 const Comments = require('./Comments');
 
 const postSchema = new Schema({
-  author: {
-    type: String,
+  authorId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
-    trim: true
   },
   title: {
     type: String,

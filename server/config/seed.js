@@ -2,20 +2,40 @@ const db = require('./connection');
 const { User, BlogPost, Charities } = require('../models');
 
 db.once('open', async () => {
+  await User.deleteMany();
+  await User.insertMany([
+    {
+      id: "1",
+      name: 'Charlie Pace',
+      email: 'cpace@gmail.com',
+      password: 'Test123!',
+      city: 'Austin',
+      state: 'TX'
+    },
+    {
+      id: "2",
+      name: 'Hugo Reyes',
+      email: 'hugo@gmail.com',
+      password: '4815162342!',
+      city: 'Austin',
+      state: 'TX'
+    },
+  ]);
+
   await BlogPost.deleteMany();
   await BlogPost.insertMany([
     {
-      author: 'Charlie Pace',
+      authorId: "1",
       title: 'Testing One',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
     {
-      author: 'John Locke',
+      authorId: "1",
       title: 'Testing Two',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
     {
-      author: 'Hugo Reyes',
+      authorId: "2",
       title: 'Testing Three',
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam ab ipsum, sit, dolores voluptates numquam nulla quisquam delectus excepturi nesciunt. Exercitationem a rerum eos, neque placeat facere et sequi!'
     },
