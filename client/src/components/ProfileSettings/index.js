@@ -13,7 +13,8 @@ import {
   faLock
 } from '@fortawesome/free-solid-svg-icons';
 
-const profileAngleDown = <FontAwesomeIcon className='location-profile-icon profile-icon fa-xl' id='location-profile' icon={faAngleDown} />
+const profileAngleDownOne = <FontAwesomeIcon className='location-profile-icon profile-icon fa-xl dropdown-icon' id='user-profile-icon' icon={faAngleDown} />
+const profileAngleDownTwo = <FontAwesomeIcon className='location-profile-icon profile-icon fa-xl dropdown-icon' id='location-profile-icon' icon={faAngleDown} />
 const profileSettings = <FontAwesomeIcon className='settings-profile-icon profile-icon' icon={faCog} />
 const profilePhoto = <FontAwesomeIcon className='photo-profile-icon profile-icon' icon={faCamera} />
 const profileDarkMode = <FontAwesomeIcon className='darkmode-profile-icon profile-icon' icon={faSun} />
@@ -24,10 +25,12 @@ const ProfileSettings = () => {
 
   const userSettingsDropdown = () => {
     document.getElementById('profile-user-options').classList.toggle('active');
+    document.getElementById('user-profile-icon').classList.toggle('active');
   };
 
   const locationSettingsDropdown = () => {
     document.getElementById('profile-location-options').classList.toggle('active');
+    document.getElementById('location-profile-icon').classList.toggle('active');
   };
 
   return (
@@ -45,7 +48,7 @@ const ProfileSettings = () => {
             {profileSettings}
             user settings
           </div>
-          {profileAngleDown}
+          {profileAngleDownOne}
         </li>
 
         <div 
@@ -74,7 +77,7 @@ const ProfileSettings = () => {
             {profileLocation}
             location settings
           </div>
-          {profileAngleDown}
+          {profileAngleDownTwo}
         </li>
 
         <div 

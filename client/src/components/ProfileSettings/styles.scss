@@ -46,6 +46,14 @@
       margin-right: 8px;
       cursor: default;
     }
+
+    .dropdown-icon {
+      transition: 0.3s ease-in-out;
+    }
+
+    .dropdown-icon.active {
+      transform: rotate(180deg);
+    }
   }
 
   .profile-dropdown-option {
