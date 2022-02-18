@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimatePage from '../../AnimatePage';
+import TopCharitiesWrapper from '../TopCharitiesWrapper';
 import CharityCard from '../../components/Cards/CharityCard/';
 import CharityFilter from '../../components/Forms/CharityFilter/';
 
@@ -10,9 +11,9 @@ const CharityWrapper = () => {
   return (
     <AnimatePage>
       <main className='charity-wrapper'>
-        <h1>charity homepage</h1>
-        <CharityCard />
+        <TopCharitiesWrapper />
         <CharityFilter />
+        <CharityCard />
       </main>
     </AnimatePage>
   );
