@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, BlogPost } = require('../models');
+const { User, BlogPost, Charities } = require('../models');
 
 db.once('open', async () => {
   await BlogPost.insertMany([
@@ -20,6 +20,42 @@ db.once('open', async () => {
     },
   ]);
 
+  await Charities.insertMany([
+    {
+      charityName: 'Charity One',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Two',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Three',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Four',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Five',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Six',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Seven',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      charityName: 'Charity Eight',
+      charityDescription: 'Lorem ipsum dolor sit amet',
+    },
+  ]);
+
   console.log('seeded posts');
+  console.log('seeded charities');
   process.exit();
 });
