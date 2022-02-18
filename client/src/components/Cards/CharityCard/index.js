@@ -19,7 +19,7 @@ const CharityCard = () => {
       {
         allCharities.map((singleCharity) => {
           return (
-            <section className="single-charity-card" key={singleCharity.id}>
+            <section className="single-charity-card" key={singleCharity._id}>
               <div className="charity-card-header-wrapper">
                 <h1 className="charity-name">
                   {singleCharity.charityName}
