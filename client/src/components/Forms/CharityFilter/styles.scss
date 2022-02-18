@@ -29,12 +29,12 @@
 }
 
 .charity-search-icon-btn {
-  // position: absolute;
+  position: absolute;
   right: 1rem;
-  transition: 0.2s ease-in-out;
   z-index: 5;
-
+  
   .charity-search-icon > path {
+    transition: 0.2s ease-in-out;
     color: $btn-disabled;
   }
 }
