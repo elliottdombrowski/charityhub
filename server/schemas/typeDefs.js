@@ -35,6 +35,7 @@ const typeDefs = gql`
     users: [User]
     user(userId: ID!): User
     allPosts: [Post]
+    singlePost(postId: ID!): Post
     allCharities: [Charities]
   }
 

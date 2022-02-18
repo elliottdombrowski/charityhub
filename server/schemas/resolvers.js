@@ -19,6 +19,10 @@ const resolvers = {
       return await BlogPost.find({});
     },
 
+    singlePost: async (parent, { postId }) => {
+      return BlogPost.findOne({ _id: postId });
+    },
+
     allCharities: async () => {
       return await Charities.find({});
     },
