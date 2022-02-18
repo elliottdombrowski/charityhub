@@ -1,54 +1,26 @@
 import React from 'react';
-
 import DonationBtn from '../../Btns/DonationBtn';
+
+import { useQuery } from '@apollo/client';
+import { QUERY_ALLCHARITIES } from '../../../utils/queries';
 
 import './styles.scss';
 import './query.scss';
 
-let topCharities = [
-  {
-    top_id: 1,
-    topCharityName: 'top charity one',
-    topCharityDesc: 'lorem ipsum yada yada dummy text',
-  },
-  {
-    top_id: 2,
-    topCharityName: 'top charity two',
-    topCharityDesc: 'lorem ipsum yada yada dummy text',
-  },
-  {
-    top_id: 3,
-    topCharityName: 'top charity three',
-    topCharityDesc: 'lorem ipsum yada yada dummy text',
-  },
-  {
-    top_id: 4,
-    topCharityName: 'top charity four',
-    topCharityDesc: 'lorem ipsum yada yada dummy text',
-  },
-  {
-    top_id: 5,
-    topCharityName: 'top charity five',
-    topCharityDesc: 'lorem ipsum yada yada dummy text',
-  },
-  {
-    top_id: 6,
-    topCharityName: 'top charity six',
-    topCharityDesc: 'lorem ipsum yada yada dummy text',
-  },
-];
-
 const TopCharityCard = () => {
-  console.log(topCharities)
+
+  const { loading, data } = useQuery(QUERY_ALLCHARITIES);
+  const allCharities = data?.allCharities || [];
+
   return (
     <div className='top-charity-card-wrapper'>
       {
-        topCharities.map((top) => {
+        allCharities.map((singleCharity) => {
           return (
-            <div className='single-top-charity-card' key={top.top_id}>
+            <div className='single-top-charity-card' key={singleCharity._id}>
               <div>
-                <h1 className='top-charitiy-name'>{top.topCharityName}</h1>
-                <h2 className='top-charity-desc'>{top.topCharityDesc}</h2>
+                <h1 className='top-charitiy-name'>{singleCharity.charityName}</h1>
+                <h2 className='top-charity-desc'>{singleCharity.charityDescription}</h2>
                 <div className="top-charity-card-img">
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
