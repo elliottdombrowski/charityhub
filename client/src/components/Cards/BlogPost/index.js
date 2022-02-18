@@ -46,7 +46,7 @@ const BlogPost = () => {
                   <ThumbsUpIcon />
                   <ThumbsDownIcon />
 
-                  <Link to={Auth.loggedIn() ? '/blog:id' : '/login'} className='blog-post-comment-icon'>
+                  <Link to={Auth.loggedIn() ? '/comments' : '/login'} className='blog-post-comment-icon'>
                     <CommentIcon />
                   </Link>
                 </ul>
