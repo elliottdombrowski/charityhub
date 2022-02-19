@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-//IMPORT AUTH / VALIDATE EMAIL UTILS
+//IMPORT AUTH / VALIDATE EMAIL / GEOLOCATION UTILS
 import Auth from '../../../utils/auth';
 import { validateEmail } from '../../../utils/helpers';
+import { getLocation } from '../../../utils/location';
 
 //IMPORT CHAKRA LOADING SPINNER COMPONENT
 import { Spinner } from '@chakra-ui/react';
@@ -347,6 +348,7 @@ const SignupForm = () => {
                 <button
                   type='text'
                   className='location-services-primary location-services-button'
+                  onClick={getLocation}
                 >
                   Allow
                 </button>
