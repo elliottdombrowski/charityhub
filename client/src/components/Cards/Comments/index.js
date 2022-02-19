@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import AnimatePage from '../../../AnimatePage';
+import BackBtn from '../../Btns/BackBtn';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLEPOST } from '../../../utils/queries';
@@ -33,6 +34,7 @@ const Comments = () => {
           </p>
         </section>
       </div>
+      <BackBtn />
     </AnimatePage>
   );
 };
