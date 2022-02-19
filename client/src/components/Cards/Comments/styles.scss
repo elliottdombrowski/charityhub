@@ -16,4 +16,30 @@
     font-size: 120%;
     color: $black;
   }
+
+  .comment-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: $btn-disabled;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 50px;
+
+    div:nth-child(1) {
+      padding-left: .5rem;
+    }
+
+    div:nth-child(2) {
+      padding-right: .5rem;
+    }
+
+    .comment-vote-wrapper {
+      display: flex;
+
+      div:nth-child(2) {
+        margin-left: 1rem;
+      }
+    }
+  }
 }

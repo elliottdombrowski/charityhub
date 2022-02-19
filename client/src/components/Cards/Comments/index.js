@@ -4,6 +4,7 @@ import AnimatePage from '../../../AnimatePage';
 import BackBtn from '../../Btns/BackBtn';
 import ThumbsUpIcon from '../../Icons/ThumbsUpIcon';
 import ThumbsDownIcon from '../../Icons/ThumbsDownIcon';
+import CommentIcon from '../../Icons/CommentIcon';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLEPOST, QUERY_ALLCOMMENTS } from '../../../utils/queries';
@@ -95,6 +96,24 @@ const Comments = () => {
                   {/* <p>{singleComment.commentCreatedAt}</p> */}
                 </span>
                 <h2>{singleComment.commentBody}</h2>
+                <span className='comment-toolbar'>
+                  <div className='comment-vote-wrapper'>
+                    <div>
+                      <ThumbsUpIcon />
+                    </div>
+
+                    <div>
+                      <ThumbsDownIcon />
+                    </div>
+                  </div>
+
+                  <div>
+                    <CommentIcon />
+                  </div>
+                </span>
+                <div className='comment-textbox'>
+                
+                </div>
               </div>
             );
           })
