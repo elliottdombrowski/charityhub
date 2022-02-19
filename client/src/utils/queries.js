@@ -38,7 +38,7 @@ export const QUERY_SINGLEPOST = gql`
   query singlePost($postId: ID!) {
     singlePost(postId: $postId) {
       _id
-      author
+      authorId
       title
       body
     }
