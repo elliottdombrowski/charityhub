@@ -1,5 +1,3 @@
-const geocoder = require('node-geocoder');
-
 export function getLocation() {
   if (!navigator.geoloation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -10,5 +8,4 @@ export function getLocation() {
 
 function showPosition(position) {
   console.log('lat- ', position.coords.latitude, 'lon- ', position.coords.longitude);
-
 };
