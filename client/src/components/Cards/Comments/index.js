@@ -34,6 +34,9 @@ const Comments = () => {
 
   return (
     <AnimatePage>
+      {/* BACK TO BLOG PAGE BTN  */}
+      <BackBtn />
+      
       {/* RENDER SINGLE BLOG POST  */}
       <div className='comments-wrapper'>
         <section className='single-blog-post' key={singlePost._id}>
@@ -107,9 +110,6 @@ const Comments = () => {
           })
         }
       </div>
-
-      {/* BACK TO BLOG PAGE BTN  */}
-      <BackBtn />
     </AnimatePage>
   );
 };
