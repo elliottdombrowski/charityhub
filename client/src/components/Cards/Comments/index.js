@@ -81,11 +81,25 @@ const Comments = () => {
 
                 {/* COMMENT REPLY MODAL  */}
                 <div className='comment-textbox' id='comment-replies'>
-                  <form>
-                    <input 
-                      type='text'
-                      className='comment-reply-input'
-                    />
+                  <form
+                    className='comment-form'
+                  >
+                    <div className='comment-reply-wrapper'>
+
+                      {/* COMMENT SUBMIT INPUT  */}
+                      <input 
+                        type='text'
+                        placeholder='leave a comment...'
+                        className='comment-reply-input'
+                      />
+
+                      {/* COMMENT SUBMIT BUTTON  */}
+                      <button
+                        className='comment-reply-submit'
+                      >
+                        post
+                      </button>
+                    </div>
                   </form>
                 </div>
               </div>

@@ -70,9 +70,24 @@
     overflow: hidden;
     transition: 0.2s ease-in-out;
 
-    .comment-reply-input {
-      width: 100%;
-      border-radius: 10px;
+    .comment-form {
+      .comment-reply-wrapper {
+        position: relative;
+        .comment-reply-input {
+          width: 100%;
+          border-radius: 10px;
+          padding: 5px 10px;
+          color: $black;
+        }
+
+        .comment-reply-submit {
+          position: absolute;
+          right: 0;
+          padding: 5px 10px;
+          background: $dgreen;
+          border-radius: 10px;
+        }
+      }
     }
   }
 
