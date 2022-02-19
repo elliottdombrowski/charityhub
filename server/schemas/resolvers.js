@@ -19,6 +19,10 @@ const resolvers = {
       return await BlogPost.find({});
     },
 
+    allComments: async () => {
+      return await Comments.find({});
+    },
+
     singlePost: async (parent, { postId }) => {
       return BlogPost.findOne({ _id: postId });
     },

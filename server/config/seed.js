@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, BlogPost, Charities } = require('../models');
+const { User, BlogPost, Comments, Charities } = require('../models');
 
 db.once('open', async () => {
   await User.deleteMany();
@@ -22,6 +22,8 @@ db.once('open', async () => {
     },
   ]);
 
+  console.log('seeded users');
+
   await BlogPost.deleteMany();
   await BlogPost.insertMany([
     {
@@ -42,6 +44,32 @@ db.once('open', async () => {
   ]);
 
   console.log('seeded posts');
+
+  await Comments.deleteMany();
+  await Comments.insertMany([
+    {
+      commentAuthor: 'Charlie Pace',
+      commentBody: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      commentAuthor: 'John Locke',
+      commentBody: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      commentAuthor: 'Hugo Reyes',
+      commentBody: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      commentAuthor: 'Benjamin Linus',
+      commentBody: 'Lorem ipsum dolor sit amet',
+    },
+    {
+      commentAuthor: 'Jacob',
+      commentBody: 'Lorem ipsum dolor sit amet',
+    },
+  ]);
+
+  console.log('seeded comments');
 
   await Charities.deleteMany();
   await Charities.insertMany([

@@ -17,6 +17,12 @@ const typeDefs = gql`
     body: String
   }
 
+  type Comment {
+    _id: ID!
+    commentAuthor: String
+    commentBody: String
+  }
+
   type Charities {
     _id: ID!
     charityName: String
@@ -37,6 +43,7 @@ const typeDefs = gql`
     allPosts: [Post]
     singlePost(postId: ID!): Post
     allCharities: [Charities]
+    allComments: [Comment]
   }
 
   type Mutation {
