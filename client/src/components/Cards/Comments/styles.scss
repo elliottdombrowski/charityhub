@@ -26,6 +26,24 @@
     margin-top: 1rem;
     border-radius: 50px;
 
+    div {
+      svg {
+        path {
+          color: $login-background-two;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
+    div {
+      svg {
+        path:hover {
+          color: $input-placeholder;
+        }
+      }
+    }
+
     div:nth-child(1) {
       padding-left: .5rem;
     }
@@ -41,5 +59,13 @@
         margin-left: 1rem;
       }
     }
+  }
+  .comment-textbox {
+    height: 150px;
+    width: 80%;
+    margin-left: auto;
+    background: $input-placeholder;
+    border-radius: 10px;
+    margin-top: 1rem;
   }
 }

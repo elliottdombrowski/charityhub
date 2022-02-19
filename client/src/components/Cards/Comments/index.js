@@ -112,7 +112,6 @@ const Comments = () => {
                   </div>
                 </span>
                 <div className='comment-textbox'>
-                
                 </div>
               </div>
             );
