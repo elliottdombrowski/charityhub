@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+
+//IMPORT AUTH UTILS
 import Auth from '../../../utils/auth';
 
+//IMPORT COMPONENTS
 import CommentIcon from '../../Icons/CommentIcon/';
 import ThumbsUpIcon from '../../Icons/ThumbsUpIcon/';
 import ThumbsDownIcon from '../../Icons/ThumbsDownIcon/';
 import BookmarkIcon from '../../Icons/BookmarkIcon/';
 
+// IMPORT GQL QUERIES 
 import { useQuery } from '@apollo/client';
 import { QUERY_ALLPOSTS } from '../../../utils/queries';
 
@@ -15,11 +19,12 @@ import './query.scss';
 
 const BlogPost = () => {
 
+  //CALL FIND ALL POSTS QUERY
   const { loading, data } = useQuery(QUERY_ALLPOSTS);
   const blogPosts = data?.allPosts || [];
-  console.log(blogPosts);
 
   return (
+    // MAP BLOG POST DATA TO CARDS 
     <section className='blog-post-wrapper'>
       {
         blogPosts.map((singlePost) => {
@@ -38,6 +43,7 @@ const BlogPost = () => {
                 {singlePost.body}
               </p>
 
+              {/* BLOG POST TOOLBAR W/ LIKE/DISLIKE/COMMENT/SAVE ICONS  */}
               <span className='blog-post-toolbar-wrapper'>
                 <ul className='blog-post-toolbar-left'>
                   <BookmarkIcon />
@@ -47,6 +53,7 @@ const BlogPost = () => {
                   <ThumbsUpIcon />
                   <ThumbsDownIcon />
 
+                  {/* LINK TO INDIVIDUAL POST COMMENTS  */}
                   <Link to={`/comments/${singlePost._id}`} className='blog-post-comment-icon'>
                     <CommentIcon />
                   </Link>

@@ -61,11 +61,22 @@
     }
   }
   .comment-textbox {
-    height: 150px;
-    width: 80%;
+    height: 0px;
+    width: 100%;
     margin-left: auto;
     background: $input-placeholder;
     border-radius: 10px;
     margin-top: 1rem;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+
+    .comment-reply-input {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .comment-textbox.active {
+    height: 150px;
   }
 }

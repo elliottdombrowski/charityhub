@@ -1,74 +1,40 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+
+//IMPORT COMPONENTS
 import AnimatePage from '../../../AnimatePage';
 import BackBtn from '../../Btns/BackBtn';
 import ThumbsUpIcon from '../../Icons/ThumbsUpIcon';
 import ThumbsDownIcon from '../../Icons/ThumbsDownIcon';
 import CommentIcon from '../../Icons/CommentIcon';
 
+//IMPORT GQL QUERIES
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLEPOST, QUERY_ALLCOMMENTS } from '../../../utils/queries';
 
 import './styles.scss';
 import './query.scss';
 
-const dummyComments = [
-  {
-    id: 1,
-    commentAuthor: 'dummy one',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 2,
-    commentAuthor: 'dummy two',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 3,
-    commentAuthor: 'dummy three',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 4,
-    commentAuthor: 'dummy four',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 5,
-    commentAuthor: 'dummy five',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 6,
-    commentAuthor: 'dummy six',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 7,
-    commentAuthor: 'dummy seven',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-  {
-    id: 8,
-    commentAuthor: 'dummy eight',
-    commentBody: 'lorem ipsum dolor sit amet',
-  },
-];
-
 const Comments = () => {
   const { postId } = useParams();
-
+  //CALL SINGLEPOST QUERY TO FIND POST BY ID
   const { loading: singlePostLoading, data: singlePostData } = useQuery(QUERY_SINGLEPOST, {
     variables: { postId: postId },
   });
   const singlePost = singlePostData?.singlePost || [];
 
+  //CALL ALLCOMMENTS QUERY, RETURNS ALL COMMENTS
   const { loading: allCommentsLoading, data: allCommentsData } = useQuery(QUERY_ALLCOMMENTS);
   const allComments = allCommentsData?.allComments || [];
-  console.log('all comments- ', allComments);
+
+  //ON COMMENT ICON CLICK, TOGGLE SHOW/HIDE COMMENT REPLY MODAL
+  const showCommentBox = () => {
+    document.getElementById('comment-replies').classList.toggle('active');
+  };
 
   return (
     <AnimatePage>
+      {/* RENDER SINGLE BLOG POST  */}
       <div className='comments-wrapper'>
         <section className='single-blog-post' key={singlePost._id}>
           <div className='blog-post-header-wrapper'>
@@ -86,6 +52,7 @@ const Comments = () => {
         </section>
       </div>
 
+      {/* RENDER/MAP ALL COMMENTS  */}
       <div>
         {
           allComments.map((singleComment) => {
@@ -107,17 +74,27 @@ const Comments = () => {
                     </div>
                   </div>
 
-                  <div>
+                  <div onClick={showCommentBox}>
                     <CommentIcon />
                   </div>
                 </span>
-                <div className='comment-textbox'>
+
+                {/* COMMENT REPLY MODAL  */}
+                <div className='comment-textbox' id='comment-replies'>
+                  <form>
+                    <input 
+                      type='text'
+                      className='comment-reply-input'
+                    />
+                  </form>
                 </div>
               </div>
             );
           })
         }
       </div>
+
+      {/* BACK TO BLOG PAGE BTN  */}
       <BackBtn />
     </AnimatePage>
   );

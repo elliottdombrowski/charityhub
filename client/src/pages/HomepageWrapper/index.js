@@ -8,6 +8,12 @@ import EmissionDonation from '../EmissionDonation';
 import FooterSvg from '../../components/Svgs/FooterSvg';
 
 const HomepageWrapper = () => {
+  // HOMEPAGE STRUCTURE TOP-DOWN 
+  // TOP CHARITIES ->
+  // HOMEPAGE HERO CONTENT ->
+  // EMISSION DONATIONS ->
+  // FOOTER
+
   return (
     <AnimatePage>
       <TopCharitiesWrapper />

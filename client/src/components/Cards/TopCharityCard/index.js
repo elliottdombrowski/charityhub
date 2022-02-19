@@ -1,6 +1,9 @@
 import React from 'react';
+
+//IMPORT COMPONENTS
 import DonationBtn from '../../Btns/DonationBtn';
 
+//IMPORT GQL QUERIES
 import { useQuery } from '@apollo/client';
 import { QUERY_ALLCHARITIES } from '../../../utils/queries';
 
@@ -9,10 +12,13 @@ import './query.scss';
 
 const TopCharityCard = () => {
 
+  //CALL FIND ALL CHARITIES QUERY
+  //TODO- REPLACE W/ TOP CHARITIES DATA
   const { loading, data } = useQuery(QUERY_ALLCHARITIES);
   const allCharities = data?.allCharities || [];
 
   return (
+    //MAP TO CARDS
     <div className='top-charity-card-wrapper'>
       {
         allCharities.map((singleCharity) => {
@@ -24,6 +30,7 @@ const TopCharityCard = () => {
                 <div className="top-charity-card-img">
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
+                
                 <DonationBtn />
               </div>
             </div>
