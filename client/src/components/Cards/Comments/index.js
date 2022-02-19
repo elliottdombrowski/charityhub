@@ -14,13 +14,25 @@ const Comments = () => {
     variables: { postId: postId },
   });
   const singlePost = data?.singlePost || [];
-  console.log('single post- ', singlePost);
 
   return (
     <div className='comments-wrapper'>
-      comments
+      <section className='single-blog-post' key={singlePost._id}>
+        <div className='blog-post-header-wrapper'>
+          <h1 className='blog-post-title'>
+            {singlePost.title}
+          </h1>
+          <h2 className='blog-post-author'>
+            {singlePost.author}
+          </h2>
+        </div>
+
+        <p className='blog-post-body'>
+          {singlePost.body}
+        </p>
+      </section>
     </div>
   );
 };
- 
+
 export default Comments;
