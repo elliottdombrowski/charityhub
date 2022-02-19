@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+// IMPORT COMPONENTS 
 import DonationBtn from "../../Btns/DonationBtn/";
 
 import './styles.scss';
 import './query.scss';
 
+//DUMMY DATA FOR RENDER TESTING
 let places = [
   {
     id: 1,
@@ -25,6 +27,7 @@ let places = [
 ];
 
 const DonationCard = () => {
+  //MAP DUMMY DATA TO EMISSION DONATION CARDS
   return (
     <div className="donation-card-wrapper">
       {
@@ -40,6 +43,8 @@ const DonationCard = () => {
                   <img src={require('./placeholder.jpeg')}></img>
                 </div>
               </div>
+
+              {/* LINK TO FUTURE STRIPE DONATION PAGE, CURRENTLY HOMEPAGE  */}
               <Link to='/'>
                 <DonationBtn />
               </Link>

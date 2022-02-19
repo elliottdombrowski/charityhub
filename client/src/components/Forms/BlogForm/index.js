@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import LoginBtn from '../../Btns/LoginBtn/';
+
+// IMPORT AUTH UTILS 
 import Auth from '../../../utils/auth';
+
+//IMPORT COMPONENTS 
+import LoginBtn from '../../Btns/LoginBtn/';
 
 import './styles.scss';
 import './query.scss';
 
 const BlogForm = () => {
+  //CREATE BLOG POST DATA STATE OBJECT
   const [blogPostData, setBlogPostData] = useState({
     blog_author: '',
     blog_title: '',
@@ -13,9 +18,12 @@ const BlogForm = () => {
     blog_category: '',
   });
 
+  //STATE FOR CHARACTER COUNT, DEFAULT TO 0
   const [charCount, setCharCount] = useState(0);
+  //ERROR STATE
   const [err, setErr] = useState('');
 
+  //DYNAMIC CSS TO RENDER ERROR TEXT COLORS
   const styles = {
     clear: {
       color: 'black',
@@ -29,17 +37,24 @@ const BlogForm = () => {
   }
 
   const handleBlogInputChange = (event) => {
+    //ON INPUT CHANGE, SET BLOG POST DATA STATE 
     const { name, value } = event.target;
     setBlogPostData({ ...blogPostData, [name]: value });
 
+    //SET CHARACTER COUNT STATE AS LENGTH OF INPUT VALUE
     setCharCount(event.target.value.length);
 
+    // IF CHARACTER COUNT VALUE IS GREATER THAN / EQUAL TO 500 CHARACTERS, SET ERROR STATE MESSAGE
+    // ELSE, RESET ERROR STATE VALUE
     charCount >= 500 ? setErr('your post is too long!') : setErr('');
   };
 
   const postSubmit = async (event) => {
     event.preventDefault();
 
+    //TODO- POST SUBMIT MUTATION LOGIC 
+
+    //RESET ALL STATE
     setBlogPostData('');
     setCharCount(0);
     setErr('');
@@ -47,6 +62,11 @@ const BlogForm = () => {
 
   return (
     <section className='blog-form-wrapper'>
+      {/* 
+      RENDER BLOG POST CREATE FORM IF LOGGED IN
+      ELSE RENDER PROMPT TO LOG IN 
+      */}
+
       {Auth.loggedIn() ? (
         <form 
           className='blog-form'
@@ -54,7 +74,10 @@ const BlogForm = () => {
         >
           <span className='blog-header-wrapper'>
             <label className='blog-label'>Create a post!</label>
+
+            {/* WRAPPER FOR ERROR MESSAGE. DYNAMIC CSS CHANGES COLOR BASED ON CHARACTER STATE VALUE  */}
             <span className='blog-char-count-wrapper'>
+              {/* RENDER ERROR MESSAGE  */}
               <p
                 style={charCount >= 500 ? styles.error : styles.clear}
                 className='blog-char-err'
@@ -62,6 +85,7 @@ const BlogForm = () => {
                 {err}
               </p>
 
+              {/* RENDER CHARACTER COUNTER  */}
               <p 
                 style={charCount >= 500 ? styles.error : charCount >= 450 ? styles.warning : styles.clear}
                 className='blog-char-count'
@@ -70,6 +94,8 @@ const BlogForm = () => {
               </p>
             </span>
           </span>
+
+          {/* BLOG TITLE INPUT  */}
           <input
             type='text'
             name='blog_title'
@@ -80,6 +106,7 @@ const BlogForm = () => {
             className='blog-title-input'
           />
 
+          {/* BLOG BODY INPUT  */}
           <textarea 
             className='blog-textarea'
             name='blog_body'
@@ -90,6 +117,7 @@ const BlogForm = () => {
           />
 
           <div className='blog-post-btn-wrapper'>
+            {/* SELECT BLOG CATEGORY  */}
             <select
               type='text'
               name='category'
@@ -106,6 +134,7 @@ const BlogForm = () => {
               <option value="5">OPTION FIVE</option>
             </select>
 
+            {/* BLOG POST SUBMIT  */}
             <button
               type='submit'
               className='blog-post-btn'
@@ -117,6 +146,7 @@ const BlogForm = () => {
           </div>
         </form>
       ) : (
+      // RENDER PROMPT TO LOG IN IF NOT LOGGED IN 
        <span className='blog-prompt-sign-in'>
          <h1 className='blog-prompt-sign-in-header'>
           Log In to create or comment on posts!

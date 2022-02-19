@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 
+//IMPORT AUTH / VALIDATE EMAIL / GEOLOCATION UTILS
+import Auth from '../../../utils/auth';
+import { validateEmail } from '../../../utils/helpers';
+import { getLocation } from '../../../utils/location';
+
+//IMPORT CHAKRA LOADING SPINNER COMPONENT
 import { Spinner } from '@chakra-ui/react';
 
+//IMPORT FONTAWESOME ICONS / COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
+//IMPORT GQL MUTATIONS
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../../utils/mutations';
-import { validateEmail } from '../../../utils/helpers';
-import Auth from '../../../utils/auth';
 
-import '../LoginForm/styles.css';
+import '../LoginForm/styles.scss';
 
 const arrowDown = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-down' id='arrow-down' />
 const arrowRight = <FontAwesomeIcon icon={faArrowDown} className='arrow-icon arrow-right' id='arrow-right' />
@@ -44,6 +50,7 @@ const SignupForm = () => {
   const cross = <FontAwesomeIcon icon={faTimes} />
 
   const handleShowLocationInfo = () => {
+    //ON HANDLESHOWLOCATIONINFO INVOCATION, SET SHOW LOCATION INFO STATE TO OPPOSITE BOOLEAN
     setShowLocationInfo(!showLocationInfo);
 
     showLocationInfo
@@ -56,8 +63,11 @@ const SignupForm = () => {
   };
 
   const handleDisplayLocationForm = () => {
+    //ON HANDLEDISPLAYLOCATIONFORM INVOCATION, SET SHOW LOCATION FORM STATE TO OPPOSITE BOOLEAN
     setShowLocationForm(!showLocationForm);
 
+    //IF SHOWLOCATIONFORM STATE VALUE = TRUE, ADD 'ACTIVE / ANIMATE' CLASS TO LOCATION FORM AND ARROW INDICATOR
+    //ELSE, REMOVE 'ACTIVE / ANIMATE' CLASS
     showLocationForm
       ? document.getElementById('location-form').classList.add('active')
       : document.getElementById('location-form').classList.remove('active')
@@ -72,18 +82,22 @@ const SignupForm = () => {
   };
 
   const handleInputChange = (event) => {
-    if (!validateEmail(signupData.email)) {
-      setErr(true);
-    } else if (validateEmail(signupData.email)) {
-      setErr(false);
-    }
 
+    //ON INPUT CHANGE, CHECK IF EMAIL IS VALID
+    //IF INVALID, SET ERROR STATE TO DISPLAY X ICON
+    //ELSE RENDER CHECKMARK ICON
+    !validateEmail(signupData.email) ? setErr(true) : setErr(false);
+
+    //TODO - FIX EXTRA CHARACTER AT THE END
+    //IF PASSWORD STATE IS NOT EQUAL TO CONFIRM PASSWORD STATE, SET PWDERR STATE TO RENDER X ICON.
+    //ELSE RENDER CHECKMARK ICON
     if (signupData.password !== signupData.confirmpassword) {
       setPwdErr(true);
     } else {
       setPwdErr(false);
     }
 
+    //SET SIGNUP DATA STATE FROM INPUT VALUE
     const { name, value } = event.target;
     setSignupData({ ...signupData, [name]: value });
   };
@@ -91,6 +105,8 @@ const SignupForm = () => {
   const signupSubmit = async (event) => {
     event.preventDefault();
 
+    //CALL ADDUSER MUTATION W/ SIGNUP DATA STATE VALUE
+    //SIGN JWT LOGIN TOKEN
     const { data } = await addUser({
       variables: { ...signupData },
     });
@@ -100,10 +116,13 @@ const SignupForm = () => {
 
   return (
     <>
+      {/* SIGNUP MAIN INFO WRAPPER  */}
       <div className='signup-left' id='signup-form'>
         <label className='login-label'>
           sign up
         </label>
+
+        {/* NAME INPUT  */}
         <input
           type='text'
           name='name'
@@ -113,7 +132,9 @@ const SignupForm = () => {
           required
           className='login-input'
         />
+
         <div className="password-wrapper">
+          {/* EMAIL INPUT  */}
           <input
             type='text'
             name='email'
@@ -123,6 +144,8 @@ const SignupForm = () => {
             required
             className='login-input signup-input'
           />
+
+          {/* RENDER EMAIL VALIDATION ICON  */}
           <span
             className='show-password valid-email'
           >
@@ -132,6 +155,8 @@ const SignupForm = () => {
 
         <div className='password-double-wrapper'>
           <div className="password-wrapper">
+
+            {/* PASSWORD INPUT  */}
             <input
               type={showPwd ? 'text' : 'password'}
               name='password'
@@ -141,6 +166,8 @@ const SignupForm = () => {
               required
               className='login-input signup-password'
             />
+
+            {/* SHOW PASSWORD BTN / ICON  */}
             <span
               className='show-password'
               onClick={() => setShowPwd((prev) => !prev)}
@@ -150,6 +177,8 @@ const SignupForm = () => {
           </div>
 
           <div className="password-wrapper">
+
+            {/* CONFIRM PASSWORD INPUT  */}
             <input
               type={showPwd ? 'text' : 'password'}
               name='confirmpassword'
@@ -159,6 +188,8 @@ const SignupForm = () => {
               required
               className='login-input signup-password-confirm'
             />
+            
+            {/* CONFIRM PASSWORD VALIDATION ICON */}
             <span
               className='show-password valid-email'
             >
@@ -166,6 +197,8 @@ const SignupForm = () => {
             </span>
           </div>
         </div>
+
+        {/* IF ERROR, RENDER APOLLO ERROR  */}
         {error ? (
           <pre className='apollo-errors'>
             {error.graphQLErrors.map(({ message }, i) => (
@@ -178,6 +211,7 @@ const SignupForm = () => {
         )}
       </div>
 
+      {/* SIGNUP LOCATION INFO WRAPPER  */}
       <div className='signup-right' id='location-form'>
         <div className='signup-right-inner-wrapper'>
           <label className='login-label'>
@@ -185,10 +219,14 @@ const SignupForm = () => {
             <span className='required-label'>*</span>
           </label>
           <span className='location-signup-wrapper'>
+
+            {/* RENDER MANUAL LOCATION ENTRY INPUTS  */}
             {useLocationServices ? (
               <>
                 <div className='location-input-wrapper'>
                   <div className='location-wrapper-left'>
+
+                    {/* LOCATION CITY INPUT  */}
                     <input
                       name='city'
                       onChange={handleInputChange}
@@ -198,7 +236,9 @@ const SignupForm = () => {
                       className='login-input login-input-city'
                     />
                   </div>
+
                   <div className='location-wrapper-right'>
+                    {/* LOCATION STATE SELECTOR INPUT */}
                     <select
                       type='text'
                       name='state'
@@ -262,6 +302,8 @@ const SignupForm = () => {
                     </select>
                   </div>
                 </div>
+
+                {/* LOCATION INFO MODAL  */}
                 <div className='signup-location-wrapper'>
                   <span
                     className='signup-location-header'
@@ -285,6 +327,8 @@ const SignupForm = () => {
                 </div>
               </>
             ) : (
+
+              // BUTTON CHOICES FOR AUTO LOCATION INFO
               <div className='location-wrapper-right location-services-wrapper'>
                 <button
                   type='text'
@@ -304,6 +348,7 @@ const SignupForm = () => {
                 <button
                   type='text'
                   className='location-services-primary location-services-button'
+                  onClick={getLocation}
                 >
                   Allow
                 </button>

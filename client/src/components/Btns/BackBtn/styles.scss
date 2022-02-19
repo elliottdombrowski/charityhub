@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+.back-btn-link {
+  background: $gblue;
+  margin: 1rem 0 0 1rem;
+  padding: 5px 10px;
+  border: 1px solid $login-background-two;
+  border-radius: 10px;
+  font-size: 120%;
+
+  .back-icon {
+    margin-right: 8px;
+  }
+}

@@ -1,36 +1,47 @@
 import React, { useState } from "react";
+
+//IMPORT AUTH AND EMAIL VALIDATION UTILS
+import Auth from '../../../utils/auth';
+import { validateEmail } from '../../../utils/helpers';
+
+//IMPORT CHAKRA LOADING SPINNER
 import { Spinner } from "@chakra-ui/react";
 
+//IMPORT FONTAWESOME ICON AND COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
+//IMPORT GQL MUTATIONS
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from '../../../utils/mutations';
-import { validateEmail } from '../../../utils/helpers';
-import Auth from '../../../utils/auth';
 
 import './styles.scss';
 import './query.scss';
 
+const eye = <FontAwesomeIcon icon={faEye} />
+const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
+const check = <FontAwesomeIcon icon={faCheck} />
+const cross = <FontAwesomeIcon icon={faTimes} />
+
 const LoginForm = () => {
+  //DECLARE STATE FOR LOGIN EMAIL / PASSWORD DATA
   const [loginData, setLoginData] = useState({ email: '', password: '' });
+
+  //DECLARE STATE FOR SHOW / HIDE PASSWORD BUTTON, DEFAULT TO HIDDEN
   const [showPwd, setShowPwd] = useState(false);
+
+  //DECLARE EMAIL VALIDATION STATE
   const [err, setErr] = useState(true);
 
-  const eye = <FontAwesomeIcon icon={faEye} />
-  const eyeSlash = <FontAwesomeIcon icon={faEyeSlash} />
-  const check = <FontAwesomeIcon icon={faCheck} />
-  const cross = <FontAwesomeIcon icon={faTimes} />
-
+  //DECALRE LOGIN MUTATION
   const [login, { error, data, loading }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
-    if (!validateEmail(loginData.email)) {
-      setErr(true);
-    } else if (validateEmail(loginData.email)) {
-      setErr(false);
-    }
+    //ON INPUT CHANGE, CHECK IF EMAIL IS VALID
+    //IF EMAIL IS VALID, REPLACE X ICON WITH CHECKMARK
+    !validateEmail(loginData.email) ? setErr(true) : setErr(false);
 
+    //SET LOGIN DATA STATE
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
   };
@@ -38,6 +49,7 @@ const LoginForm = () => {
   const loginSubmit = async (event) => {
     event.preventDefault();
 
+    // TRY LOG IN WITH CURRENT LOGIN STATE DATA, SIGN JWT TOKEN 
     try {
       const { data } = await login({
         variables: { ...loginData },
@@ -48,6 +60,7 @@ const LoginForm = () => {
       console.log(err);
     }
 
+    //RESET STATE TO DEFAULT VALUE
     setLoginData({
       email: '',
       password: ''
@@ -65,6 +78,8 @@ const LoginForm = () => {
           log in
         </label>
         <div className="password-wrapper">
+
+          {/* EMAIL INPUT  */}
           <input
             type='text'
             name='email'
@@ -74,6 +89,8 @@ const LoginForm = () => {
             required
             className='login-input'
           />
+
+          {/* EMAIL VALIDATION ICON  */}
           <span
             className='show-password valid-email'
           >
@@ -82,6 +99,8 @@ const LoginForm = () => {
         </div>
 
         <div className="password-wrapper">
+
+          {/* PASSWORD INPUT  */}
           <input
             type={showPwd ? "text" : "password"}
             name='password'
@@ -92,6 +111,8 @@ const LoginForm = () => {
             className='login-input'
             id='change-pwd'
           />
+
+          {/* SHOW PASSWORD ICON / BTN */}
           <span
             className='show-password'
             onClick={() => setShowPwd((prev) => !prev)}
@@ -99,6 +120,8 @@ const LoginForm = () => {
             {showPwd ? eyeSlash : eye}
           </span>
         </div>
+
+        {/* IF ERROR, DISPLAY APOLLO ERROR MESSAGE  */}
         {error ? (
           <pre className='apollo-errors'>
             {error.graphQLErrors.map(({ message }, i) => (

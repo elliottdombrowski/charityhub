@@ -1,8 +1,11 @@
 import React from 'react';
+
+//IMPORT COMPONENTS
 import AnimatePage from '../../AnimatePage';
 import BlogForm from '../../components/Forms/BlogForm/';
 import BlogPost from '../../components/Cards/BlogPost/';
 
+//IMPORT FONTAWESOME COMPONENT/ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 

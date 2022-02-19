@@ -37,8 +37,6 @@ const userSchema = new Schema({
     default: 0,
     max: 500
   },
-  posts: [BlogPost.schema],
-  comments: [Comments.schema]
 });
 
 //SAVE USER SCHEMA AND HASH / SALT PASSWORD 

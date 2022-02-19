@@ -10,6 +10,10 @@ const commentsSchema = new Schema({
     type: String,
     required: true,
     max: 255
+  },
+  commentCreatedAt: {
+    type: Date,
+    default: Date.now
   }
 });
 

@@ -1,0 +1,97 @@
+@import '../../../variables.scss';
+
+.comments-wrapper {
+  width: 60%;
+  margin: 0 auto 2rem;
+}
+
+.single-comment {
+  background: $login-background-two;
+  width: 60%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+
+  h1, h2 {
+    font-size: 120%;
+    color: $black;
+  }
+
+  .comment-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: $btn-disabled;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 50px;
+
+    div {
+      svg {
+        path {
+          color: $login-background-two;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
+    div {
+      svg {
+        path:hover {
+          color: $input-placeholder;
+        }
+      }
+    }
+
+    div:nth-child(1) {
+      padding-left: .5rem;
+    }
+
+    div:nth-child(2) {
+      padding-right: .5rem;
+    }
+
+    .comment-vote-wrapper {
+      display: flex;
+
+      div:nth-child(2) {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .comment-textbox {
+    height: 0px;
+    width: 100%;
+    margin-left: auto;
+    background: $input-placeholder;
+    border-radius: 10px;
+    margin-top: 1rem;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+
+    .comment-form {
+      .comment-reply-wrapper {
+        position: relative;
+        .comment-reply-input {
+          width: 100%;
+          border-radius: 10px;
+          padding: 5px 10px;
+          color: $black;
+        }
+
+        .comment-reply-submit {
+          position: absolute;
+          right: 0;
+          padding: 5px 10px;
+          background: $dgreen;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .comment-textbox.active {
+    height: 150px;
+  }
+}

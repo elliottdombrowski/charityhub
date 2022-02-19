@@ -27,7 +27,7 @@ export const QUERY_ALLPOSTS = gql`
   query allPosts {
     allPosts {
       _id
-      author
+      authorId
       title
       body
     }
@@ -38,7 +38,7 @@ export const QUERY_SINGLEPOST = gql`
   query singlePost($postId: ID!) {
     singlePost(postId: $postId) {
       _id
-      author
+      authorId
       title
       body
     }
@@ -53,6 +53,17 @@ export const QUERY_ALLCHARITIES = gql`
       charityDescription
       charityEmail
       charityAddress
+    }
+  }
+`;
+
+export const QUERY_ALLCOMMENTS = gql`
+  query allComments {
+    allComments {
+      _id
+      commentAuthor
+      commentBody
+      commentCreatedAt
     }
   }
 `;

@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+//IMPORT COMPONENTS
 import DonationBtn from '../../Btns/DonationBtn/';
 
+//IMPORT GQL QUERIES
 import { useQuery } from '@apollo/client';
 import { QUERY_ALLCHARITIES } from '../../../utils/queries';
 
@@ -11,10 +13,12 @@ import './query.scss';
 
 const CharityCard = () => {
 
+  //CALL GQL FIND ALL CHARITIES QUERY
   const { loading, data } = useQuery(QUERY_ALLCHARITIES);
   const allCharities = data?.allCharities || [];
 
   return (
+    // MAP CHARITY DATA TO CARDS 
     <section className="charity-card-wrapper">
       {
         allCharities.map((singleCharity) => {
@@ -34,6 +38,7 @@ const CharityCard = () => {
                 </div>
               </div>
 
+              {/* LINK TO FUTURE STRIPE DONATION PAGE - CURRENTLY HOMEPAGE  */}
               <Link to='/' className="charity-donate-btn">
                 <DonationBtn />
               </Link>
