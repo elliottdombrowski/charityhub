@@ -56,3 +56,14 @@ export const QUERY_ALLCHARITIES = gql`
     }
   }
 `;
+
+export const QUERY_ALLCOMMENTS = gql`
+  query allComments {
+    allComments {
+      _id
+      commentAuthor
+      commentBody
+      commentCreatedAt
+    }
+  }
+`;

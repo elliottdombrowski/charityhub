@@ -21,6 +21,7 @@ const typeDefs = gql`
     _id: ID!
     commentAuthor: String
     commentBody: String
+    commentCreatedAt: String
   }
 
   type Charities {

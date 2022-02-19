@@ -6,7 +6,7 @@ import ThumbsUpIcon from '../../Icons/ThumbsUpIcon';
 import ThumbsDownIcon from '../../Icons/ThumbsDownIcon';
 
 import { useQuery } from '@apollo/client';
-import { QUERY_SINGLEPOST } from '../../../utils/queries';
+import { QUERY_SINGLEPOST, QUERY_ALLCOMMENTS } from '../../../utils/queries';
 
 import './styles.scss';
 import './query.scss';
@@ -57,10 +57,15 @@ const dummyComments = [
 const Comments = () => {
   const { postId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SINGLEPOST, {
+  const { loading: singlePostLoading, data: singlePostData } = useQuery(QUERY_SINGLEPOST, {
     variables: { postId: postId },
   });
-  const singlePost = data?.singlePost || [];
+  const singlePost = singlePostData?.singlePost || [];
+
+  const { loading: allCommentsLoading, data: allCommentsData } = useQuery(QUERY_ALLCOMMENTS);
+  const allComments = allCommentsData?.allComments || [];
+  console.log('all comments- ', allComments);
+
   return (
     <AnimatePage>
       <div className='comments-wrapper'>
@@ -82,11 +87,12 @@ const Comments = () => {
 
       <div>
         {
-          dummyComments.map((singleComment) => {
+          allComments.map((singleComment) => {
             return (
-              <div className='single-comment' key={singleComment.id}>
+              <div className='single-comment' key={singleComment._id}>
                 <span className='comment-header-wrapper'>
                   <h1>{singleComment.commentAuthor}</h1>
+                  {/* <p>{singleComment.commentCreatedAt}</p> */}
                 </span>
                 <h2>{singleComment.commentBody}</h2>
               </div>
