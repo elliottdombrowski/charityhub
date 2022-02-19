@@ -27,7 +27,7 @@ export const QUERY_ALLPOSTS = gql`
   query allPosts {
     allPosts {
       _id
-      author
+      authorId
       title
       body
     }

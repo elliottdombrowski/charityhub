@@ -17,6 +17,7 @@ const BlogPost = () => {
 
   const { loading, data } = useQuery(QUERY_ALLPOSTS);
   const blogPosts = data?.allPosts || [];
+  console.log(blogPosts);
 
   return (
     <section className='blog-post-wrapper'>
