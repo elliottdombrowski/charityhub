@@ -1,4 +1,4 @@
-export function getLocation() {
+ export function getLocation() {
   if (!navigator.geoloation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
