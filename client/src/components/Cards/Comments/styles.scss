@@ -2,5 +2,18 @@
 
 .comments-wrapper {
   width: 60%;
-  margin: 0 auto;
+  margin: 3rem auto 2rem;
+}
+
+.single-comment {
+  background: $login-background-two;
+  width: 60%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+
+  h1, h2 {
+    font-size: 120%;
+    color: $black;
+  }
 }

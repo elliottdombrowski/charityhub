@@ -80,12 +80,14 @@ const Comments = () => {
         </section>
       </div>
 
-      <div className='single-comment-wrapper'>
+      <div>
         {
           dummyComments.map((singleComment) => {
             return (
               <div className='single-comment' key={singleComment.id}>
-                <h1>{singleComment.commentAuthor}</h1>
+                <span className='comment-header-wrapper'>
+                  <h1>{singleComment.commentAuthor}</h1>
+                </span>
                 <h2>{singleComment.commentBody}</h2>
               </div>
             );
