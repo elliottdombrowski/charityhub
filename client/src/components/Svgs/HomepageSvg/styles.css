@@ -1,7 +1,9 @@
 .homepage-svg-wrapper {
+  position: relative;
   width: 90%;
   height: auto;
   margin: 0 auto;
+  z-index: 5;
 }
 
 .cls-1 {

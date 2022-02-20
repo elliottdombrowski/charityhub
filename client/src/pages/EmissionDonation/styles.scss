@@ -9,13 +9,17 @@
 } */
 
 .emission-donation-wrapper {
+  position: relative;
   height: 100%;
   width: 95%;
   margin: 0 auto;
   padding: 1rem 0;
-  background: linear-gradient(to right, var(--gblue), var(--blue));
-  border: 1px solid var(--white);
-  border-radius: 10px;
+  background: linear-gradient(to right, $gblue, $blue);
+  border-bottom: 1px solid $white;
+  border-left: 1px solid $white;
+  border-right: 1px solid $white;
+  border-radius: 0 0 10px 10px;
+  z-index: 5;
 }
 
 .emission-donation-cards {

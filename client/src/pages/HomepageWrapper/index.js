@@ -17,12 +17,14 @@ const HomepageWrapper = () => {
 
   return (
     <AnimatePage>
-      <TopCharitiesWrapper />
-      <WavesSvg />
-      <Homepage />
-      <EmissionHeader />
-      <EmissionDonation />
-      <FooterSvg />
+      <div className='homepage-route-wrapper'>
+        <TopCharitiesWrapper />
+        <WavesSvg />
+        <Homepage />
+        <EmissionHeader />
+        <EmissionDonation />
+        <FooterSvg />
+      </div>
     </AnimatePage>
   );
 };
