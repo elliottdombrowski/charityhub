@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './styles.scss';
-import './query.scss';
+import './styles.css';
+import './query.css';
 
 const WavesSvg = () => {
   // CREDIT TO GOODKATZ @ CODEPEN.IO
@@ -19,6 +19,7 @@ const WavesSvg = () => {
           <use xlinkHref="#gentle-wave" x="48" y="7" fill="#00d9ff" />
         </g>
       </svg>
+      <div className='waves-bottom-container'></div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
 .footer-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -9,4 +10,5 @@
   border-top: 1px solid $white;
   border-bottom: 1px solid $white;
   background: $blue;
+  z-index: 2;
 }
