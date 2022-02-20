@@ -27,6 +27,14 @@
         color: $black;
         font-size: 130%;
       }
+      
+      .card-header:nth-child(1) {
+        font-family: $poppins;
+      }
+
+      .card-header:nth-child(2) {
+        font-family: $nunito;
+      }
 
       .card-img {
         width: 70%;

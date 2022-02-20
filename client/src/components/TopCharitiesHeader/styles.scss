@@ -4,11 +4,13 @@
   text-align: center;
 
   .top-charities-header {
+    font-family: $poppins;
     font-size: 180%;
   }
 
   .top-charities-subheader {
     margin-top: 10px;
+    font-family: $nunito;
     font-size: 140%;
   }
 }

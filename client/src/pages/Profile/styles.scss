@@ -4,19 +4,22 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 90vh;
+  height: 100%;
+  overflow-x: scroll;
   background: linear-gradient(to right, $ddblue, $dblue);
 
   .profile-body-left {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
+    margin: 5rem 0;
     padding: 2rem 1rem;
     border-radius: 10px;
     height: fit-content;
     width: 60%;
     background: $login-background-two;
+    z-index: 1;
 
     h1, h2 {
       color: $black;
@@ -43,6 +46,7 @@
 
     .profile-name {
       margin: .5rem 0 1rem 0;
+      font-family: $poppins;
       font-size: 120%;
     }
 
@@ -50,6 +54,7 @@
       width: 100%;
       padding: 0 8px;
       border-top: 1px solid white;
+      font-family: $poppins;
     }
     
     .profile-email {
@@ -60,5 +65,6 @@
   .profile-settings-wrapper {
     background: $input-placeholder;
     border-radius: 10px;
+    font-family: $poppins;
   }
 }

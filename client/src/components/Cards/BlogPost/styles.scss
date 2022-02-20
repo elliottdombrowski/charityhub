@@ -27,10 +27,12 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
+    font-family: $poppins;
     font-size: 23px;
   }
 
   .blog-post-body {
+    font-family: $nunito;
     font-size: 18px;
   }
 

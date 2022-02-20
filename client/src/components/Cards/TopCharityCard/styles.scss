@@ -21,8 +21,13 @@
     text-align: center;
 
     h1, h2 {
+      font-family: $poppins;
       font-size: 120%;
       color: $black;
+    }
+
+    h2 {
+      font-family: $nunito;
     }
 
     .top-charity-card-img {
