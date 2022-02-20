@@ -5,6 +5,7 @@ import Homepage from '../../components/Homepage';
 import TopCharitiesWrapper from '../TopCharitiesWrapper';
 import EmissionHeader from '../../components/EmissionHeader';
 import EmissionDonation from '../EmissionDonation';
+import WavesSvg from '../../components/Svgs/WavesSvg';
 import FooterSvg from '../../components/Svgs/FooterSvg';
 
 const HomepageWrapper = () => {
@@ -17,6 +18,7 @@ const HomepageWrapper = () => {
   return (
     <AnimatePage>
       <TopCharitiesWrapper />
+      <WavesSvg />
       <Homepage />
       <EmissionHeader />
       <EmissionDonation />
