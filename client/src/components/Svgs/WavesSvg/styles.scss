@@ -1,4 +1,10 @@
 // CREDIT TO GOODKATZ 
+.waves-container {
+  position: absolute;
+  width: 100%;
+  bottom: 3.4rem;
+  z-index: 10;
+}
 
 .waves {
   position:relative;

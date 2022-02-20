@@ -6,7 +6,7 @@ import './query.scss';
 const WavesSvg = () => {
   // CREDIT TO GOODKATZ @ CODEPEN.IO
   return (
-    <div>
+    <div className='waves-container'>
       <svg className="waves"
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>

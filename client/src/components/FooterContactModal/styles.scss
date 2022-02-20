@@ -15,6 +15,7 @@
   border-right: none;
   background: $blue;
   transition: 0.2s ease-in-out;
+  z-index: 30;
 
   .footer-developer-info {
     display: none;

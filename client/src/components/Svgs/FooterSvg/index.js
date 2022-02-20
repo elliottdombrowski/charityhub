@@ -11,7 +11,7 @@ const FooterSvg = () => {
             <g id="Слой_1" data-name="Слой 1">
               <g id="TRASH_CANS" data-name="TRASH CANS">
                 <polygon
-                  className="cls-2"
+                  className="cls-2 cls-custom-two"
                   points="2982.06 1868.28 3621.86 1868.28 3697.78 1114.73 2906.13 1114.73 2982.06 1868.28"
                 />
                 <rect
@@ -99,7 +99,7 @@ const FooterSvg = () => {
                   d="M2558,1406H2451.32a2.5,2.5,0,0,1,0-5H2558a2.5,2.5,0,0,1,0,5Z"
                 />
                 <polyline
-                  className="cls-10"
+                  className="cls-10 cls-custom"
                   points="1386.4 1868.28 1310.47 1114.73 2102.12 1114.73 2026.2 1868.28"
                 />
                 <path

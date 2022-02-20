@@ -1,8 +1,10 @@
 .footer-svg-wrapper {
+  position: relative;
   width: 40%;
   height: auto;
   margin: 0 auto;
   padding: 100px 0 0;
+  z-index: 15;
 }
 
 .cls-1 {
@@ -26,6 +28,13 @@
 .cls-5,
 .cls-9 {
   fill: none;
+}
+
+.cls-custom {
+  fill: #004cff;
+}
+.cls-custom-two {
+  fill: #2ad44c;
 }
 .cls-3,
 .cls-30,
