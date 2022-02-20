@@ -11,7 +11,6 @@ import HomepageWrapper from './pages/HomepageWrapper/';
 import LoginWrapper from './pages/LoginWrapper/';
 import Profile from './pages/Profile/';
 import EmissionDonation from './pages/EmissionDonation/';
-import EmissionHeader from './components/EmissionHeader';
 import Footer from './components/Footer/';
 import MessageWrapper from './pages/MessageWrapper/';
 import BlogWrapper from './pages/BlogWrapper/';
@@ -19,9 +18,8 @@ import Comments from './components/Cards/Comments';
 import CharityWrapper from './pages/CharityWrapper/';
 import NewsWrapper from './pages/NewsWrapper/';
 import BackToTopBtn from './components/Btns/BackToTopBtn/';
+import WavesSvg from './components/Svgs/WavesSvg';
 import NotFound from './pages/NotFound/';
-
-import FooterSvg from './components/Svgs/FooterSvg';
 
 import './App.scss';
 
@@ -54,6 +52,7 @@ function App() {
             <Navbar />
             <Toolbar />
             <BackToTopBtn />
+            <WavesSvg />
 
             <AnimatePresence exitBeforeEnter>
               <Switch 

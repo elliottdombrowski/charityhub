@@ -1,11 +1,13 @@
 import React from 'react';
+
+//IMPORT FRAMER ANIMATION COMPONENT
 import AnimatePage from '../../AnimatePage';
 
+//IMPORT COMPONENTS
 import Homepage from '../../components/Homepage';
 import TopCharitiesWrapper from '../TopCharitiesWrapper';
 import EmissionHeader from '../../components/EmissionHeader';
 import EmissionDonation from '../EmissionDonation';
-import WavesSvg from '../../components/Svgs/WavesSvg';
 import FooterSvg from '../../components/Svgs/FooterSvg';
 
 const HomepageWrapper = () => {
@@ -19,7 +21,6 @@ const HomepageWrapper = () => {
     <AnimatePage>
       <div className='homepage-route-wrapper'>
         <TopCharitiesWrapper />
-        <WavesSvg />
         <Homepage />
         <EmissionHeader />
         <EmissionDonation />
