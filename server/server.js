@@ -10,7 +10,6 @@ const { authMiddleware } = require('./utils/auth');
 
 const app = express();
 const http = require('http').createServer(app);
-const io = require('socket.io')(http);
 const PORT = process.env.PORT || 3001;
 
 
@@ -32,13 +31,6 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
-});
-
-io.on('connection', socket => {
-  console.log('socket connecting');
-  socket.on('message', ({ name, message }) => {
-    io.emit('message', { name, message });
-  });
 });
 
 db.once('open', () => {

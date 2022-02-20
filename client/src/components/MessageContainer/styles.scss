@@ -1,1 +1,11 @@
 @import '../../variables.scss';
+
+.render-chat {
+  height: 100px;
+  width: 100px;
+  background: red;
+}
+
+.chat-input {
+  color: $black;
+}

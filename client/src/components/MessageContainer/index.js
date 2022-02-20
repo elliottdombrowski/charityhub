@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+//IMPORT CLIENT SOCKET PACKAGE
+import io from 'socket.io-client';
 
 import './styles.scss';
 import './query.scss';
