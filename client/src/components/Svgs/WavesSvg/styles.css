@@ -2,11 +2,13 @@
 .waves-container {
   position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: 3.4rem;
   z-index: 1;
 }
 
 .waves-bottom-container {
+  position: fixed;
+  bottom: 0;
   height: 3.4rem;
   width: 100%;
   background: #00d9ff;
