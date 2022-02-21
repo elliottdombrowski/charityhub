@@ -36,6 +36,16 @@ const BlogForm = () => {
     }
   }
 
+  window.onclick = event => {
+    if (event.target !== document.getElementById('blog-text-input')) {
+      document.getElementById('blog-text-input').classList.remove('active');
+    }
+  };
+
+  const handleShowBlogTextarea = () => {
+    document.getElementById('blog-text-input').classList.add('active');
+  };
+
   const handleBlogInputChange = (event) => {
     //ON INPUT CHANGE, SET BLOG POST DATA STATE 
     const { name, value } = event.target;
@@ -109,9 +119,11 @@ const BlogForm = () => {
           {/* BLOG BODY INPUT  */}
           <textarea 
             className='blog-textarea'
+            id='blog-text-input'
             name='blog_body'
             value={blogPostData.blog_body}
             onChange={handleBlogInputChange}
+            onClick={handleShowBlogTextarea}
             required
             placeholder='Write your post!'
           />

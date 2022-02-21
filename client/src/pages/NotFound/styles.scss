@@ -1,13 +1,16 @@
 @import '../../variables.scss';
 
 .notfound-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
+  z-index: 1;
   
   .notfound-header {
+    font-family: $poppins;
     font-size: 100px;
     font-weight: bold;
   }
@@ -19,6 +22,7 @@
   }
   
   .notfound-subheader {
-    font-size: 30px;
+    font-family: $poppins;
+    font-size: 25px;
   }
 }

@@ -11,6 +11,48 @@
   font-size: 1.2em;
 
   .toolbar-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .toolbar-search-bar-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .toolbar-search-bar {
+        padding: 2px 15px;
+        border-radius: 50px;
+        width: 275px;
+        color: $black;
+        transition: 0.2s ease-in-out;
+        z-index: 2;
+      }
+
+      .toolbar-search-icon-btn {
+        position: absolute;
+        right: 1rem;
+        transition: 0.2s ease-in-out;
+        z-index: 4;
+      }
+    }
+    
+    .toolbar-search-bar:hover,
+    .toolbar-search-bar:focus {
+      outline: 1px solid $input-placeholder;
+    }
+    
+    .toolbar-search-icon-btn:hover > .toolbar-search-icon > path,
+    .toolbar-search-icon-btn:focus > .toolbar-search-icon > path {
+      color: $dgreen;
+    }
+    
+    .toolbar-search-icon > path {
+      transition: 0.2s ease-in-out;
+      color: $btn-disabled;
+    }
+
     .nav-item-wrapper {
       li:nth-child(1) {
         margin: 0 1rem;

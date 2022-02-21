@@ -9,7 +9,9 @@ const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 
 const app = express();
+const http = require('http').createServer(app);
 const PORT = process.env.PORT || 3001;
+
 
 const server = new ApolloServer({
   typeDefs,
@@ -32,7 +34,7 @@ app.get('*', (req, res) => {
 });
 
 db.once('open', () => {
-  app.listen(PORT, () => {
+  http.listen(PORT, () => {
     console.log(`server running on ${PORT}`);
     console.log(`gql running on http://localhost:${PORT}${server.graphqlPath}`);
   });

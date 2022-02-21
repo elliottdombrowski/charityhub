@@ -13,22 +13,26 @@
 }
 
 .single-blog-post {
+  position: relative;
   width: 100%;
   padding: 1rem;
   margin: 1rem 0;
   border: 1px solid $white;
   border-radius: 10px;
   background: $login-background-two;
+  z-index: 5;
 
   .blog-post-header-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
+    font-family: $poppins;
     font-size: 23px;
   }
 
   .blog-post-body {
+    font-family: $nunito;
     font-size: 18px;
   }
 

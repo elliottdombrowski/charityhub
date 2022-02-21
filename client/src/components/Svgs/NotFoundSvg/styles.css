@@ -1,58 +1,58 @@
-.cls-1 {
+.nfnd-1 {
   fill: #e5f1ef;
 }
-.cls-2 {
+.nfnd-2 {
   fill: #c8d9d2;
 }
-.cls-3 {
+.nfnd-3 {
   fill: #becdc8;
 }
-.cls-4 {
+.nfnd-4 {
   fill: #b59b00;
 }
-.cls-5 {
+.nfnd-5 {
   fill: #423c52;
 }
-.cls-6,
-.cls-8,
-.cls-9 {
+.nfnd-6,
+.nfnd-8,
+.nfnd-9 {
   fill: #fff;
 }
-.cls-6,
-.cls-7,
-.cls-8 {
+.nfnd-6,
+.nfnd-7,
+.nfnd-8 {
   stroke: #423c52;
 }
-.cls-12,
-.cls-6,
-.cls-7,
-.cls-8 {
+.nfnd-12,
+.nfnd-6,
+.nfnd-7,
+.nfnd-8 {
   stroke-linecap: round;
   stroke-width: 5px;
 }
-.cls-12,
-.cls-6,
-.cls-7 {
+.nfnd-12,
+.nfnd-6,
+.nfnd-7 {
   stroke-miterlimit: 10;
 }
-.cls-12,
-.cls-7 {
+.nfnd-12,
+.nfnd-7 {
   fill: none;
 }
-.cls-8,
-.cls-9 {
+.nfnd-8,
+.nfnd-9 {
   stroke-linejoin: round;
 }
-.cls-9 {
+.nfnd-9 {
   stroke: #fe552f;
   stroke-width: 6px;
 }
-.cls-10 {
+.nfnd-10 {
   fill: #fe552f;
 }
-.cls-11 {
+.nfnd-11 {
   fill: #ffdb00;
 }
-.cls-12 {
+.nfnd-12 {
   stroke: #fff;
 }

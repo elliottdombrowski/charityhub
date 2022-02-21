@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
+
+//IMPORT AUTH UTILS
 import Auth from '../../utils/auth';
 
+//IMPORT COMPONENTS
 import CurrDate from '../CurrDate';
 import ProfileIcon from '../Icons/ProfileIcon';
 import MessengerIcon from '../Icons/MessengerIcon';
 
+//IMPORT FONTAWESOME COMPONENT AND ICON
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 import './styles.scss';
 import './query.scss';
+
+const searchIcon = <FontAwesomeIcon icon={faSearch} className='fa-lg toolbar-search-icon' />
 
 const Toolbar = () => {
   const [apiData, setApiData] = useState({});
@@ -37,6 +46,22 @@ const Toolbar = () => {
       </nav>
 
       <nav className='toolbar-right'>
+
+        {/* TOOLBAR SEARCH  */}
+        <div className='toolbar-search-bar-wrapper'>
+          <input
+            type='text'
+            className='toolbar-search-bar'
+            placeholder='Search for posts'
+          />
+
+          <button
+            type='submit'
+            className='toolbar-search-icon-btn'>
+            {searchIcon}
+          </button>
+        </div>
+
         <ul className='nav-item-wrapper'>
           {Auth.loggedIn() ? (
             <MessengerIcon />

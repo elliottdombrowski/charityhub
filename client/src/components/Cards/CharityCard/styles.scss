@@ -1,11 +1,13 @@
 @import '../../../variables.scss';
 
 .charity-card-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   width: 80%;
+  z-index: 1;
 
   .single-charity-card {
     display: flex;
@@ -31,10 +33,12 @@
     }
 
     .charity-name {
+      font-family: $poppins;
       font-size: 25px;
     }
     
     .charity-desc {
+      font-family: $nunito;
       font-size: 18px;
     }
 

@@ -1,68 +1,68 @@
-.cls-1 {
+.log-1 {
   fill: #dbe5e5;
 }
-.cls-14,
-.cls-2,
-.cls-3 {
+.log-14,
+.log-2,
+.log-3 {
   fill: #fff;
 }
-.cls-12,
-.cls-14,
-.cls-3 {
+.log-12,
+.log-14,
+.log-3 {
   stroke: #423c52;
 }
-.cls-10,
-.cls-12,
-.cls-14,
-.cls-3,
-.cls-6 {
+.log-10,
+.log-12,
+.log-14,
+.log-3,
+.log-6 {
   stroke-linecap: round;
 }
-.cls-10,
-.cls-12,
-.cls-3,
-.cls-6,
-.cls-8 {
+.log-10,
+.log-12,
+.log-3,
+.log-6,
+.log-8 {
   stroke-miterlimit: 10;
 }
-.cls-12,
-.cls-14,
-.cls-3,
-.cls-6 {
+.log-12,
+.log-14,
+.log-3,
+.log-6 {
   stroke-width: 5px;
 }
-.cls-4 {
+.log-4 {
   fill: #423c52;
 }
-.cls-5 {
+.log-5 {
   fill: #fe552f;
 }
-.cls-10,
-.cls-12,
-.cls-6,
-.cls-8 {
+.log-10,
+.log-12,
+.log-6,
+.log-8 {
   fill: none;
 }
-.cls-6 {
+.log-6 {
   stroke: #fe552f;
 }
-.cls-7 {
+.log-7 {
   fill: #b59b00;
 }
-.cls-10,
-.cls-8 {
+.log-10,
+.log-8 {
   stroke: #41465a;
   stroke-width: 6px;
 }
-.cls-9 {
+.log-9 {
   fill: #ffdb00;
 }
-.cls-11 {
+.log-11 {
   fill: #907b00;
 }
-.cls-13 {
+.log-13 {
   fill: #a0505a;
 }
-.cls-14 {
+.log-14 {
   stroke-linejoin: round;
 }
